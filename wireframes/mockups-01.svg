@@ -1,0 +1,1800 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:pencil="http://www.evolus.vn/Namespace/Pencil"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="641"
+   height="566"
+   id="exportedSVG"
+   version="1.1"
+   pencil:version="1.2.2"
+   sodipodi:docname="mockups-01.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata164">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs162" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="707"
+     id="namedview160"
+     showgrid="false"
+     inkscape:zoom="1.6678445"
+     inkscape:cx="175.12704"
+     inkscape:cy="463.12861"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g156" />
+  <g
+     inkscape:label="main"
+     inkscape:groupmode="layer"
+     id="layer_main">
+    <g
+       id="g156">
+      <rect
+         x="0"
+         y="0"
+         width="641"
+         height="566"
+         fill="none"
+         id="rect2" />
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Panel"
+         pencil:sc="Panel (primary)"
+         id="e5adb18760694f87aedfd279c12d8cc8"
+         transform="matrix(1,0,0,1,0,0)"
+         pencil:RelatedPage="">
+        <pencil:metadata>
+          <pencil:property
+             name="box">641,566</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="height">0,39</pencil:property>
+          <pencil:property
+             name="smartColor">false</pencil:property>
+          <pencil:property
+             name="heading">true</pencil:property>
+          <pencil:property
+             name="textContent">Gerência de Estoque</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|500|normal|16px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">0,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="paneColor">#F8F8F8FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="ca72b342e4cd4606b8cd3915176a3a10"
+           d="M 4,0 L 637,0 a 4,4 0 0,1 4,4l 0,35 a 0,0 0 0,1 0,0L 0,39 a 0,0 0 0,1 0,0L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="visibility: visible; fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(51, 122, 183); stroke-opacity: 1; stroke-width: 1;" />
+        <path
+           pencil:name="pane"
+           id="265c160aeef449a1b2410b7a53c52daa"
+           d="M 0,39 L 641,39 a 0,0 0 0,1 0,0L641,562 a 4,4 0 0,1 -4,4L 4,566 a 4,4 0 0,1 -4,-4L 0,39 a 0,0 0 0,1 0,0Z"
+           style="fill: rgb(248, 248, 248); fill-opacity: 1; stroke: rgb(51, 122, 183); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="45f4715bc66f40bd93b78fe1aa824ecf"
+           transform="translate(15,25)"
+           style="visibility: visible; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 500; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;">
+          <tspan
+             x="0"
+             y="0"
+             id="tspan6">Gerência de Estoque</tspan>
+        </text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="a04795e3f55c4e509763888c74b2e593"
+         transform="matrix(1,0,0,1,230,170)"
+         pencil:RelatedPage="bf96ae7805cd42ae8552c3adbdd7ee6c"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="8d5e33f683e3468bbf1baf4bcb9a78be"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="fd3918a28cc84709808b487ed7d5fd90"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="e88a92c1e5d24c52afb011848d978e47"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="6ee5cfaa69f244ae98dd5dbda19475aa"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="02c7e1e526c743709e39320338431c0d"
+         transform="matrix(1,0,0,1,32,118)"
+         pencil:RelatedPage="61d3720fbd464e3aa45c5829984096b3">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="7806ab55c2a54ed1a110019c2d9a3d11"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="69e7a6e5061f4ecead7b7dd2ba7bd6e0"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="59b85af02bc347cfb184c3dbb7747dc9"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="0008f075244c49e99e77b76b6e45e244"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Label"
+         pencil:sc="Label (primary)"
+         id="c2aef779074e470fa399406a43a789e8"
+         transform="matrix(1,0,0,1,32,66)"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">576,33</pencil:property>
+          <pencil:property
+             name="radius">2,0</pencil:property>
+          <pencil:property
+             name="textContent">Operações de Cadastro</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">0,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">0|</pencil:property>
+        </pencil:metadata>
+        <rect
+           pencil:name="bg"
+           id="7ccb4592317841b08f4770ef129ea347"
+           rx="2"
+           ry="2"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(204, 204, 204); stroke-opacity: 1; stroke-width: 0;"
+           height="33"
+           width="576" />
+        <text
+           pencil:name="text"
+           id="440195bb6765442999dab52f3036af99"
+           transform="translate(6,21)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;">
+          <tspan
+             x="0"
+             y="0"
+             id="tspan21">Operações de Cadastro</tspan>
+        </text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="b9634be2c614474a80fc7af27e8adae7"
+         transform="matrix(1,0,0,1,32,170)"
+         pencil:RelatedPage="9f74c01351364bad98fb3fa5f03f1305"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">179,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="acd6d088feaa41f2a3c6cba866230979"
+           d="M 4,0 L 175,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="604a7fe6eae74e668c0aef3d6d5fc15a"
+           transform="translate(90,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="ff511a9fb31140e49fb3e728f7c51190"
+           d="M 159,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="1f420743bba24df2a4629d6a5004d214"
+           d="M153,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="309002926474485eab38c66dbe91759e"
+         transform="matrix(1,0,0,1,427,118)"
+         pencil:RelatedPage="f381120f32a0472a8d64fab786a222fa"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="316a230909a24322915f188ddb30a20f"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="cf7e4b0b999c4ea18b299e352aaee94a"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="c0640b7afda643128492fa82b9d44453"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="fe1a56c2f15741e4a64abfd122264cae"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="16f9ff9552364a5dabc264910447b65e"
+         transform="matrix(1,0,0,1,230,118)"
+         pencil:RelatedPage="7df85736214e4feba57e104bac6d77c6"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="fd0cfd123c4642fead957c4dc583491b"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="8868fe0c3f2748608be7ff7a1f6293dd"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="eebf53f75c55422fb6c20f0cee404c6b"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="8a9d6c19262042e8abed025be24697d6"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Label"
+         pencil:sc="Label (primary)"
+         id="da83ae953beb4513a532874a38a8a130"
+         transform="matrix(1,0,0,1,32,244)"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">576,33</pencil:property>
+          <pencil:property
+             name="radius">2,0</pencil:property>
+          <pencil:property
+             name="textContent">Movimentações de Estoque</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">0,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">0|</pencil:property>
+        </pencil:metadata>
+        <rect
+           pencil:name="bg"
+           id="833b9d2ce57445cd83311bc861721618"
+           rx="2"
+           ry="2"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(204, 204, 204); stroke-opacity: 1; stroke-width: 0;"
+           height="33"
+           width="576" />
+        <text
+           pencil:name="text"
+           id="3f113a240ee84bf2a06d447d491de0e6"
+           transform="translate(6,21)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;">
+          <tspan
+             x="0"
+             y="0"
+             id="tspan41">Movimentações de Estoque</tspan>
+        </text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="dbb3d518deed447e9d519e767f122c6e"
+         transform="matrix(1,0,0,1,30,295)"
+         pencil:RelatedPage="0ea925ba7a8f49349cf41be925101f19"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="b0390ddde84d481caf02137f03c319f1"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="ac1fe1e7c02c473a8e577964620b6180"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="a6c249449aa841f2a84ed4ec044fac6e"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="f276486fe9ca4df28872b0444f3d63a5"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="643991cfa9374e9997082d1762bf41e0"
+         transform="matrix(1,0,0,1,230,295)"
+         pencil:RelatedPage="c68e791b6d6b4f998e0d665560260516"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="51fbb1c0cb294ae5bf4e770b5b86a036"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="981c9a3fbfbb4562b63bf689d48d70f1"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="dab96a7b456744c590ac432e8c814c62"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="284b9b68418e4aa2be8294b45cc55d24"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="6bb272f8d3f3458badc5cddfbbb60d55"
+         transform="matrix(1,0,0,1,427,295)"
+         pencil:RelatedPage="17f1f7f93e2a43388db1ea0765854dd7"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="a8a0e886e6f64e77a5f3705c97080c36"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="7b85fafdd9af4255849a298a71f54f87"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="4684263471cc42dda317c3ca2e715922"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="c14d907f7e224727b7d8cbe9fceb0413"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Label"
+         pencil:sc="Label (primary)"
+         id="7d25eb031b2942a4961083703a154117"
+         transform="matrix(1,0,0,1,30,370)">
+        <pencil:metadata>
+          <pencil:property
+             name="box">576,33</pencil:property>
+          <pencil:property
+             name="radius">2,0</pencil:property>
+          <pencil:property
+             name="textContent">Consultas</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">0,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">0|</pencil:property>
+        </pencil:metadata>
+        <rect
+           pencil:name="bg"
+           id="53c3351ec87d492db8204554901d97e2"
+           rx="2"
+           ry="2"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(204, 204, 204); stroke-opacity: 1; stroke-width: 0;"
+           height="33"
+           width="576" />
+        <text
+           pencil:name="text"
+           id="28ea29cf66374f498038acc58798e40b"
+           transform="translate(6,21)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;">
+          <tspan
+             x="0"
+             y="0"
+             id="tspan61">Consultas</tspan>
+        </text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="ddb51f601ee748fc94bcd00449ca9575"
+         transform="matrix(1,0,0,1,30,421)"
+         pencil:RelatedPage="25ad991e7de84102a239e52b29ff1ffb"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|bold|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="4e6e8ea0ee5048318931bdf416a4ca06"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="9c8eb7eb9d1b4604a2665b6e55923984"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="b2efcea03a44470dbde4a787e107e46f"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="625918aca3c142998580270d55122844"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="1301bbadb74f4769aad1000c5e4d063a"
+         transform="matrix(1,0,0,1,230,421)"
+         pencil:RelatedPage="81a962cd76934d49ae526249bda7ea73"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="02ea8847b3d74f88949cc107cb50e1e9"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="ced048ea30234d058fb44eaaff8e7c14"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="148f3e9211194594b9162e7c9a101526"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="61488aa147a3401cbfbc071d10277eee"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="d6f5a8fe12bb4ba4864bdabb6f771414"
+         transform="matrix(1,0,0,1,427,421)"
+         pencil:RelatedPage="c7261680a38f4f468ddd84ca84916af6"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="ac3a61adaae046d9b165be275c318543"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="d4f3cb48ba0c4a3f96b7cbd09a2d8e03"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="469018b7255f42cb874c9ce1486016fe"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="6c39502dbba441b584e6448e39ed40d1"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.BasicWebElements:htmlLink"
+         id="1c74f3d115374c9c92211c334fa45835"
+         transform="matrix(1,0,0,1,488,126)"
+         pencil:RelatedPage="9f74c01351364bad98fb3fa5f03f1305">
+        <pencil:metadata>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">Serif|100|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="customStyle" />
+        </pencil:metadata>
+        <foreignObject
+           x="0"
+           y="0"
+           width="0"
+           height="0"
+           pencil:name="htmlObject"
+           id="221a64b61be042e2886241c4bdda135a"
+           style="color: rgb(255, 255, 255); font-family: serif; font-size: 13px; font-weight: 100; font-style: normal; text-decoration: none;">
+          <xhtml:div
+             pencil:name="textDiv"
+             id="9a37afec866a41059ca37d8f2f1790b2"
+             style="white-space: nowrap; text-decoration: underline; display: inline-block !important; ">
+            <xhtml:div />
+          </xhtml:div>
+        </foreignObject>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.BasicWebElements:heading"
+         pencil:sc="Heading 5"
+         id="7a30eeb7180b4e449eca65792eaaa4c9"
+         transform="matrix(1,0,0,1,501,126)"
+         pencil:RelatedPage="f381120f32a0472a8d64fab786a222fa"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="textContent">Lotes</pencil:property>
+          <pencil:property
+             name="textFont">PencilUI|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="customStyle" />
+        </pencil:metadata>
+        <foreignObject
+           x="0"
+           y="0"
+           width="33"
+           height="18"
+           pencil:name="htmlObject"
+           id="8a1ac541789a4222b6d4c2d656f6cc90"
+           style="color: rgb(255, 255, 255); font-family: PencilUI; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;">
+          <xhtml:div
+             pencil:name="textDiv"
+             id="65a12758811a45109cf9586de5412549"
+             style="white-space: nowrap; display: inline-block !important">
+            <xhtml:div>Lotes</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.BasicWebElements:heading"
+         pencil:sc="Heading 5"
+         id="20fe1b29ef91460bbb1acee688828603"
+         transform="matrix(1,0,0,1,275,126)"
+         pencil:RelatedPage="7df85736214e4feba57e104bac6d77c6"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="textContent">Departamentos</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|12px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="customStyle" />
+        </pencil:metadata>
+        <foreignObject
+           x="0"
+           y="0"
+           width="87"
+           height="17"
+           pencil:name="htmlObject"
+           id="48378a8c7f6e425ab71cd9b072be7e8a"
+           style="color: rgb(255, 255, 255); font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 12px; font-weight: bold; font-style: normal; text-decoration: none;">
+          <xhtml:div
+             pencil:name="textDiv"
+             id="fc2dd7f84f9544008f34b366bc5f5911"
+             style="white-space: nowrap; display: inline-block !important">
+            <xhtml:div>Departamentos</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.BasicWebElements:heading"
+         pencil:sc="Heading 5"
+         id="3968d7789d3c45febdce5c4d8954ae7f"
+         transform="matrix(1,0,0,1,96,179)"
+         pencil:RelatedPage="9f74c01351364bad98fb3fa5f03f1305"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="textContent">Marcas</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|12px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="customStyle" />
+        </pencil:metadata>
+        <foreignObject
+           x="0"
+           y="0"
+           width="41"
+           height="17"
+           pencil:name="htmlObject"
+           id="7eaf7b9de66349aaaf0cb16ff42f547d"
+           style="color: rgb(255, 255, 255); font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 12px; font-weight: bold; font-style: normal; text-decoration: none;">
+          <xhtml:div
+             pencil:name="textDiv"
+             id="535ce344b81f4ab691a45cd8f33895f5"
+             style="white-space: nowrap; display: inline-block !important">
+            <xhtml:div>Marcas</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.BasicWebElements:heading"
+         pencil:sc="Heading 5"
+         id="f6a0c858264846b5854349d9ad3a8d84"
+         transform="matrix(1,0,0,1,283,179)"
+         pencil:RelatedPage="bf96ae7805cd42ae8552c3adbdd7ee6c"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="textContent">Localizações</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|12px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="customStyle" />
+        </pencil:metadata>
+        <foreignObject
+           x="0"
+           y="0"
+           width="75"
+           height="17"
+           pencil:name="htmlObject"
+           id="bd006e3b39dd482687393e06dfdc6b6b"
+           style="color: rgb(255, 255, 255); font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 12px; font-weight: bold; font-style: normal; text-decoration: none;">
+          <xhtml:div
+             pencil:name="textDiv"
+             id="ca781117597a407387efd3cd0b514a80"
+             style="white-space: nowrap; display: inline-block !important">
+            <xhtml:div>Localizações</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="89058e6dfeb34c23b8f5f792aaec0067"
+         transform="matrix(1,0,0,1,475,307)"
+         pencil:RelatedPage="17f1f7f93e2a43388db1ea0765854dd7"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Transferência</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="66ce0e0b572c4410867bc9b6f7d4a4fb"
+           width="85.328125"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="65187d18aae941ab9bfc646fc0bce702"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan86">Transferência</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="d25cfbff399347c2837d7bfb165410bc"
+         transform="matrix(1,0,0,1,91,307)"
+         pencil:RelatedPage="0ea925ba7a8f49349cf41be925101f19"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Entrada</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="bcbf4c1de3954c7eb45540f51477511f"
+           width="49.171875"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="5222610335ed4e65971783f032b25ec4"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan91">Entrada</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="a6048ab6043c4d4488e2b6f1c9f12b6d"
+         transform="matrix(1,0,0,1,301,307)"
+         pencil:RelatedPage="c68e791b6d6b4f998e0d665560260516"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Saída</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="b8d596d799b8457e97633a5bb6e4d558"
+           width="35.46875"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="7e963a41e0464415a752d1ed1e2c3591"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan96">Saída</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="91dd1c3dcaeb4792a00f369b40ced085"
+         transform="matrix(1,0,0,1,30,469)"
+         pencil:RelatedPage="e3c627261c7a4a03bfe5d9d32fc41df6"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="8e3b82dd65de4dc7a0c81f17240b65d0"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="4eed2749e669467093739788cfdd0143"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="4308b56ace07416fb6addd1e3ad95a68"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="7f81f77848c549a4a82bfbf8597a8992"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="b02e3eb2520a40efb1da48ff88a57645"
+         transform="matrix(1,0,0,1,230,469)"
+         pencil:RelatedPage="8f31c419b13943b0adaf150457c55002"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="474c76cdca374e1c85979ab80600c9a9"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="6d419a8fbb1c41fda3bbddbf2c5ff253"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="2096e5e2bd834e4b8fcc3512c4fd1f89"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="575d5a6c99eb49ae92a66f56d1d7b748"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="236cd43322b64e0793b6f3e8823922e3"
+         transform="matrix(1,0,0,1,427,469)"
+         pencil:RelatedPage="7a45394902ae410f92cccacb4ab4203e"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="528ad1db806c4fd693366095eab2d131"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="b2118eac004044edad16c32b83029ee6"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="c091311c30844bbc9e2eaf1652c61615"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="5b68debfe4844678b379d34223f0eda7"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="nz.nwatson.Bootstrap:Button"
+         pencil:sc="Button (primary)"
+         id="0a56abfca634429c9215b10069fa6b0c"
+         transform="matrix(1,0,0,1,30,516)"
+         pencil:RelatedPage="5cd5bea161b64d0f8e174f0f653fb03f"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="box">181,34</pencil:property>
+          <pencil:property
+             name="smartColor">true</pencil:property>
+          <pencil:property
+             name="radius">4,0</pencil:property>
+          <pencil:property
+             name="textContent" />
+          <pencil:property
+             name="textFont">&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif|400|normal|14px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textAlign">1,1</pencil:property>
+          <pencil:property
+             name="fillColor">#337AB7FF</pencil:property>
+          <pencil:property
+             name="strokeColor">#CCCCCCFF</pencil:property>
+          <pencil:property
+             name="strokeStyle">1|</pencil:property>
+          <pencil:property
+             name="dropdown">none</pencil:property>
+          <pencil:property
+             name="dropdownDirection">1</pencil:property>
+          <pencil:property
+             name="position">none</pencil:property>
+        </pencil:metadata>
+        <path
+           pencil:name="bg"
+           id="ee992a32caf340c1a78106ada7b9331c"
+           d="M 4,0 L 177,0 a 4,4 0 0,1 4,4l 0,26 a 4,4 0 0,1 -4,4L 4,34 a 4,4 0 0,1 -4,-4L 0,4 a 4,4 0 0,1 4,-4Z"
+           style="fill: rgb(51, 122, 183); fill-opacity: 1; stroke: rgb(46, 108, 163); stroke-opacity: 1; stroke-width: 1;" />
+        <text
+           pencil:name="text"
+           id="bf7add851ddd41988d6f012a0b715290"
+           transform="translate(91,17)"
+           style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; text-decoration: none; fill: rgb(255, 255, 255); fill-opacity: 1;" />
+        <path
+           style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; stroke: none; visibility: hidden; display: none;"
+           pencil:name="arrow"
+           id="c552d10b0fac4b10be1e34355fba9d66"
+           d="M 161,15 l 8,0 l -4,4 Z" />
+        <path
+           style="opacity: 1; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: rgb(46, 108, 163); visibility: hidden; display: none; stroke-opacity: 1; stroke-width: 1;"
+           pencil:name="split"
+           id="b8dcdce0fe2949569d0872abb07f8635"
+           d="M155,0 l 0,34" />
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="5957e904bfd74e9da248efca355f2be2"
+         transform="matrix(1,0,0,1,475,481)"
+         pencil:RelatedPage="7a45394902ae410f92cccacb4ab4203e"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Lista de Lotes</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="03fc90c090bd483bb3ca18ec00c864ec"
+           width="87.421875"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="de4d6358d4ec4db595c4c579b59db379"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan121">Lista de Lotes</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="167a61c492604944a9c0080332eace00"
+         transform="matrix(1,0,0,1,271,481)"
+         pencil:RelatedPage="8f31c419b13943b0adaf150457c55002"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Lista de Locais</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="b12462911b5a487dbabe76d714fb060f"
+           width="93.921875"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="c3a2585972444cdfbfadd2ad3ea0c3ed"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan126">Lista de Locais</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="3e8c9f525a964285b4c491ad3759b541"
+         transform="matrix(1,0,0,1,47,481)"
+         pencil:RelatedPage="e3c627261c7a4a03bfe5d9d32fc41df6"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Lista de Departamentos</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="6a83e1c3189a41f6a098402c9cb7a400"
+           width="147.375"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="e24b030ff51a4124a6ce6e3a09bb2b49"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan131">Lista de Departamentos</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="d9a4f078bac544d78fbe4d2f4e849fe9"
+         transform="matrix(1,0,0,1,69,528)"
+         pencil:RelatedPage="5cd5bea161b64d0f8e174f0f653fb03f"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Lista de Marcas</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="dc52df404ede4402acbef9bb926eae7e"
+           width="97.546875"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="8cd70a6dc85a4328afd97e449f0b67ee"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan136">Lista de Marcas</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="fd508a795d4747f1a5f1b80f98055bf1"
+         transform="matrix(1,0,0,1,67,433)"
+         pencil:RelatedPage="25ad991e7de84102a239e52b29ff1ffb"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Lista de Produtos</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="8ec012e5070341cfacc9835837acd972"
+           width="109.796875"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="e038d4ccc77a4f69b2292a6e5992a5f3"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan141">Lista de Produtos</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="fb1073a004284d69881cc5e74b7c3639"
+         transform="matrix(1,0,0,1,271,433)"
+         pencil:RelatedPage="81a962cd76934d49ae526249bda7ea73"
+         pencil:locked="true">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Movimentações</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="93db3a7f7a3144288ddaa94401b23040"
+           width="97.546875"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="b95db3a54ff34272ac326d94b096df0d"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan146">Movimentações</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.Common:PlainTextV3"
+         id="2aa2016e58d2433e9d98f71873f2073b"
+         transform="matrix(1,0,0,1,488,433)"
+         pencil:RelatedPage="c7261680a38f4f468ddd84ca84916af6">
+        <pencil:metadata>
+          <pencil:property
+             name="disabled">false</pencil:property>
+          <pencil:property
+             name="width">100,0</pencil:property>
+          <pencil:property
+             name="fixedWidth">false</pencil:property>
+          <pencil:property
+             name="label">Estoque</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|13px|none|0</pencil:property>
+          <pencil:property
+             name="textAlign">0,0</pencil:property>
+        </pencil:metadata>
+        <rect
+           x="0"
+           y="0"
+           style="fill: none; stroke: none; visibility: hidden; display: none;"
+           pencil:name="bgRect"
+           id="0cd8d51122094531959893ad3aecce6d"
+           width="51.296875"
+           height="15.015625" />
+        <text
+           xml:space="preserve"
+           dominant-baseline="hanging"
+           pencil:name="text"
+           id="5e444ce99dec42bd9cf645ee9d8afe81"
+           style="fill: rgb(255, 255, 255); fill-opacity: 1; font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 13px; font-weight: bold; font-style: normal; text-decoration: none;"><tspan
+             x="0"
+             y="0"
+             id="tspan151">Estoque</tspan></text>
+      </g>
+      <g
+         pencil:type="Shape"
+         pencil:def="Evolus.BasicWebElements:heading"
+         pencil:sc="Heading 5"
+         id="a49cd26fe2eb4420a4088550b62e0e15"
+         transform="matrix(1,0,0,1,96,126)"
+         pencil:RelatedPage="61d3720fbd464e3aa45c5829984096b3">
+        <pencil:metadata>
+          <pencil:property
+             name="textContent">Produtos</pencil:property>
+          <pencil:property
+             name="textFont">&quot;Liberation Sans&quot;,Arial,sans-serif|bold|normal|12px|none|0</pencil:property>
+          <pencil:property
+             name="textColor">#FFFFFFFF</pencil:property>
+          <pencil:property
+             name="customStyle" />
+        </pencil:metadata>
+        <foreignObject
+           x="0"
+           y="0"
+           width="53"
+           height="17"
+           pencil:name="htmlObject"
+           id="ded8bc20b4fc4c278018a5087d2f5fc6"
+           style="color: rgb(255, 255, 255); font-family: &quot;Liberation Sans&quot;, Arial, sans-serif; font-size: 12px; font-weight: bold; font-style: normal; text-decoration: none;">
+          <xhtml:div
+             pencil:name="textDiv"
+             id="e72d2d0dcbe6480bbe41bf9379f549e3"
+             style="white-space: nowrap; display: inline-block !important">
+            <xhtml:div>Produtos</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+      </g>
+      <text
+         y="130.88373"
+         x="90.442123"
+         xml:space="preserve"
+         dominant-baseline="hanging"
+         pencil:name="text"
+         id="5222610335ed4e65971783f032b25ec4-3"
+         style="font-style:normal;font-weight:bold;font-size:13px;font-family:'Liberation Sans', Arial, sans-serif;text-decoration:none;text-decoration-line:none;dominant-baseline:hanging;fill:#ffffff;fill-opacity:1"><tspan
+           x="90.442123"
+           y="130.88373"
+           id="tspan91-6">Produtos</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="264.41315"
+         y="131.30721"
+         id="text740"><tspan
+           sodipodi:role="line"
+           id="tspan738"
+           x="264.41315"
+           y="167.33739" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="265.6123"
+         y="145.09746"
+         id="text744"><tspan
+           sodipodi:role="line"
+           id="tspan742"
+           x="265.6123"
+           y="181.12764" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f9f9f9;fill-opacity:1;stroke:none"
+         x="258.41736"
+         y="137.90254"
+         id="text748"><tspan
+           sodipodi:role="line"
+           id="tspan746"
+           x="258.41736"
+           y="137.90254"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.00000064px;line-height:0;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#f9f9f9">Departamentos</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="497.64832"
+         y="139.70128"
+         id="text752"><tspan
+           sodipodi:role="line"
+           id="tspan750"
+           x="497.64832"
+           y="139.70128"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#f9f9f9">Lotes</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="89.336868"
+         y="191.26483"
+         id="text756"><tspan
+           sodipodi:role="line"
+           id="tspan754"
+           x="89.336868"
+           y="191.26483"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#f2f2f2">Marcas</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="268.61017"
+         y="190.06567"
+         id="text760"><tspan
+           sodipodi:role="line"
+           id="tspan758"
+           x="268.61017"
+           y="190.06567"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#f9f9f9">Localizações</tspan></text>
+    </g>
+  </g>
+</svg>
