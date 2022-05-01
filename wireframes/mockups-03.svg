@@ -19,7 +19,7 @@
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs6"><clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath18"><path
@@ -198,7 +198,7 @@
      showgrid="false"
      inkscape:zoom="0.84189505"
      inkscape:cx="316.78463"
-     inkscape:cy="845.69003"
+     inkscape:cy="275.54771"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
@@ -207,19 +207,6 @@
      inkscape:groupmode="layer"
      inkscape:label="mockups-03"
      transform="matrix(0.31999998,0,0,0.31999998,0,-1.8634668e-5)"><g
-       id="g28"><g
-         id="g30"
-         clip-path="url(#clipPath34)"><g
-           id="g36"
-           transform="matrix(3.125,0,0,3.125,129.16666,79.166664)"><text
-             transform="translate(0,1045)"
-             style="font-variant:normal;font-weight:normal;font-size:7.55000019px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text40"><tspan
-               x="0 5.0337067 8.8071442 13.004364 17.201584 19.714752 21.811523 26.008743 30.205963 32.302734 34.399506 36.912674 41.109894 47.3965 49.493271 54.526978 58.724197 62.921417 66.694855 68.371536 70.048218 72.144989 74.658157 76.754929 81.788635 85.985855 90.183075 92.279846 98.566452 102.76367 106.53711 108.63388 112.8311 117.02832 119.12509 123.32231 127.51953 131.71675 135.91397 138.01074 142.20796 146.40518 148.50195 152.69917 156.89639 158.99316 163.19038 167.3876 169.48438 175.35458 181.64119 185.83455 188.34772 192.54494 196.74216 200.93938 205.1366 207.23337 209.74654 214.78024 217.29341 221.49063 225.26407 226.94075 228.61743 230.29411 234.49133 236.5881 241.62181 243.71858 247.9158 252.11302 256.31024 260.50745 263.02063 267.21783 269.31461 273.64435 275.32104 281.60767 285.80487 288.31805 290.41483 292.92798 295.02475 300.05847 304.25568 308.45288 312.65009 314.74686 318.94409 321.04086 325.2381 327.33487 329.43164"
-               y="0"
-               sodipodi:role="line"
-               id="tspan38">Exported from Pencil - Sun May 01 2022 11:38:38 GMT-0300 (Brasilia Standard Time) - Page 1 of 1</tspan></text>
-</g></g></g><g
        id="g42"><g
          id="g44"
          clip-path="url(#clipPath48)"><g
@@ -243,25 +230,27 @@
              inkscape:connector-curvature="0" /></g><g
            id="g60"
            transform="matrix(3.1269932,0,0,3.1255724,182.41745,239.73346)"><text
-             style="font-variant:normal;font-weight:normal;font-size:18.15999985px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text64"><tspan
-               x="0 13.111862 23.209503 33.307144 43.404785 52.48291 57.527298 63.573471 73.671112 78.7155 88.813141 98.910782 103.95517 116.06525 122.11142 132.20906 142.3067 152.40434 157.44873 167.54637"
-               y="0"
-               sodipodi:role="line"
-               id="tspan62">Cadastro de Produtos</tspan></text>
+   style="font-variant:normal;font-weight:normal;font-size:18.15999985px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text64"><tspan
+     x="0 13.111862 23.209503 33.307144 43.404785 52.48291 57.527298 63.573471 73.671112 78.7155 88.813141 98.910782 103.95517 116.06525 122.11142 132.20906 142.3067 152.40434 157.44873 167.54637"
+     y="0"
+     sodipodi:role="line"
+     id="tspan62">Cadastro de Produtos</tspan></text>
+
 </g></g></g><g
        id="g66"><g
          id="g68"
          clip-path="url(#clipPath72)"><g
            id="g74"
            transform="matrix(3.5492845,0,0,3.5476718,210.81174,339.06827)"><text
-             transform="translate(0,17)"
-             style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text78"><tspan
-               x="0 12.276855 22.661133 37.776855"
-               y="0"
-               sodipodi:role="line"
-               id="tspan76">Nome</tspan></text>
+   transform="translate(0,17)"
+   style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text78"><tspan
+     x="0 12.276855 22.661133 37.776855"
+     y="0"
+     sodipodi:role="line"
+     id="tspan76">Nome</tspan></text>
+
 </g></g></g><g
        id="g80"><g
          id="g82"
@@ -278,25 +267,27 @@
              inkscape:connector-curvature="0" /></g><g
            id="g102"
            transform="matrix(3.1269932,0,0,3.1255724,253.40314,541.28552)"><text
-             style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text106"><tspan
-               x="0 11.464417 20.293335 33.517334 42.346252 46.756836 55.585754 64.414673 68.825256 77.654175 82.940674 91.769592 100.59851 109.42743 113.83801"
-               y="0"
-               sodipodi:role="line"
-               id="tspan104">Nome do produto</tspan></text>
+   style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text106"><tspan
+     x="0 11.464417 20.293335 33.517334 42.346252 46.756836 55.585754 64.414673 68.825256 77.654175 82.940674 91.769592 100.59851 109.42743 113.83801"
+     y="0"
+     sodipodi:role="line"
+     id="tspan104">Nome do produto</tspan></text>
+
 </g></g></g><g
        id="g108"><g
          id="g110"
          clip-path="url(#clipPath114)"><g
            id="g116"
            transform="matrix(3.5492845,0,0,3.5476718,210.81174,1151.4851)"><text
-             transform="translate(0,17)"
-             style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text120"><tspan
-               x="0 14.161133 23.615723 30.231445 39.686035"
-               y="0"
-               sodipodi:role="line"
-               id="tspan118">Marca</tspan></text>
+   transform="translate(0,17)"
+   style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text120"><tspan
+     x="0 14.161133 23.615723 30.231445 39.686035"
+     y="0"
+     sodipodi:role="line"
+     id="tspan118">Marca</tspan></text>
+
 </g></g></g><g
        id="g122"><g
          id="g124"
@@ -313,12 +304,13 @@
              inkscape:connector-curvature="0" /></g><g
            id="g144"
            transform="matrix(3.1269932,0,0,3.1255724,253.40314,1325.3209)"><text
-             style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text148"><tspan
-               x="0 13.223999 22.052917 27.339417 35.276917 44.105835 48.516418"
-               y="0"
-               sodipodi:role="line"
-               id="tspan146">Marca 1</tspan></text>
+   style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text148"><tspan
+     x="0 13.223999 22.052917 27.339417 35.276917 44.105835 48.516418"
+     y="0"
+     sodipodi:role="line"
+     id="tspan146">Marca 1</tspan></text>
+
 </g><g
            id="g150"
            transform="matrix(3.5492845,0,0,3.5476718,924.2179,1247.2722)"><path
@@ -332,25 +324,27 @@
              inkscape:connector-curvature="0" /></g><g
            id="g164"
            transform="matrix(3.1269932,0,0,3.1255724,966.80933,1325.3209)"><text
-             style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text168"><tspan
-               x="0 11.464417 20.293335 29.122253 37.951172 43.237671 47.648254 56.477173 69.701172 78.53009 87.359009 91.769592 100.59851 105.00909"
-               y="0"
-               sodipodi:role="line"
-               id="tspan166">Departamento 1</tspan></text>
+   style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text168"><tspan
+     x="0 11.464417 20.293335 29.122253 37.951172 43.237671 47.648254 56.477173 69.701172 78.53009 87.359009 91.769592 100.59851 105.00909"
+     y="0"
+     sodipodi:role="line"
+     id="tspan166">Departamento 1</tspan></text>
+
 </g></g></g><g
        id="g170"><g
          id="g172"
          clip-path="url(#clipPath176)"><g
            id="g178"
            transform="matrix(3.5492845,0,0,3.5476718,920.66858,1151.4851)"><text
-             transform="translate(0,17)"
-             style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text182"><tspan
-               x="0 12.276855 21.731445 32.115723 41.570312 48.186035 53.847168 63.301758 78.41748 87.87207 98.256348 103.91748"
-               y="0"
-               sodipodi:role="line"
-               id="tspan180">Departamento</tspan></text>
+   transform="translate(0,17)"
+   style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text182"><tspan
+     x="0 12.276855 21.731445 32.115723 41.570312 48.186035 53.847168 63.301758 78.41748 87.87207 98.256348 103.91748"
+     y="0"
+     sodipodi:role="line"
+     id="tspan180">Departamento</tspan></text>
+
 </g></g></g><g
        id="g184"><g
          id="g186"
@@ -367,25 +361,27 @@
              inkscape:connector-curvature="0" /></g><g
            id="g206"
            transform="matrix(3.1269932,0,0,3.1255724,253.40314,910.24341)"><text
-             style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text210"><tspan
-               x="0 11.464417 20.293335 28.230835 36.168335 41.454834 44.98175 52.91925 61.748169 70.577087 74.987671 83.816589 92.645508 97.056091 105.88501 119.10901 123.51959 132.34851 137.63501 146.46393 155.29285 164.12177 168.53235 177.36127 181.77185 186.18243 190.59302"
-               y="0"
-               sodipodi:role="line"
-               id="tspan208">Descrição de um produto....</tspan></text>
+   style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text210"><tspan
+     x="0 11.464417 20.293335 28.230835 36.168335 41.454834 44.98175 52.91925 61.748169 70.577087 74.987671 83.816589 92.645508 97.056091 105.88501 119.10901 123.51959 132.34851 137.63501 146.46393 155.29285 164.12177 168.53235 177.36127 181.77185 186.18243 190.59302"
+     y="0"
+     sodipodi:role="line"
+     id="tspan208">Descrição de um produto....</tspan></text>
+
 </g></g></g><g
        id="g212"><g
          id="g214"
          clip-path="url(#clipPath218)"><g
            id="g220"
            transform="matrix(3.5492845,0,0,3.5476718,210.81174,605.14368)"><text
-             transform="translate(0,17)"
-             style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text224"><tspan
-               x="0 12.276855 21.731445 31.186035 40.640625 47.256348 51.979492 61.434082 70.888672"
-               y="0"
-               sodipodi:role="line"
-               id="tspan222">Descrição</tspan></text>
+   transform="translate(0,17)"
+   style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text224"><tspan
+     x="0 12.276855 21.731445 31.186035 40.640625 47.256348 51.979492 61.434082 70.888672"
+     y="0"
+     sodipodi:role="line"
+     id="tspan222">Descrição</tspan></text>
+
 </g></g></g><g
        id="g226"><g
          id="g228"
@@ -402,13 +398,14 @@
              inkscape:connector-curvature="0" /></g><g
            id="g240"
            transform="matrix(3.1269932,0,0,3.1255724,1729.9055,1619.7777)"><text
-             transform="translate(2.1902862)"
-             style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text244"><tspan
-               x="0 8.8289185 12.355835 25.579834 34.408752 43.237671"
-               y="0"
-               sodipodi:role="line"
-               id="tspan242">Limpar</tspan></text>
+   transform="translate(2.1902862)"
+   style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text244"><tspan
+     x="0 8.8289185 12.355835 25.579834 34.408752 43.237671"
+     y="0"
+     sodipodi:role="line"
+     id="tspan242">Limpar</tspan></text>
+
 </g><g
            id="g246"
            transform="matrix(3.5492845,0,0,3.5476718,1367.8784,1541.7289)"><path
@@ -422,13 +419,14 @@
              inkscape:connector-curvature="0" /></g><g
            id="g252"
            transform="matrix(3.1269932,0,0,3.1255724,1410.4699,1619.7777)"><text
-             transform="translate(3.9549296)"
-             style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text256"><tspan
-               x="0 10.588501 19.417419 22.944336 30.881836 39.710754"
-               y="0"
-               sodipodi:role="line"
-               id="tspan254">Salvar</tspan></text>
+   transform="translate(3.9549296)"
+   style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text256"><tspan
+     x="0 10.588501 19.417419 22.944336 30.881836 39.710754"
+     y="0"
+     sodipodi:role="line"
+     id="tspan254">Salvar</tspan></text>
+
 </g><g
            id="g258"
            transform="matrix(3.5492845,0,0,3.5476718,1989.0032,1541.7289)"><path
@@ -442,26 +440,28 @@
              inkscape:connector-curvature="0" /></g><g
            id="g264"
            transform="matrix(3.1269932,0,0,3.1255724,2031.5947,1619.7777)"><text
-             transform="translate(-5.3205333)"
-             style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text268"><tspan
-               x="0 11.464417 20.293335 29.122253 37.059753 45.888672 49.415588 58.244507"
-               y="0"
-               sodipodi:role="line"
-               id="tspan266">Cancelar</tspan></text>
+   transform="translate(-5.3205333)"
+   style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text268"><tspan
+     x="0 11.464417 20.293335 29.122253 37.059753 45.888672 49.415588 58.244507"
+     y="0"
+     sodipodi:role="line"
+     id="tspan266">Cancelar</tspan></text>
+
 </g></g></g><g
        id="g270"><g
          id="g272"
          clip-path="url(#clipPath276)"><g
            id="g278"
            transform="matrix(3.5492845,0,0,3.5476718,1626.9762,1151.4851)"><text
-             transform="translate(0,17)"
-             style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text282"><tspan
-               x="0 10.400879 19.855469 24.578613 34.962891 41.578613 46.301758 56.686035 67.070312 71.793457 77.45459 86.90918 93.524902 98.248047"
-               y="0"
-               sodipodi:role="line"
-               id="tspan280">Valor unitário</tspan></text>
+   transform="translate(0,17)"
+   style="font-variant:normal;font-weight:bold;font-size:17px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text282"><tspan
+     x="0 10.400879 19.855469 24.578613 34.962891 41.578613 46.301758 56.686035 67.070312 71.793457 77.45459 86.90918 93.524902 98.248047"
+     y="0"
+     sodipodi:role="line"
+     id="tspan280">Valor unitário</tspan></text>
+
 </g></g></g><g
        id="g284"><g
          id="g286"
@@ -478,10 +478,11 @@
              inkscape:connector-curvature="0" /></g><g
            id="g306"
            transform="matrix(3.1269932,0,0,3.1255724,1669.5676,1321.7733)"><text
-             style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text310"><tspan
-               x="0 11.464417 20.293335 24.703918 33.532837 37.94342 46.772339"
-               y="0"
-               sodipodi:role="line"
-               id="tspan308">R$ 3,95</tspan></text>
+   style="font-variant:normal;font-weight:normal;font-size:15.89000034px;font-family:Arimo;-inkscape-font-specification:Arimo;writing-mode:lr-tb;fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text310"><tspan
+     x="0 11.464417 20.293335 24.703918 33.532837 37.94342 46.772339"
+     y="0"
+     sodipodi:role="line"
+     id="tspan308">R$ 3,95</tspan></text>
+
 </g></g></g></g></svg>
