@@ -1,0 +1,41 @@
+<div class="row" style="padding-inline: 16px;">
+  <div class="col-md-12">
+    <h4 class="menu-bar">{{title}}</h4>
+    <div class="row button-group">
+      <button class="col-md-3  btn menu-button button-entry" *ngFor="let entry of entries" >
+        {{entry}}
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<style>
+  .menu-bar {
+    border-radius: 5px;
+    border: 2px solid #03398f;
+    background-color: #03398f;
+    color: #fff;
+    padding: 8px;
+    font-size: 20px;
+    margin-top: 64px;
+    margin-bottom: 16px;
+  }
+
+  .button-group {
+    justify-content: safe;
+  }
+
+  .button-entry {
+    margin-inline: 16px;
+    margin-top: 16px;
+    background-color: #03398f;
+    color: #fff;
+  }
+
+  .button-entry:hover {
+    color:#fff;
+    font-weight: bold;
+  }
+</style>
