@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-main-page',
+  templateUrl: './main-page.component.html',
+  styleUrls: ['./main-page.component.css']
 })
-export class AppComponent {
+export class MainPageComponent implements OnInit {
   title = 'controle-estoque';
   @Input()
   menuEntries: any = [
@@ -84,6 +84,9 @@ export class AppComponent {
       ]
     }];
 
-  constructor() {
+  constructor() { }
+
+  ngOnInit(): void {
   }
+
 }

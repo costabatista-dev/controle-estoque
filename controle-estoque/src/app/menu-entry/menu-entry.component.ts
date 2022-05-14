@@ -9,7 +9,7 @@ export class MenuEntryComponent implements OnInit {
   @Input()
   title:string='';
   @Input()
-  entries:string[]=[];
+  entries = [{'name': '', 'link': ''}];
 
   constructor() { }
 
