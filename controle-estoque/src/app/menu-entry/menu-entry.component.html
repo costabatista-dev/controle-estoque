@@ -5,7 +5,7 @@
       <button type="button"
               class="col-md-3  btn menu-button  button-entry"
               *ngFor="let entry of entries"
-              [routerLink]="['/products']">
+              [routerLink]=[entry.link]>
           {{entry.name}}
       </button>
     </div>

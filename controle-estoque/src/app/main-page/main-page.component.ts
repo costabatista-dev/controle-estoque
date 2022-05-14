@@ -18,19 +18,19 @@ export class MainPageComponent implements OnInit {
         },
         {
           'name': 'Departamentos',
-          'link': ''
+          'link': 'departments'
         },
         {
           'name': 'Lotes',
-          'link': ''
+          'link': 'batches'
         },
         {
           'name': 'Marcas',
-          'link': ''
+          'link': 'brands'
         },
         {
           'name': 'Localizações ',
-          'link': ''
+          'link': 'locations'
         }
       ]
     },
@@ -39,15 +39,15 @@ export class MainPageComponent implements OnInit {
       'childs': [
         {
           'name': 'Entrada',
-          'link': ''
+          'link': 'stock-entry'
         },
         {
           'name': 'Saída',
-          'link': ''
+          'link': 'stock-out'
         },
         {
           'name': 'Transferência',
-          'link': ''
+          'link': 'stock-transfer'
         }]
     },
     {
