@@ -22,6 +22,7 @@ import { DepartmentListPageComponent } from './department-list-page/department-l
 import { LocationListPageComponent } from './location-list-page/location-list-page.component';
 import { BatchListPageComponent } from './batch-list-page/batch-list-page.component';
 import { BrandListPageComponent } from './brand-list-page/brand-list-page.component';
+import { CommonPageComponent } from './common-page/common-page.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { BrandListPageComponent } from './brand-list-page/brand-list-page.compon
     DepartmentListPageComponent,
     LocationListPageComponent,
     BatchListPageComponent,
-    BrandListPageComponent
+    BrandListPageComponent,
+    CommonPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,6 @@
-<div>
-  <app-title-bar title="Gerência de Estoque"></app-title-bar>
-  <div class="row-fluid">
-    <div class="col-md-12">
-      <h4 class="header-text">Uma aplicação para gerenciamento de estoque de mercearias</h4>
-    </div>
-  </div>
+<app-common-page title="Gerência de Estoque"
+                 header="Uma aplicação para gerenciamento de estoque de mercearias">
+                 <app-menu-entry *ngFor="let item of menuEntries" [title]="item.title" [entries]="item.childs">
+                </app-menu-entry>
 
-  <app-menu-entry *ngFor="let item of menuEntries" [title]="item.title" [entries]="item.childs">
-  </app-menu-entry>
-  <app-footer text="Gerência de Estoque - Paulo Batista da Costa 2022-2022 ©">
-  </app-footer>
-</div>
-
-<style>
-  .header-text {
-    padding-inline-start: 8px;
-  }
-</style>
+</app-common-page>

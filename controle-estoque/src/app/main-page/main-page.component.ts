@@ -55,31 +55,31 @@ export class MainPageComponent implements OnInit {
       'childs': [
         {
           'name': 'Lista de Produtos',
-          'link': ''
+          'link': 'product-list'
         },
         {
           'name': 'Movimentações',
-          'link': ''
+          'link': 'mov-list'
         },
         {
           'name': 'Estoque',
-          'link': ''
+          'link': 'stock-list'
         },
         {
-          'name': 'Lista de Deperamentos',
-          'link': ''
+          'name': 'Lista de Departamentos',
+          'link': 'department-list'
         },
         {
           'name': 'Lista de Locais',
-          'link': ''
+          'link': 'location-list'
         },
         {
           'name': 'Lista de Lotes',
-          'link': ''
+          'link': 'batch-list'
         },
         {
           'name': 'Lista de Marcas',
-          'link': ''
+          'link': 'brand-list'
         }
       ]
     }];
