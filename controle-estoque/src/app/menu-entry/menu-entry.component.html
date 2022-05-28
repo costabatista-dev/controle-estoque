@@ -2,11 +2,13 @@
   <div class="col-md-12">
     <h4 class="menu-bar">{{title}}</h4>
     <div class="row button-group">
-      <button class="col-md-3  btn menu-button button-entry" *ngFor="let entry of entries" >
-        {{entry}}
+      <button type="button"
+              class="col-md-3  btn menu-button  button-entry"
+              *ngFor="let entry of entries"
+              [routerLink]=[entry.link]>
+          {{entry.name}}
       </button>
     </div>
-
   </div>
 </div>
 

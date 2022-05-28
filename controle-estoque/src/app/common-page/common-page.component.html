@@ -1,0 +1,17 @@
+<div>
+  <app-title-bar title="{{title}}"></app-title-bar>
+  <div class="row-fluid">
+    <div class="col-md-12">
+      <h4 class="header-text">{{header}}</h4>
+    </div>
+  </div>
+  <ng-content></ng-content>
+  <app-footer text="Gerência de Estoque - Paulo Batista da Costa 2022-2022 ©">
+  </app-footer>
+</div>
+
+<style>
+  .header-text {
+    padding-inline-start: 8px;
+  }
+</style>

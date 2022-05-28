@@ -1,0 +1,12 @@
+<app-common-page title="Gerência de Estoque" header="Uma aplicação para gerenciamento de estoque de mercearias">
+  <app-menu-entry *ngFor="let item of menuEntries" [title]="item.title" [entries]="item.childs">
+  </app-menu-entry>
+  <div class="space"></div>
+
+</app-common-page>
+
+<style>
+  .space {
+    margin-bottom: 64px;
+  }
+</style>
