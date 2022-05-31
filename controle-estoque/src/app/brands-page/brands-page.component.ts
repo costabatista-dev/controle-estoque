@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BrandsPageComponent implements OnInit {
 
   name:string = "";
+  brands=[{id:'', name:''}];
 
   constructor() {
   }
@@ -26,6 +27,7 @@ export class BrandsPageComponent implements OnInit {
   save() {
     let key = localStorage.length + 1;
     localStorage.setItem(key.toString(), this.name);
+    this.brands.push({'id': key.toString(), 'name': this.name});
     console.log(localStorage.getItem(key.toString()));
   }
 

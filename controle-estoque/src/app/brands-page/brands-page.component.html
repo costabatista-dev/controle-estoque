@@ -22,10 +22,24 @@
       <div class="col-md-1">
         <button class="btn btn-danger">Cancelar</button>
       </div>
-
-
     </div>
-
+    <div class="row">
+      <p class="field-label">Marcas disponíveis</p>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let brand of brands">
+          <td>{{brand.id}}</td>
+          <td>{{brand.name}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
 
