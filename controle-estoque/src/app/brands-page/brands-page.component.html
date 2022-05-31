@@ -1,31 +1,6 @@
 <app-common-page title="Marcas"
                  header="Cadastro de Marcas">
-  <div class="container">
-    <div class="row">
-      <p class="field-label">Nome</p>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <input class="form-control" type="text" [(ngModel)]="name"/>
-      </div>
-
-    </div>
-    <div class="row buttons">
-      <div class="col-md-3">
-      </div>
-      <div class="col-md-1">
-        <button class="btn btn-success" [disabled]="disableSave()" (click)="save()">Salvar</button>
-      </div>
-      <div class="col-md-1">
-        <button class="btn btn-warning" (click)="clearNameField()">Limpar</button>
-      </div>
-      <div class="col-md-1">
-        <button class="btn btn-danger">Cancelar</button>
-      </div>
-    </div>
-    <div class="row">
-      <p class="field-label">Marcas disponíveis</p>
-    </div>
+  <app-simple-form (onChange)="name = $event" tableTitle="Marcas disponíveis">
     <table class="table">
       <thead>
         <tr>
@@ -40,12 +15,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
-
-
-
-
-
+  </app-simple-form>
 </app-common-page>
 
 <style>

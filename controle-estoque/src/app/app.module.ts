@@ -25,6 +25,7 @@ import { BatchListPageComponent } from './batch-list-page/batch-list-page.compon
 import { BrandListPageComponent } from './brand-list-page/brand-list-page.component';
 import { CommonPageComponent } from './common-page/common-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     BatchListPageComponent,
     BrandListPageComponent,
     CommonPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    SimpleFormComponent
   ],
   imports: [
     BrowserModule,

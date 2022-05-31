@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <p class="field-label">Nome</p>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <input class="form-control"
+             type="text"
+             [(ngModel)]="name"
+             (ngModelChange)="change()"/>
+    </div>
+  </div>
+  <div class="row buttons">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-1">
+      <button class="btn btn-success"
+              [disabled]="disableSave()">
+              Salvar
+      </button>
+    </div>
+    <div class="col-md-1">
+      <button class="btn btn-warning"
+              [disabled]="disableClear()"
+              (click)="clearNameField()">
+              Limpar
+      </button>
+    </div>
+    <div class="col-md-1">
+      <button class="btn btn-danger">
+        Cancelar
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <p class="field-label">
+      {{tableTitle}}
+    </p>
+  </div>
+  <ng-content>
+  </ng-content>
+</div>
+
+<style>
+  .container {
+    margin-left: 8px;
+  }
+  .field-label {
+    font-weight: bold;
+  }
+  .buttons {
+    margin-top: 8px;
+    margin-right: 40px;
+  }
+</style>
