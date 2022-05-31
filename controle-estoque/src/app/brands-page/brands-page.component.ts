@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandsPageComponent implements OnInit {
 
-  constructor() { }
+  name:string = "";
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  disableSave() {
+    return this.name.trim().length == 0
+  }
+
+  clearNameField() {
+    this.name = "";
+  }
+
+  save() {
+    let key = localStorage.length + 1;
+    localStorage.setItem(key.toString(), this.name);
+    console.log(localStorage.getItem(key.toString()));
   }
 
 }
