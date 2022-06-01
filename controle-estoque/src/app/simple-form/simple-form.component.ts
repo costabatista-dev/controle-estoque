@@ -25,13 +25,13 @@ export class SimpleFormComponent implements OnInit {
 
   constructor() {
     this.data = [];
+  }
+
+  ngOnInit(): void {
     let dataStorage = localStorage.getItem(this.listId);
     if (dataStorage) {
       this.data = JSON.parse(dataStorage);
     }
-  }
-
-  ngOnInit(): void {
   }
 
   changeName() {
