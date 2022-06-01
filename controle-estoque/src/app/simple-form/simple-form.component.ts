@@ -8,20 +8,43 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class SimpleFormComponent implements OnInit {
 
   @Output()
-  onChange = new EventEmitter();
+  onChangeName = new EventEmitter();
+
+  @Output()
+  onChangeTable = new EventEmitter();
+
   name: string = "";
+  data = [{'id': 0, 'name': ''}];
 
   @Input()
   tableTitle: string = "";
 
+  @Input()
+  listId: string = "";
+
   constructor() {
+    this.data = [];
+    let dataStorage = localStorage.getItem(this.listId);
+    if (dataStorage) {
+      this.data = JSON.parse(dataStorage);
+    }
   }
 
   ngOnInit(): void {
   }
 
-  change() {
-    this.onChange.emit(this.name);
+  changeName() {
+    this.onChangeName.emit({'name': this.name});
+  }
+
+  changeTableData() {
+    this.onChangeTable.emit(this.data);
+  }
+
+  save() {
+    this.data.push({'id': this.data.length + 1, 'name': this.name});
+    localStorage.setItem(this.listId, JSON.stringify(this.data));
+    this.clearNameField();
   }
 
   disableSave() {

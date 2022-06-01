@@ -7,7 +7,7 @@
       <input class="form-control"
              type="text"
              [(ngModel)]="name"
-             (ngModelChange)="change()"/>
+             (ngModelChange)="changeName()"/>
     </div>
   </div>
   <div class="row buttons">
@@ -15,7 +15,8 @@
     </div>
     <div class="col-md-1">
       <button class="btn btn-success"
-              [disabled]="disableSave()">
+              [disabled]="disableSave()"
+              (click)="save()">
               Salvar
       </button>
     </div>
@@ -37,6 +38,20 @@
       {{tableTitle}}
     </p>
   </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let object of data">
+        <td>{{object.id}}</td>
+        <td>{{object.name}}</td>
+      </tr>
+    </tbody>
+  </table>
   <ng-content>
   </ng-content>
 </div>

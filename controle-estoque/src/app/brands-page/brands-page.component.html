@@ -1,20 +1,8 @@
 <app-common-page title="Marcas"
                  header="Cadastro de Marcas">
-  <app-simple-form (onChange)="name = $event" tableTitle="Marcas disponíveis">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Código</th>
-          <th>Nome</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let brand of brands">
-          <td>{{brand.id}}</td>
-          <td>{{brand.name}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <app-simple-form (onChangeName)="name = $event.name"
+                   tableTitle="Marcas disponíveis"
+                   data="brands">
   </app-simple-form>
 </app-common-page>
 
