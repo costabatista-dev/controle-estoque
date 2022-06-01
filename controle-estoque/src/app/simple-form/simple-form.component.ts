@@ -89,6 +89,10 @@ export class SimpleFormComponent implements OnInit {
     return this.name.trim().length == 0;
   }
 
+  disableCancel() {
+    return this.id == 0;
+  }
+
   clearNameField() {
     this.name = "";
   }
