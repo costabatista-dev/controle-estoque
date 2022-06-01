@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,9 @@ import { BrandListPageComponent } from './brand-list-page/brand-list-page.compon
 import { CommonPageComponent } from './common-page/common-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+
+
 
 @NgModule({
   declarations: [
@@ -51,12 +55,14 @@ import { SimpleFormComponent } from './simple-form/simple-form.component';
     BrandListPageComponent,
     CommonPageComponent,
     NotFoundPageComponent,
-    SimpleFormComponent
+    SimpleFormComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AutocompleteLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

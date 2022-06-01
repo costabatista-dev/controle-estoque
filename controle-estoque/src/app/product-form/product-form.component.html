@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <p class="field-label">Nome</p>
+  </div>
+  <div class="row">
+    <div class="col-md-11">
+      <input class="form-control"
+             type="text"
+             [(ngModel)]="name"
+             (ngModelChange)="changeName()"/>
+    </div>
+    <div class="row">
+      <p class="field-label">Descrição</p>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <textarea class="form-control" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="ng-autocomplete">
+      <ng-autocomplete placeholder="Selecionar a marca"
+                     [data]="brands"
+                     [itemTemplate]="itemTemplate"
+                     [searchKeyword]="brandKeyword"
+                     (selected)='selectBrand($event)'
+                     [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+    <ng-template #itemTemplate let-item>
+      <a [innerHTML]="item.name"></a>
+      </ng-template>
+    </div>
+    <ng-template #notFoundTemplate let-notFound>
+        <p>Marca não encontrada</p>
+      </ng-template>
+  </div>
+</div>
+
+<style>
+  .container {
+    margin-left: 8px;
+  }
+
+  .field-label {
+    font-weight: bold;
+  }
+</style>
