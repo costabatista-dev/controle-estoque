@@ -44,7 +44,14 @@ export class SimpleFormComponent implements OnInit {
 
   save() {
     if (this.id == 0) {
-      this.data.push({'id': this.data.length + 1, 'name': this.name.trim()});
+      if (this.data.length == 0)
+        this.data.push({'id': 1, 'name': this.name.trim()});
+      else
+        this.data.push({
+          'id': this.data[this.data.length - 1].id + 1,
+          'name': this.name.trim()
+        })
+
     } else {
       let index = this.data.map(x => {return x.id}).indexOf(this.id);
       this.data[index].name = this.name.trim();
@@ -61,9 +68,16 @@ export class SimpleFormComponent implements OnInit {
   }
 
   delete(id:number) {
-    let index = this.data.map(x => {return x.id}).indexOf(id);
-    this.data.splice(index);
+    this.data = this.data.filter(function(element) {
+      return element.id != id;
+    })
+
     localStorage.setItem(this.listId, JSON.stringify(this.data));
+  }
+
+  cancel() {
+    this.id = 0;
+    this.name = "";
   }
 
 
