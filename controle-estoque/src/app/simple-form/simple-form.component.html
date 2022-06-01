@@ -43,12 +43,29 @@
       <tr>
         <th>Código</th>
         <th>Nome</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let object of data">
         <td>{{object.id}}</td>
         <td>{{object.name}}</td>
+        <td>
+          <div class="row">
+            <div class="col-md-2">
+              <button class="btn btn-warning"
+                      (click)="edit(object.id, object.name)">
+                Editar
+              </button>
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-danger"
+                    (click)="delete(object.id)">
+                  Excluir
+              </button>
+            </div>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -14,6 +14,7 @@ export class SimpleFormComponent implements OnInit {
   onChangeTable = new EventEmitter();
 
   name: string = "";
+  id: number = 0;
   data = [{'id': 0, 'name': ''}];
 
   @Input()
@@ -42,10 +43,29 @@ export class SimpleFormComponent implements OnInit {
   }
 
   save() {
-    this.data.push({'id': this.data.length + 1, 'name': this.name});
+    if (this.id == 0) {
+      this.data.push({'id': this.data.length + 1, 'name': this.name.trim()});
+    } else {
+      let index = this.data.map(x => {return x.id}).indexOf(this.id);
+      this.data[index].name = this.name.trim();
+    }
+
     localStorage.setItem(this.listId, JSON.stringify(this.data));
     this.clearNameField();
+    this.id = 0;
   }
+
+  edit(id:number, name:string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  delete(id:number) {
+    let index = this.data.map(x => {return x.id}).indexOf(id);
+    this.data.splice(index);
+    localStorage.setItem(this.listId, JSON.stringify(this.data));
+  }
+
 
   disableSave() {
     return this.name.trim().length == 0;
