@@ -3,46 +3,93 @@
     <p class="field-label">Nome</p>
   </div>
   <div class="row">
-    <div class="col-md-11">
-      <input class="form-control"
-             type="text"
-             [(ngModel)]="name"
-             (ngModelChange)="changeName()"/>
+    <div class="col-md-12">
+      <input class="form-control" type="text" [(ngModel)]="name" (ngModelChange)="changeName()" />
     </div>
     <div class="row">
       <p class="field-label">Descrição</p>
     </div>
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-12">
         <textarea class="form-control" rows="5"></textarea>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="ng-autocomplete">
-      <ng-autocomplete placeholder="Selecionar a marca"
-                     [data]="brands"
-                     [itemTemplate]="itemTemplate"
-                     [searchKeyword]="brandKeyword"
-                     (selected)='selectBrand($event)'
-                     [notFoundTemplate]="notFoundTemplate">
-    </ng-autocomplete>
-    <ng-template #itemTemplate let-item>
-      <a [innerHTML]="item.name"></a>
+    <div class="col-md-6">
+      <p class="field-label">Marca</p>
+      <ng-autocomplete  placeholder="Selecionar a marca" [data]="brands" [itemTemplate]="itemBrandTemplate"
+        [searchKeyword]="brandKeyword" (selected)='selectBrand($event)' [notFoundTemplate]="notFoundBrandTemplate"
+        [focusFirst]="true">
+      </ng-autocomplete>
+      <ng-template #itemBrandTemplate let-item>
+        <a [innerHTML]="item.name"></a>
       </ng-template>
     </div>
-    <ng-template #notFoundTemplate let-notFound>
-        <p>Marca não encontrada</p>
+    <ng-template #notFoundBrandTemplate let-notFound>
+      <p>Marca não encontrada</p>
+    </ng-template>
+    <div class="col-md-6">
+      <p class="field-label">Departamento</p>
+      <ng-autocomplete placeholder="Selecionar o departamento" [data]="departments"
+        [itemTemplate]="itemDepartmentTemplate" [searchKeyword]="departmentKeyword" (selected)='selectDepartment($event)'
+        [notFoundTemplate]="notFoundDepartmentTemplate" [focusFirst]="true">
+      </ng-autocomplete>
+      <ng-template #itemDepartmentTemplate let-item>
+        <a [innerHTML]="item.name"></a>
       </ng-template>
+    </div>
+    <ng-template #notFoundDepartmentTemplate let-notFound>
+      <p>Departamento não encontrado</p>
+    </ng-template>
+    <div class="row">
+      <div class="col-md-4">
+        <p class="field-label">Preço</p>
+        <input class="form-control" type="text"/>
+      </div>
+    </div>
+    <div class="row buttons">
+      <div class="col-md-9">
+        <p></p>
+      </div>
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-success"
+                [disabled]="">
+                Salvar
+        </button>
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-warning"
+                [disabled]="">
+                Limpar
+        </button>
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-danger"
+                [disabled]="">
+          Cancelar
+        </button>
+      </div>
+    </div>
   </div>
+
+
 </div>
 
 <style>
   .container {
     margin-left: 8px;
   }
-
   .field-label {
     font-weight: bold;
+    margin-top: 16px;
+  }
+  .buttons {
+    margin-top: 8px;
+    margin-bottom: 100px;
+    margin-right: 40px;
+    align-items: flex-end;
   }
 </style>

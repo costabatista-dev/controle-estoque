@@ -9,11 +9,13 @@ export class ProductFormComponent implements OnInit {
 
   name:string="";
   brands = [];
+  departments = [];
   brandKeyword = "name";
+  departmentKeyword = "name";
 
   constructor() {
     this.loadBrands();
-    console.log(this.brands)
+    this.loadDepartments();
   }
 
   ngOnInit(): void {
@@ -33,7 +35,21 @@ export class ProductFormComponent implements OnInit {
     }
   }
 
+  loadDepartments(): void {
+    let localDepartments = localStorage.getItem('departments');
+
+    if (localDepartments) {
+      this.departments = JSON.parse(localDepartments);
+    } else {
+      this.brands = [];
+    }
+  }
+
   selectBrand(item: Event): void {
+    console.log(item);
+  }
+
+  selectDepartment(item: Event): void {
     console.log(item);
   }
 }
