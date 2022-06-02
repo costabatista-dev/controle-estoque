@@ -19,13 +19,12 @@ export class ProductFormComponent implements OnInit {
   product = {"id":0, "name":'', description: '', 'brand': 0, 'department': 0, 'price': 0};
   departmentModel:string="";
   brandModel:string="";
+  isValidPrice: boolean=true;
 
   constructor() {
     this.loadBrands();
     this.loadDepartments();
     let storage = localStorage.getItem('products');
-    if (storage)
-      console.log(JSON.parse(storage));
   }
 
   ngOnInit(): void {
@@ -84,7 +83,20 @@ export class ProductFormComponent implements OnInit {
     this.product.price = Number(this.price);
   }
 
+  validatePrice(): boolean {
+    if (this.price.match(/(\d{1,3}(\.\d{3})*|\d+)(\,\d{2})?$/)) {
+      this.isValidPrice = true;
+      return true;
+    }
+    this.isValidPrice = false;
+    return false;
+  }
+
   save(): void {
+    if (!this.validatePrice()) {
+      alert('Preço inválido');
+      return;
+    }
     this.createId();
     this.createProduct();
     let storage = localStorage.getItem('products');
