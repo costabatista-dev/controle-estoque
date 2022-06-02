@@ -50,14 +50,19 @@ export class SimpleFormComponent implements OnInit {
         this.data.push({
           'id': this.data[this.data.length - 1].id + 1,
           'name': this.name.trim()
-        })
+        });
+      localStorage.setItem(this.listId, JSON.stringify(this.data));
+      alert('Registro salvo com sucesso!')
 
     } else {
-      let index = this.data.map(x => {return x.id}).indexOf(this.id);
-      this.data[index].name = this.name.trim();
+      let text = "Deseja atualizar o registro?";
+      if (confirm(text)) {
+        let index = this.data.map(x => {return x.id}).indexOf(this.id);
+        this.data[index].name = this.name.trim();
+        localStorage.setItem(this.listId, JSON.stringify(this.data));
+        alert('Registro salvo com sucesso!')
+      }
     }
-    localStorage.setItem(this.listId, JSON.stringify(this.data));
-    alert('Registro salvo com sucesso!')
     this.clearNameField();
     this.id = 0;
   }
