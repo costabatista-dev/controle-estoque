@@ -18,7 +18,7 @@
   <div class="row">
     <div class="col-md-6">
       <p class="field-label">Marca</p>
-      <ng-autocomplete  placeholder="Selecionar a marca" [data]="brands" [itemTemplate]="itemBrandTemplate"
+      <ng-autocomplete  [(ngModel)]="brandModel" placeholder="Selecionar a marca" [data]="brands" [itemTemplate]="itemBrandTemplate"
         [searchKeyword]="brandKeyword" (selected)='selectBrand($event)' [notFoundTemplate]="notFoundBrandTemplate"
         [focusFirst]="true">
       </ng-autocomplete>
@@ -31,7 +31,7 @@
     </ng-template>
     <div class="col-md-6">
       <p class="field-label">Departamento</p>
-      <ng-autocomplete placeholder="Selecionar o departamento" [data]="departments"
+      <ng-autocomplete [(ngModel)]="departmentModel" placeholder="Selecionar o departamento" [data]="departments" #departmentAuto
         [itemTemplate]="itemDepartmentTemplate" [searchKeyword]="departmentKeyword" (selected)='selectDepartment($event)'
         [notFoundTemplate]="notFoundDepartmentTemplate" [focusFirst]="true">
       </ng-autocomplete>
@@ -63,7 +63,8 @@
       </div>
       <div class="col-md-1">
         <button class="btn btn-warning"
-                [disabled]="">
+                [disabled]=""
+                (click)="clearFields()">
                 Limpar
         </button>
       </div>

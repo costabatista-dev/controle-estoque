@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-product-form',
@@ -11,12 +11,14 @@ export class ProductFormComponent implements OnInit {
   description:string="";
   brand:number=0;
   department:number=0;
-  price:number=0;
+  price:string='';
   brands = [];
   departments = [];
   brandKeyword = "name";
   departmentKeyword = "name";
   product = {"id":0, "name":'', description: '', 'brand': 0, 'department': 0, 'price': 0};
+  departmentModel:string="";
+  brandModel:string="";
 
   constructor() {
     this.loadBrands();
@@ -52,10 +54,12 @@ export class ProductFormComponent implements OnInit {
 
   selectBrand(item:{'id':0, 'name':''}): void {
     this.brand = item.id;
+    this.brandModel = item.name;
   }
 
   selectDepartment(item:{'id':0, 'name':''}): void {
     this.department = item.id;
+    this.departmentModel = item.name;
   }
 
   createId(): void {
@@ -77,7 +81,7 @@ export class ProductFormComponent implements OnInit {
     this.product.description = this.description;
     this.product.brand = this.brand;
     this.product.department = this.department;
-    this.product.price = this.price;
+    this.product.price = Number(this.price);
   }
 
   save(): void {
@@ -92,8 +96,18 @@ export class ProductFormComponent implements OnInit {
       let products = [this.product];
       localStorage.setItem('products', JSON.stringify(products));
     }
+    this.clearFields();
+  }
 
-
+  clearFields(): void {
+    this.name = '';
+    this.description = '';
+    this.id = 0;
+    this.brand = 0;
+    this.department = 0;
+    this.price = '';
+    this.departmentModel = "";
+    this.brandModel = "";
   }
 
 
