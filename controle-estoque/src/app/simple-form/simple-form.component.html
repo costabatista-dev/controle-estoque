@@ -40,7 +40,7 @@
       {{tableTitle}}
     </p>
   </div>
-  <table class="table">
+  <table class="table bottom-fix">
     <thead>
       <tr>
         <th>Código</th>
@@ -71,8 +71,6 @@
       </tr>
     </tbody>
   </table>
-  <ng-content>
-  </ng-content>
 </div>
 
 <style>
@@ -85,5 +83,8 @@
   .buttons {
     margin-top: 8px;
     margin-right: 40px;
+  }
+  .bottom-fix {
+    margin-bottom: 50px;
   }
 </style>

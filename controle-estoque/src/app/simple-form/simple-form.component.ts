@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-simple-form',
@@ -58,6 +57,7 @@ export class SimpleFormComponent implements OnInit {
       this.data[index].name = this.name.trim();
     }
     localStorage.setItem(this.listId, JSON.stringify(this.data));
+    alert('Registro salvo com sucesso!')
     this.clearNameField();
     this.id = 0;
   }
@@ -68,11 +68,15 @@ export class SimpleFormComponent implements OnInit {
   }
 
   delete(id:number) {
-    this.data = this.data.filter(function(element) {
-      return element.id != id;
-    })
+    let text = "Deseja remover o registro?";
+    if (confirm(text)) {
+      this.data = this.data.filter(function(element) {
+        return element.id != id;
+      })
 
-    localStorage.setItem(this.listId, JSON.stringify(this.data));
+      localStorage.setItem(this.listId, JSON.stringify(this.data));
+    }
+
   }
 
   cancel() {
