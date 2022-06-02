@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-simple-form',
@@ -56,7 +57,6 @@ export class SimpleFormComponent implements OnInit {
       let index = this.data.map(x => {return x.id}).indexOf(this.id);
       this.data[index].name = this.name.trim();
     }
-
     localStorage.setItem(this.listId, JSON.stringify(this.data));
     this.clearNameField();
     this.id = 0;
@@ -82,15 +82,19 @@ export class SimpleFormComponent implements OnInit {
 
 
   disableSave() {
-    return this.name.trim().length == 0;
+    return this.isNameEmpty();
   }
 
   disableClear() {
-    return this.name.trim().length == 0;
+    return this.isNameEmpty();
   }
 
   disableCancel() {
     return this.id == 0;
+  }
+
+  isNameEmpty(): boolean {
+    return (this.name.match(/^\s*$/g)) ? true : false;
   }
 
   clearNameField() {
