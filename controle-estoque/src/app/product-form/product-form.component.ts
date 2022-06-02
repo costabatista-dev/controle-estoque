@@ -6,24 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent implements OnInit {
-
+  id:number=0;
   name:string="";
+  description:string="";
+  brand:number=0;
+  department:number=0;
+  price:number=0;
   brands = [];
   departments = [];
   brandKeyword = "name";
   departmentKeyword = "name";
+  product = {"id":0, "name":'', description: '', 'brand': 0, 'department': 0, 'price': 0};
 
   constructor() {
     this.loadBrands();
     this.loadDepartments();
+    let storage = localStorage.getItem('products');
+    if (storage)
+      console.log(JSON.parse(storage));
   }
 
   ngOnInit(): void {
   }
 
-  changeName(): void {
-
-  }
 
   loadBrands(): void {
     let localBrands = localStorage.getItem('brands');
@@ -45,11 +50,53 @@ export class ProductFormComponent implements OnInit {
     }
   }
 
-  selectBrand(item: Event): void {
-    console.log(item);
+  selectBrand(item:{'id':0, 'name':''}): void {
+    this.brand = item.id;
   }
 
-  selectDepartment(item: Event): void {
-    console.log(item);
+  selectDepartment(item:{'id':0, 'name':''}): void {
+    this.department = item.id;
   }
+
+  createId(): void {
+    let storage = localStorage.getItem("products");
+
+    if (storage) {
+      let products = JSON.parse(storage);
+      let lastIndex = products.length - 1;
+      let lastId = products[lastIndex].id + 1;
+      this.id = lastId;
+    } else {
+      this.id = 1;
+    }
+  }
+
+  createProduct() {
+    this.product.id = this.id;
+    this.product.name = this.name;
+    this.product.description = this.description;
+    this.product.brand = this.brand;
+    this.product.department = this.department;
+    this.product.price = this.price;
+  }
+
+  save(): void {
+    this.createId();
+    this.createProduct();
+    let storage = localStorage.getItem('products');
+    if (storage) {
+      let products = JSON.parse(storage);
+      products.push(this.product);
+      localStorage.setItem('products', JSON.stringify(products));
+    } else {
+      let products = [this.product];
+      localStorage.setItem('products', JSON.stringify(products));
+    }
+
+
+  }
+
+
+
+
 }
