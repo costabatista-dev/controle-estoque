@@ -53,7 +53,8 @@ export class SimpleFormComponent implements OnInit {
         });
       localStorage.setItem(this.listId, JSON.stringify(this.data));
       alert('Registro salvo com sucesso!')
-
+      this.clearNameField();
+      this.id = 0;
     } else {
       let text = "Deseja atualizar o registro?";
       if (confirm(text)) {
@@ -61,10 +62,10 @@ export class SimpleFormComponent implements OnInit {
         this.data[index].name = this.name.trim();
         localStorage.setItem(this.listId, JSON.stringify(this.data));
         alert('Registro salvo com sucesso!')
+        this.clearNameField();
+        this.id = 0;
       }
     }
-    this.clearNameField();
-    this.id = 0;
   }
 
   edit(id:number, name:string) {
