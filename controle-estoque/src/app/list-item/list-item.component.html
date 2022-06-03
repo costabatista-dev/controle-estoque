@@ -1,5 +1,12 @@
 <div class="container">
   <div class="row">
+    <div class="col-md-6 name-field">
+      <p class="field-label">Consultar por nome</p>
+      <input class="form-control" placeholder="Insira um nome para filtrar" type="text" [(ngModel)]="searchTerm"
+        (ngModelChange)="onChangeNameFilter()" />
+    </div>
+  </div>
+  <div class="row">
     <p class="field-label">
       {{tableTitle}}
     </p>
@@ -13,7 +20,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let object of dataTable">
+      <tr *ngFor="let object of searchableTable">
         <td>{{object.id}}</td>
         <td>{{object.name}}</td>
         <td>
@@ -34,9 +41,15 @@
   .container {
     margin-left: 8px;
   }
-   .field-label {
+
+  .name-field {
+    margin-bottom: 32px;
+  }
+
+  .field-label {
     font-weight: bold;
   }
+
   .bottom-fix {
     margin-bottom: 50px;
   }
