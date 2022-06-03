@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-form',
@@ -6,31 +7,55 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent implements OnInit {
-  id:number=0;
-  name:string="";
-  description:string="";
-  brand:number=0;
-  department:number=0;
-  price:string='';
-  brands = [];
-  departments = [];
+  id: number = 0;
+  name: string = "";
+  description: string = "";
+  brand: number = 0;
+  department: number = 0;
+  price: string = '';
+  brands = [{'id':0, 'name': ''}];
+  departments = [{'id':0, 'name': ''}];
   brandKeyword = "name";
   departmentKeyword = "name";
-  product = {"id":0, "name":'', description: '', 'brand': 0, 'department': 0, 'price': 0};
-  departmentModel:string="";
-  brandModel:string="";
-  isValidName: boolean=true;
-  isValidBrand: boolean=true;
-  isValidDepartment: boolean=true;
-  isValidPrice: boolean=true;
+  product = { "id": 0, "name": '', description: '', 'brand': 0, 'department': 0, 'price': 0 };
+  departmentModel: string = "";
+  brandModel: string = "";
+  isValidName: boolean = true;
+  isValidBrand: boolean = true;
+  isValidDepartment: boolean = true;
+  isValidPrice: boolean = true;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.loadBrands();
     this.loadDepartments();
     let storage = localStorage.getItem('products');
   }
 
   ngOnInit(): void {
+    let id = this.route.snapshot.params['id'];
+    let dataStorage = localStorage.getItem("products");
+    if (dataStorage && id) {
+      let data = [{ 'id': 0, 'name': '', 'description': '','brand': 0, 'department': 0, 'price': '' }];
+      data = JSON.parse(dataStorage);
+      id = Number(id);
+
+      let index = data.map(x => { return x.id }).indexOf(id);
+      let object = data[index];
+      console.log(object);
+      this.id = object.id;
+      this.name = object.name;
+      this.description = object.description;
+      this.brand = object.brand;
+      this.department = object.department;
+      this.price = object.price.toString();
+
+      let brandIndex = this.brands.map(x => {return x.id}).indexOf(this.brand);
+      this.brandModel = this.brands[brandIndex].name;
+
+      let departmentIndex = this.departments.map(x => {return x.id}).indexOf(this.department);
+      console.log(this.departments[departmentIndex])
+      this.departmentModel = this.departments[departmentIndex].name;
+    }
   }
 
 
@@ -54,26 +79,28 @@ export class ProductFormComponent implements OnInit {
     }
   }
 
-  selectBrand(item:{'id':0, 'name':''}): void {
+  selectBrand(item: { 'id': 0, 'name': '' }): void {
     this.brand = item.id;
     this.brandModel = item.name;
   }
 
-  selectDepartment(item:{'id':0, 'name':''}): void {
+  selectDepartment(item: { 'id': 0, 'name': '' }): void {
     this.department = item.id;
     this.departmentModel = item.name;
   }
 
   createId(): void {
-    let storage = localStorage.getItem("products");
+    if (this.id == 0) {
+      let storage = localStorage.getItem("products");
 
-    if (storage) {
-      let products = JSON.parse(storage);
-      let lastIndex = products.length - 1;
-      let lastId = products[lastIndex].id + 1;
-      this.id = lastId;
-    } else {
-      this.id = 1;
+      if (storage) {
+        let products = JSON.parse(storage);
+        let lastIndex = products.length - 1;
+        let lastId = products[lastIndex].id + 1;
+        this.id = lastId;
+      } else {
+        this.id = 1;
+      }
     }
   }
 
@@ -83,8 +110,9 @@ export class ProductFormComponent implements OnInit {
     this.product.description = this.description.trim();
     this.product.brand = this.brand;
     this.product.department = this.department;
-    this.product.price = Number(this.price.replace(",","."));
+    this.product.price = Number(this.price.replace(",", "."));
   }
+
 
   validateName(): boolean {
     this.isValidName = this.name.trim().length != 0;
@@ -166,12 +194,12 @@ export class ProductFormComponent implements OnInit {
 
   disableSave(): boolean {
     return (this.name.trim().length == 0 || this.brandModel.trim().length == 0 ||
-            this.departmentModel.trim().length == 0 || this.price.trim().length == 0);
+      this.departmentModel.trim().length == 0 || this.price.trim().length == 0);
   }
 
   disableClear(): boolean {
     return (this.name.length == 0 && this.brandModel.length == 0 &&
-    this.departmentModel.length == 0 && this.price.length == 0 && this.description.length == 0);
+      this.departmentModel.length == 0 && this.price.length == 0 && this.description.length == 0);
   }
 
 }
