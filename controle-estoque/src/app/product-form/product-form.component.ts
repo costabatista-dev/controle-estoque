@@ -13,8 +13,8 @@ export class ProductFormComponent implements OnInit {
   brand: number = 0;
   department: number = 0;
   price: string = '';
-  brands = [{'id':0, 'name': ''}];
-  departments = [{'id':0, 'name': ''}];
+  brands = [{ 'id': 0, 'name': '' }];
+  departments = [{ 'id': 0, 'name': '' }];
   brandKeyword = "name";
   departmentKeyword = "name";
   product = { "id": 0, "name": '', description: '', 'brand': 0, 'department': 0, 'price': 0 };
@@ -35,7 +35,7 @@ export class ProductFormComponent implements OnInit {
     let id = this.route.snapshot.params['id'];
     let dataStorage = localStorage.getItem("products");
     if (dataStorage && id) {
-      let data = [{ 'id': 0, 'name': '', 'description': '','brand': 0, 'department': 0, 'price': '' }];
+      let data = [{ 'id': 0, 'name': '', 'description': '', 'brand': 0, 'department': 0, 'price': '' }];
       data = JSON.parse(dataStorage);
       id = Number(id);
 
@@ -49,10 +49,10 @@ export class ProductFormComponent implements OnInit {
       this.department = object.department;
       this.price = object.price.toString();
 
-      let brandIndex = this.brands.map(x => {return x.id}).indexOf(this.brand);
+      let brandIndex = this.brands.map(x => { return x.id }).indexOf(this.brand);
       this.brandModel = this.brands[brandIndex].name;
 
-      let departmentIndex = this.departments.map(x => {return x.id}).indexOf(this.department);
+      let departmentIndex = this.departments.map(x => { return x.id }).indexOf(this.department);
       console.log(this.departments[departmentIndex])
       this.departmentModel = this.departments[departmentIndex].name;
     }
@@ -95,9 +95,13 @@ export class ProductFormComponent implements OnInit {
 
       if (storage) {
         let products = JSON.parse(storage);
-        let lastIndex = products.length - 1;
-        let lastId = products[lastIndex].id + 1;
-        this.id = lastId;
+        if (products.length > 0) {
+          let lastIndex = products.length - 1;
+          let lastId = products[lastIndex].id + 1;
+          this.id = lastId;
+        } else {
+          this.id = 1;
+        }
       } else {
         this.id = 1;
       }
@@ -163,17 +167,32 @@ export class ProductFormComponent implements OnInit {
       alert("Campos obrigatórios com valores inválidos!")
       return;
     }
-    this.createId();
-    this.createProduct();
-    let storage = localStorage.getItem('products');
-    if (storage) {
-      let products = JSON.parse(storage);
-      products.push(this.product);
-      localStorage.setItem('products', JSON.stringify(products));
+    if (this.id != 0) {
+      let storage = localStorage.getItem('products');
+      if (storage) {
+        let products = [{ 'id': 0, 'name': '', 'description': '', 'brand': 0, 'department': 0, 'price': 0 }];
+        products = JSON.parse(storage);
+        let productIndex = products.map(x => { return x.id }).indexOf(this.id);
+        this.createProduct();
+        products[productIndex] = this.product;
+        localStorage.setItem('products', JSON.stringify(products));
+      }
+
     } else {
-      let products = [this.product];
-      localStorage.setItem('products', JSON.stringify(products));
+      this.createId();
+      this.createProduct();
+      let storage = localStorage.getItem('products');
+      if (storage) {
+        let products = JSON.parse(storage);
+        products.push(this.product);
+        localStorage.setItem('products', JSON.stringify(products));
+      } else {
+        let products = [this.product];
+        localStorage.setItem('products', JSON.stringify(products));
+      }
     }
+
+
     this.clearFields();
   }
 
@@ -193,13 +212,31 @@ export class ProductFormComponent implements OnInit {
   }
 
   disableSave(): boolean {
-    return (this.name.trim().length == 0 || this.brandModel.trim().length == 0 ||
-      this.departmentModel.trim().length == 0 || this.price.trim().length == 0);
+    return (this.name.trim().length == 0 || this.price.trim().length == 0);
   }
 
-  disableClear(): boolean {
-    return (this.name.length == 0 && this.brandModel.length == 0 &&
-      this.departmentModel.length == 0 && this.price.length == 0 && this.description.length == 0);
+  disableDelete(): boolean {
+    return (this.id == 0);
+  }
+
+  delete() {
+    let text = "Deseja excluir o produto?";
+    if (confirm(text)) {
+      let productStorage = localStorage.getItem('products');
+      if (productStorage) {
+        let products = [{ 'id': 0 }];
+        products = JSON.parse(productStorage);
+        let index = products.map(x => { return x.id }).indexOf(this.id);
+        if (index == 0)
+          products.shift();
+        else if (index == products.length - 1)
+          products.pop();
+        else
+          products.splice(index, index);
+
+        localStorage.setItem('products', JSON.stringify(products));
+      }
+    }
   }
 
 }

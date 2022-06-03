@@ -83,8 +83,13 @@
           </button>
         </div>
         <div class="col-md-1">
-          <button class="btn btn-warning" [disabled]="disableClear()" (click)="clearFields()">
+          <button class="btn btn-warning"  (click)="clearFields()">
             Limpar
+          </button>
+        </div>
+        <div class="col-md-1">
+          <button class="btn btn-danger" [routerLink]="'/'" (click)="delete()" [disabled]="disableDelete()">
+            Excluir
           </button>
         </div>
         <div class="col-md-1">
