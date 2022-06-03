@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./batch-list-page.component.css']
 })
 export class BatchListPageComponent implements OnInit {
+  batches=[{'id':0, 'name': ''}]
 
-  constructor() { }
+  constructor() {
+    this.batches = [];
+  }
 
   ngOnInit(): void {
+    this.batches = this.findBatches();
   }
+
+  findBatches():[] {
+    let localBatches = localStorage.getItem('batches');
+    if (localBatches)
+      return JSON.parse(localBatches);
+    return [];
+  }
+
 
 }

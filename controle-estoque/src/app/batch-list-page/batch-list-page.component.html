@@ -1,4 +1,4 @@
-<app-common-page title="Lotes"
-                 header="Listagem e consulta de lotes">
-  <h4><a [routerLink]="['/batches', 1]">Clique para teste de rota com parâmetro</a></h4>
+<app-common-page title="Lotes" header="Listagem e consulta de lotes">
+  <app-list-item tableTitle="Lotes disponíveis" [dataTable]="batches" dataStorage="batches">
+  </app-list-item>
 </app-common-page>
