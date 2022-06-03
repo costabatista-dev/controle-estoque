@@ -28,6 +28,7 @@ import { CommonPageComponent } from './common-page/common-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ListItemComponent } from './list-item/list-item.component';
 
 
 
@@ -56,7 +57,8 @@ import { ProductFormComponent } from './product-form/product-form.component';
     CommonPageComponent,
     NotFoundPageComponent,
     SimpleFormComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,

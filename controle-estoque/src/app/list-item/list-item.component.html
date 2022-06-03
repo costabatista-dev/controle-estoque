@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <p class="field-label">
+      {{tableTitle}}
+    </p>
+  </div>
+  <table class="table bottom-fix">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let object of dataTable">
+        <td>{{object.id}}</td>
+        <td>{{object.name}}</td>
+        <td>
+          <div class="row">
+            <div class="col-md-2">
+              <button class="btn btn-warning" [routerLink]="'/' + dataStorage + '/' + object.id">
+                Detalhes
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .container {
+    margin-left: 8px;
+  }
+   .field-label {
+    font-weight: bold;
+  }
+  .bottom-fix {
+    margin-bottom: 50px;
+  }
+</style>

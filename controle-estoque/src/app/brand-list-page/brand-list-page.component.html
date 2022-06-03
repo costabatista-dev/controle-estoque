@@ -1,3 +1,4 @@
 <app-common-page title="Marcas" header="Listagem e consulta de marcas">
-  <h4><a [routerLink]="['/brands', 1]">Clique para teste de rota com parâmetro</a></h4>
+  <app-list-item tableTitle="Marcas disponíveis" [dataTable]="brands" dataStorage="brands">
+  </app-list-item>
 </app-common-page>
