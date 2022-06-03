@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-simple-form',
@@ -15,7 +16,7 @@ export class SimpleFormComponent implements OnInit {
 
   name: string = "";
   id: number = 0;
-  data = [{'id': 0, 'name': ''}];
+  data = [{ 'id': 0, 'name': '' }];
 
   @Input()
   tableTitle: string = "";
@@ -23,19 +24,28 @@ export class SimpleFormComponent implements OnInit {
   @Input()
   listId: string = "";
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.data = [];
   }
 
   ngOnInit(): void {
+    let id = this.route.snapshot.params['id'];
+
     let dataStorage = localStorage.getItem(this.listId);
     if (dataStorage) {
       this.data = JSON.parse(dataStorage);
+      if (id) {
+        id = Number(id);
+        let index = this.data.map(x => { return x.id }).indexOf(id);
+        this.edit(this.data[index].id, this.data[index].name);
+      }
     }
+
+
   }
 
   changeName() {
-    this.onChangeName.emit({'name': this.name});
+    this.onChangeName.emit({ 'name': this.name });
   }
 
   changeTableData() {
@@ -45,7 +55,7 @@ export class SimpleFormComponent implements OnInit {
   save() {
     if (this.id == 0) {
       if (this.data.length == 0)
-        this.data.push({'id': 1, 'name': this.name.trim()});
+        this.data.push({ 'id': 1, 'name': this.name.trim() });
       else
         this.data.push({
           'id': this.data[this.data.length - 1].id + 1,
@@ -58,7 +68,7 @@ export class SimpleFormComponent implements OnInit {
     } else {
       let text = "Deseja atualizar o registro?";
       if (confirm(text)) {
-        let index = this.data.map(x => {return x.id}).indexOf(this.id);
+        let index = this.data.map(x => { return x.id }).indexOf(this.id);
         this.data[index].name = this.name.trim();
         localStorage.setItem(this.listId, JSON.stringify(this.data));
         alert('Registro salvo com sucesso!')
@@ -68,15 +78,15 @@ export class SimpleFormComponent implements OnInit {
     }
   }
 
-  edit(id:number, name:string) {
+  edit(id: number, name: string) {
     this.id = id;
     this.name = name;
   }
 
-  delete(id:number) {
+  delete(id: number) {
     let text = "Deseja remover o registro?";
     if (confirm(text)) {
-      this.data = this.data.filter(function(element) {
+      this.data = this.data.filter(function (element) {
         return element.id != id;
       })
 
