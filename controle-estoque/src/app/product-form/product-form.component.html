@@ -78,12 +78,12 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-1">
-          <button class="btn btn-success" [disabled]="" (click)="save()">
+          <button class="btn btn-success" [disabled]="disableSave()" (click)="save()">
             Salvar
           </button>
         </div>
         <div class="col-md-1">
-          <button class="btn btn-warning" [disabled]="" (click)="clearFields()">
+          <button class="btn btn-warning" [disabled]="disableClear()" (click)="clearFields()">
             Limpar
           </button>
         </div>

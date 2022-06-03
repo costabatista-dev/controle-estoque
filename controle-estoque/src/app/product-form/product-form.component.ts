@@ -79,8 +79,8 @@ export class ProductFormComponent implements OnInit {
 
   createProduct() {
     this.product.id = this.id;
-    this.product.name = this.name;
-    this.product.description = this.description;
+    this.product.name = this.name.trim();
+    this.product.description = this.description.trim();
     this.product.brand = this.brand;
     this.product.department = this.department;
     this.product.price = Number(this.price.replace(",","."));
@@ -120,13 +120,19 @@ export class ProductFormComponent implements OnInit {
     return false;
   }
 
-  save(): void {
+  validate(): boolean {
     this.validateName();
     this.validateBrand();
     this.validateDepartment();
     this.validatePrice();
-    if (!this.isValidName || !this.isValidBrand || !this.isValidDepartment || !this.isValidPrice) {
-      alert("Campos obrigatórios não preenchidos!")
+
+    return this.isValidName && this.isValidBrand && this.isValidDepartment && this.isValidPrice;
+  }
+
+  save(): void {
+
+    if (!this.validate()) {
+      alert("Campos obrigatórios com valores inválidos!")
       return;
     }
     this.createId();
@@ -152,9 +158,20 @@ export class ProductFormComponent implements OnInit {
     this.price = '';
     this.departmentModel = "";
     this.brandModel = "";
+    this.isValidName = true;
+    this.isValidBrand = true;
+    this.isValidDepartment = true;
+    this.isValidPrice = true;
   }
 
+  disableSave(): boolean {
+    return (this.name.trim().length == 0 || this.brandModel.trim().length == 0 ||
+            this.departmentModel.trim().length == 0 || this.price.trim().length == 0);
+  }
 
-
+  disableClear(): boolean {
+    return (this.name.length == 0 && this.brandModel.length == 0 &&
+    this.departmentModel.length == 0 && this.price.length == 0 && this.description.length == 0);
+  }
 
 }
