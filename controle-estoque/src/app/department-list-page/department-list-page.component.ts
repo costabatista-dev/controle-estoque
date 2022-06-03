@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./department-list-page.component.css']
 })
 export class DepartmentListPageComponent implements OnInit {
+  departments=[{'id':0, 'name': ''}];
 
-  constructor() { }
+  constructor() {
+    this.departments = [];
+  }
+
+  findDepartments(): [] {
+    let localDepartments = localStorage.getItem('departments');
+    if (localDepartments) {
+      return JSON.parse(localDepartments);
+    }
+    return [];
+  }
 
   ngOnInit(): void {
+    this.departments = this.findDepartments();
   }
 
 }
