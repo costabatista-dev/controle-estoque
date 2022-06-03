@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list-page.component.css']
 })
 export class ProductListPageComponent implements OnInit {
+  products=[{'id':0, 'name':''}]
 
-  constructor() { }
+  constructor() {
+    this.products = [];
+  }
+
+  findProducts(): [] {
+    let localProducts = localStorage.getItem('products');
+    if (localProducts)
+      return JSON.parse(localProducts);
+    return [];
+  }
 
   ngOnInit(): void {
+    this.products = this.findProducts();
   }
 
 }
