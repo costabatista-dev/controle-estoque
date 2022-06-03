@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location-list-page.component.css']
 })
 export class LocationListPageComponent implements OnInit {
+  locations=[{'id':0, 'name': ''}];
 
-  constructor() { }
+  constructor() {
+    this.locations = [];
+  }
+
+  findLocations(): [] {
+    let localLocations = localStorage.getItem('locations');
+    if (localLocations)
+      return JSON.parse(localLocations);
+    return [];
+  }
 
   ngOnInit(): void {
+    this.locations = this.findLocations();
   }
 
 }
