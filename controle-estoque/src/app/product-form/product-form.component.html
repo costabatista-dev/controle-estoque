@@ -5,7 +5,11 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <input class="form-control" type="text" [(ngModel)]="name" name="name"/>
+        <input  class="form-control" *ngIf="isValidName" type="text" [(ngModel)]="name" name="name"/>
+        <input  class="form-control is-invalid" *ngIf="!isValidName" type="text" [(ngModel)]="name" name="name"/>
+        <div class="invalid-feedback">
+          Insira um nome
+        </div>
       </div>
       <div class="row">
         <p class="field-label">Descrição</p>
@@ -19,10 +23,17 @@
     <div class="row">
       <div class="col-md-6">
         <p class="field-label">Marca</p>
-        <ng-autocomplete [(ngModel)]="brandModel" name="brandModel" placeholder="Selecionar a marca" [data]="brands"
+        <ng-autocomplete class="is-valid" *ngIf="isValidBrand" [(ngModel)]="brandModel" name="brandModel" placeholder="Selecionar a marca" [data]="brands"
           [itemTemplate]="itemBrandTemplate" [searchKeyword]="brandKeyword" (selected)='selectBrand($event)'
           [notFoundTemplate]="notFoundBrandTemplate" [focusFirst]="true">
         </ng-autocomplete>
+        <ng-autocomplete class="is-invalid" *ngIf="!isValidBrand" [(ngModel)]="brandModel" name="brandModel" placeholder="Selecionar a marca" [data]="brands"
+          [itemTemplate]="itemBrandTemplate" [searchKeyword]="brandKeyword" (selected)='selectBrand($event)'
+          [notFoundTemplate]="notFoundBrandTemplate" [focusFirst]="true">
+        </ng-autocomplete>
+        <div class="invalid-feedback">
+          Marca inválida
+        </div>
         <ng-template #itemBrandTemplate let-item>
           <a [innerHTML]="item.name"></a>
         </ng-template>
@@ -32,10 +43,17 @@
       </ng-template>
       <div class="col-md-6">
         <p class="field-label">Departamento</p>
-        <ng-autocomplete [(ngModel)]="departmentModel" name="departmentModel" placeholder="Selecionar o departamento" [data]="departments"
+        <ng-autocomplete class="is-valid" *ngIf="isValidDepartment"[(ngModel)]="departmentModel" name="departmentModel" placeholder="Selecionar o departamento" [data]="departments"
           #departmentAuto [itemTemplate]="itemDepartmentTemplate" [searchKeyword]="departmentKeyword"
           (selected)='selectDepartment($event)' [notFoundTemplate]="notFoundDepartmentTemplate" [focusFirst]="true">
         </ng-autocomplete>
+        <ng-autocomplete class="is-invalid" *ngIf="!isValidDepartment"[(ngModel)]="departmentModel" name="departmentModel" placeholder="Selecionar o departamento" [data]="departments"
+          #departmentAuto [itemTemplate]="itemDepartmentTemplate" [searchKeyword]="departmentKeyword"
+          (selected)='selectDepartment($event)' [notFoundTemplate]="notFoundDepartmentTemplate" [focusFirst]="true">
+        </ng-autocomplete>
+        <div class="invalid-feedback">
+          Departamento inválido
+        </div>
         <ng-template #itemDepartmentTemplate let-item>
           <a [innerHTML]="item.name"></a>
         </ng-template>

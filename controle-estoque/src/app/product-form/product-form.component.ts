@@ -19,6 +19,9 @@ export class ProductFormComponent implements OnInit {
   product = {"id":0, "name":'', description: '', 'brand': 0, 'department': 0, 'price': 0};
   departmentModel:string="";
   brandModel:string="";
+  isValidName: boolean=true;
+  isValidBrand: boolean=true;
+  isValidDepartment: boolean=true;
   isValidPrice: boolean=true;
 
   constructor() {
@@ -80,7 +83,32 @@ export class ProductFormComponent implements OnInit {
     this.product.description = this.description;
     this.product.brand = this.brand;
     this.product.department = this.department;
-    this.product.price = Number(this.price);
+    this.product.price = Number(this.price.replace(",","."));
+  }
+
+  validateName(): boolean {
+    this.isValidName = this.name.trim().length != 0;
+    return this.isValidName;
+  }
+
+  validateBrand(): boolean {
+    if (this.brand == 0) {
+      this.isValidBrand = false;
+      return false;
+    }
+
+    this.isValidBrand = true;
+    return true;
+  }
+
+  validateDepartment(): boolean {
+    if (this.department == 0) {
+      this.isValidDepartment = false;
+      return false;
+    }
+
+    this.isValidDepartment = true;
+    return true;
   }
 
   validatePrice(): boolean {
@@ -93,8 +121,12 @@ export class ProductFormComponent implements OnInit {
   }
 
   save(): void {
-    if (!this.validatePrice()) {
-      alert('Preço inválido');
+    this.validateName();
+    this.validateBrand();
+    this.validateDepartment();
+    this.validatePrice();
+    if (!this.isValidName || !this.isValidBrand || !this.isValidDepartment || !this.isValidPrice) {
+      alert("Campos obrigatórios não preenchidos!")
       return;
     }
     this.createId();
