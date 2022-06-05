@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +13,7 @@ import { ProductsPageComponent } from './products-page/products-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DepartmentPageComponent } from './department-page/department-page.component';
 import { BatchesPageComponent } from './batches-page/batches-page.component';
-import { BrandsPageComponent } from './brands-page/brands-page.component';
+import { BrandsPageComponent } from './brand/brands-page/brands-page.component';
 import { LocationsPageComponent } from './locations-page/locations-page.component';
 import { StockEntryPageComponent } from './stock-entry-page/stock-entry-page.component';
 import { StockOutPageComponent } from './stock-out-page/stock-out-page.component';
@@ -23,7 +24,7 @@ import { StockListPageComponent } from './stock-list-page/stock-list-page.compon
 import { DepartmentListPageComponent } from './department-list-page/department-list-page.component';
 import { LocationListPageComponent } from './location-list-page/location-list-page.component';
 import { BatchListPageComponent } from './batch-list-page/batch-list-page.component';
-import { BrandListPageComponent } from './brand-list-page/brand-list-page.component';
+import { BrandListPageComponent } from './brand/brand-list-page/brand-list-page.component';
 import { CommonPageComponent } from './common-page/common-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
@@ -64,6 +65,7 @@ import { ListItemComponent } from './list-item/list-item.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     AutocompleteLibModule
   ],
   providers: [],

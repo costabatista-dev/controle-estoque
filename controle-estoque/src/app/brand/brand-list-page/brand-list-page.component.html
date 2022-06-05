@@ -1,4 +1,4 @@
 <app-common-page title="Marcas" header="Listagem e consulta de marcas">
-  <app-list-item tableTitle="Marcas disponíveis" [dataTable]="brands" dataStorage="brands">
+  <app-list-item *ngIf="isLoaded" tableTitle="Marcas disponíveis" [dataTable]="brands" dataStorage="brands">
   </app-list-item>
 </app-common-page>

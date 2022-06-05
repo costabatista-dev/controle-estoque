@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Entity } from '../entity/Entities';
 
 @Component({
   selector: 'app-simple-form',
@@ -16,7 +17,7 @@ export class SimpleFormComponent implements OnInit {
 
   name: string = "";
   id: number = 0;
-  data = [{ 'id': 0, 'name': '' }];
+  data: Entity[];
 
   @Input()
   tableTitle: string = "";
@@ -55,12 +56,9 @@ export class SimpleFormComponent implements OnInit {
   save() {
     if (this.id == 0) {
       if (this.data.length == 0)
-        this.data.push({ 'id': 1, 'name': this.name.trim() });
+        this.data.push(new Entity(1, this.name.trim()));
       else
-        this.data.push({
-          'id': this.data[this.data.length - 1].id + 1,
-          'name': this.name.trim()
-        });
+        this.data.push(new Entity(this.data[this.data.length - 1].id + 1,this.name.trim()));
       localStorage.setItem(this.listId, JSON.stringify(this.data));
       alert('Registro salvo com sucesso!')
       this.clearNameField();
