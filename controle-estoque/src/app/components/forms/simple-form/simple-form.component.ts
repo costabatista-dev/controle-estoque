@@ -1,11 +1,11 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BrandService } from '../services/brand.service'
-import { Brand, Entity } from '../entity/Entities';
-import { Service } from '../services/service';
-import { BatchService } from '../services/batch.service';
-import { LocationService } from '../services/location.service';
-import { DepartmentService } from '../services/department.service';
+import { BrandService } from '../../../services/brand.service'
+import { Brand, Entity } from '../../../entity/Entities';
+import { Service } from '../../../services/service';
+import { BatchService } from '../../../services/batch.service';
+import { LocationService } from '../../../services/location.service';
+import { DepartmentService } from '../../../services/department.service';
 
 @Component({
   selector: 'app-simple-form',

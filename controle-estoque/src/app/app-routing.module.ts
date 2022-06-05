@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BatchListPageComponent } from './batch/batch-list-page/batch-list-page.component';
-import { BatchesPageComponent } from './batch/batches-page/batches-page.component';
-import { BrandListPageComponent } from './brand/brand-list-page/brand-list-page.component';
-import { BrandsPageComponent } from './brand/brands-page/brands-page.component';
-import { DepartmentListPageComponent } from './department/department-list-page/department-list-page.component';
-import { DepartmentPageComponent } from './department/department-page/department-page.component';
-import { LocationListPageComponent } from './location/location-list-page/location-list-page.component';
-import { LocationsPageComponent } from './location/locations-page/locations-page.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { ProductListPageComponent } from './product-list-page/product-list-page.component';
-import { ProductsPageComponent } from './products-page/products-page.component';
-import { StockEntryPageComponent } from './stock-entry-page/stock-entry-page.component';
-import { StockListPageComponent } from './stock-list-page/stock-list-page.component';
-import { StockMovementListPageComponent } from './stock-movement-list-page/stock-movement-list-page.component';
-import { StockOutPageComponent } from './stock-out-page/stock-out-page.component';
-import { StockTransferPageComponent } from './stock-transfer-page/stock-transfer-page.component';
+import { BatchListPageComponent } from './pages/batch/batch-list-page/batch-list-page.component';
+import { BatchesPageComponent } from './pages/batch/batches-page/batches-page.component';
+import { BrandListPageComponent } from './pages/brand/brand-list-page/brand-list-page.component';
+import { BrandsPageComponent } from './pages/brand/brands-page/brands-page.component';
+import { DepartmentListPageComponent } from './pages/department/department-list-page/department-list-page.component';
+import { DepartmentPageComponent } from './pages/department/department-page/department-page.component';
+import { LocationListPageComponent } from './pages/location/location-list-page/location-list-page.component';
+import { LocationsPageComponent } from './pages/location/locations-page/locations-page.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { ProductListPageComponent } from './pages/product/product-list-page/product-list-page.component';
+import { ProductsPageComponent } from './pages/product/products-page/products-page.component';
+import { StockEntryPageComponent } from './pages/stock/stock-entry-page/stock-entry-page.component';
+import { StockListPageComponent } from './pages/stock/stock-list-page/stock-list-page.component';
+import { StockMovementListPageComponent } from './pages/stock/stock-movement-list-page/stock-movement-list-page.component';
+import { StockOutPageComponent } from './pages/stock/stock-out-page/stock-out-page.component';
+import { StockTransferPageComponent } from './pages/stock/stock-transfer-page/stock-transfer-page.component';
 
 const routes: Routes = [
   { path: 'products/:id', component: ProductsPageComponent},
