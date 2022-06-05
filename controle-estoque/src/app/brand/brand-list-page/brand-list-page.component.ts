@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BrandService } from 'src/app/brand.service';
+import { BrandService } from 'src/app/services/brand.service';
 import { Brand } from 'src/app/entity/Entities';
 
 @Component({
@@ -21,8 +21,9 @@ export class BrandListPageComponent implements OnInit {
         this.brands = result;
         this.isLoaded = true;
       })
-      .catch(err => {
+      .catch((err:Error) => {
         this.brands = [];
+        this.isLoaded = true;
       });
   }
 

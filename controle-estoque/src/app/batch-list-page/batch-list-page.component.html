@@ -1,4 +1,4 @@
 <app-common-page title="Lotes" header="Listagem e consulta de lotes">
-  <app-list-item tableTitle="Lotes disponíveis" [dataTable]="batches" dataStorage="batches">
+  <app-list-item *ngIf="isLoaded" tableTitle="Lotes disponíveis" [dataTable]="batches" dataStorage="batches">
   </app-list-item>
 </app-common-page>

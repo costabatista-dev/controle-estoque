@@ -1,8 +1,9 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BrandService } from '../brand.service';
+import { BrandService } from '../services/brand.service'
 import { Brand, Entity } from '../entity/Entities';
-import { Service } from '../service';
+import { Service } from '../services/service';
+import { BatchService } from '../services/batch.service';
 
 @Component({
   selector: 'app-simple-form',
@@ -27,7 +28,8 @@ export class SimpleFormComponent implements OnInit {
   @Input()
   listId: string = "";
 
-  constructor(private route: ActivatedRoute, private brandService: BrandService) {
+  constructor(private route: ActivatedRoute, private brandService: BrandService,
+    private batchService: BatchService) {
     this.data = [];
   }
 
@@ -37,7 +39,7 @@ export class SimpleFormComponent implements OnInit {
 
     service.getAll().then((result: Entity[]) => {
       this.data = result;
-    }).catch(err =>{
+    }).catch(err => {
       console.log(err);
     });
 
@@ -59,8 +61,8 @@ export class SimpleFormComponent implements OnInit {
   }
 
   save() {
-    let service:Service = this.getService();
-    let entity:Entity;
+    let service: Service = this.getService();
+    let entity: Entity;
     if (this.id == 0) {
       if (this.data.length == 0) {
         entity = new Entity(1, this.name.trim());
@@ -134,6 +136,8 @@ export class SimpleFormComponent implements OnInit {
     switch (this.listId) {
       case 'brands':
         return this.brandService;
+      case 'batches':
+        return this.batchService;
     }
 
     throw new Error("Service not found");

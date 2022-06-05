@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Batch } from '../entity/Entities';
+import { BatchService } from '../services/batch.service';
 
 @Component({
   selector: 'app-batch-list-page',
@@ -6,21 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./batch-list-page.component.css']
 })
 export class BatchListPageComponent implements OnInit {
-  batches=[{'id':0, 'name': ''}]
+  batches:Batch[];
+  isLoaded:boolean=false;
 
-  constructor() {
+  constructor(private batchService: BatchService) {
     this.batches = [];
   }
 
   ngOnInit(): void {
-    this.batches = this.findBatches();
+    this.findBatches();
   }
 
-  findBatches():[] {
-    let localBatches = localStorage.getItem('batches');
-    if (localBatches)
-      return JSON.parse(localBatches);
-    return [];
+  findBatches() {
+    this.batchService.getAll().then((result:Batch[]) => {
+      this.batches = result;
+      this.isLoaded = true;
+    }).catch((err:Error) => {
+      this.batches = [];
+      this.isLoaded = true;
+    })
   }
 
 

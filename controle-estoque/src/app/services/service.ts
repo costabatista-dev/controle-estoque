@@ -1,4 +1,4 @@
-import { Entity } from "./entity/Entities";
+import { Entity } from "../entity/Entities";
 
 export interface Service {
   getAll(): Promise<Entity[]>;
