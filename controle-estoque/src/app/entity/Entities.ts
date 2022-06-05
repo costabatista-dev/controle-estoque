@@ -11,3 +11,5 @@ export class Entity {
 
 export class Brand extends Entity{};
 export class Batch extends Entity{};
+export class Location extends Entity{};
+export class Department extends Entity{};

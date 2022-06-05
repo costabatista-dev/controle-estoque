@@ -1,4 +1,4 @@
 <app-common-page title="Localizações" header="Listagem e consulta de localizações">
-  <app-list-item tableTitle="Localizações disponíveis" [dataTable]="locations" dataStorage="locations">
+  <app-list-item *ngIf="isLoaded" tableTitle="Localizações disponíveis" [dataTable]="locations" dataStorage="locations">
   </app-list-item>
 </app-common-page>

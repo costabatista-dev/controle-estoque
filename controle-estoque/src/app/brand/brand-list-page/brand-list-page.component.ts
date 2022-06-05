@@ -17,14 +17,9 @@ export class BrandListPageComponent implements OnInit {
 
   findBrands(): void {
     this.brandService.getAll()
-      .then((result:Brand[]) => {
-        this.brands = result;
-        this.isLoaded = true;
-      })
-      .catch((err:Error) => {
-        this.brands = [];
-        this.isLoaded = true;
-      });
+      .then((result:Brand[]) => this.brands = result)
+      .catch((err:Error) => this.brands = [])
+      .finally(() => this.isLoaded = true);
   }
 
   ngOnInit(): void {

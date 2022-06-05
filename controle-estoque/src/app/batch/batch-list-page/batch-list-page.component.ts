@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Batch } from '../entity/Entities';
-import { BatchService } from '../services/batch.service';
+import { Batch } from '../../entity/Entities';
+import { BatchService } from '../../services/batch.service';
 
 @Component({
   selector: 'app-batch-list-page',
@@ -20,13 +20,9 @@ export class BatchListPageComponent implements OnInit {
   }
 
   findBatches() {
-    this.batchService.getAll().then((result:Batch[]) => {
-      this.batches = result;
-      this.isLoaded = true;
-    }).catch((err:Error) => {
-      this.batches = [];
-      this.isLoaded = true;
-    })
+    this.batchService.getAll().then((result:Batch[]) => this.batches = result)
+    .catch((err:Error) => this.batches = [])
+    .finally(() => this.isLoaded = true)
   }
 
 

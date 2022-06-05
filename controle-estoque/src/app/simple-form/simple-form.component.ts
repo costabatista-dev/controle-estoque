@@ -4,6 +4,8 @@ import { BrandService } from '../services/brand.service'
 import { Brand, Entity } from '../entity/Entities';
 import { Service } from '../services/service';
 import { BatchService } from '../services/batch.service';
+import { LocationService } from '../services/location.service';
+import { DepartmentService } from '../services/department.service';
 
 @Component({
   selector: 'app-simple-form',
@@ -29,7 +31,8 @@ export class SimpleFormComponent implements OnInit {
   listId: string = "";
 
   constructor(private route: ActivatedRoute, private brandService: BrandService,
-    private batchService: BatchService) {
+    private batchService: BatchService, private locationService: LocationService,
+    private departmentService: DepartmentService) {
     this.data = [];
   }
 
@@ -102,6 +105,8 @@ export class SimpleFormComponent implements OnInit {
       })
 
       this.getService().delete(id);
+      this.id = 0;
+      this.name = "";
     }
 
   }
@@ -109,6 +114,7 @@ export class SimpleFormComponent implements OnInit {
   cancel() {
     this.id = 0;
     this.name = "";
+    location.assign(this.listId);
   }
 
 
@@ -138,6 +144,10 @@ export class SimpleFormComponent implements OnInit {
         return this.brandService;
       case 'batches':
         return this.batchService;
+      case 'locations':
+        return this.locationService;
+      case 'departments':
+        return this.departmentService;
     }
 
     throw new Error("Service not found");
