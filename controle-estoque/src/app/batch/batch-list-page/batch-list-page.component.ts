@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataLoaderService } from 'src/app/services/data-loader';
 import { Batch } from '../../entity/Entities';
 import { BatchService } from '../../services/batch.service';
 
@@ -7,23 +8,28 @@ import { BatchService } from '../../services/batch.service';
   templateUrl: './batch-list-page.component.html',
   styleUrls: ['./batch-list-page.component.css']
 })
-export class BatchListPageComponent implements OnInit {
+export class BatchListPageComponent extends DataLoaderService implements OnInit {
   batches:Batch[];
-  isLoaded:boolean=false;
+
 
   constructor(private batchService: BatchService) {
+    super(batchService);
     this.batches = [];
   }
 
   ngOnInit(): void {
-    this.findBatches();
+    this.loadData();
   }
 
-  findBatches() {
-    this.batchService.getAll().then((result:Batch[]) => this.batches = result)
-    .catch((err:Error) => this.batches = [])
-    .finally(() => this.isLoaded = true)
+  public override getService(): BatchService {
+    return this.batchService;
   }
 
+  public override setDataSet(dataSet:Batch[]): void {
+    this.batches = dataSet;
+  }
 
+  public override getDataSet(): Batch[] {
+    return this.batches;
+  }
 }

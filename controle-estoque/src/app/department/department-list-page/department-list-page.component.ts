@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Department } from 'src/app/entity/Entities';
+import { DataLoaderService } from 'src/app/services/data-loader';
 import { DepartmentService } from 'src/app/services/department.service';
 
 @Component({
@@ -7,23 +8,29 @@ import { DepartmentService } from 'src/app/services/department.service';
   templateUrl: './department-list-page.component.html',
   styleUrls: ['./department-list-page.component.css']
 })
-export class DepartmentListPageComponent implements OnInit {
+export class DepartmentListPageComponent extends DataLoaderService implements OnInit {
   departments:Department[];
-  isLoaded:boolean=false;
+
 
   constructor(private departmentService:DepartmentService) {
+    super(departmentService);
     this.departments = [];
   }
 
-  findDepartments() {
-    this.departmentService.getAll()
-    .then((result:Department[]) => this.departments = result)
-    .catch((err:Error) => this.departments = [])
-    .finally(() => this.isLoaded = true);
+  ngOnInit(): void {
+    this.loadData();
   }
 
-  ngOnInit(): void {
-    this.findDepartments();
+  public override getService(): DepartmentService {
+    return this.departmentService;
+  }
+
+  public override setDataSet(dataSet:Department[]): void {
+    this.departments = dataSet;
+  }
+
+  public override getDataSet(): Department[] {
+    return this.departments;
   }
 
 }

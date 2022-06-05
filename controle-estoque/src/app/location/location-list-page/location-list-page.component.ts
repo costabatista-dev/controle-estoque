@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from 'src/app/entity/Entities';
+import { DataLoaderService } from 'src/app/services/data-loader';
 import { LocationService } from 'src/app/services/location.service';
 
 @Component({
@@ -7,24 +8,28 @@ import { LocationService } from 'src/app/services/location.service';
   templateUrl: './location-list-page.component.html',
   styleUrls: ['./location-list-page.component.css']
 })
-export class LocationListPageComponent implements OnInit {
+export class LocationListPageComponent extends DataLoaderService implements OnInit {
   locations:Location[];
-  isLoaded:boolean=false;
 
   constructor(private locationService: LocationService) {
+    super(locationService);
     this.locations = [];
   }
 
-  findLocations(): void {
-    this.locationService.getAll().then((result:Location[]) => {
-      this.locations = result;
-    }).catch((err:Error) => {
-      this.locations = [];
-    }).finally(() => this.isLoaded = true);
+  ngOnInit(): void {
+    this.loadData();
   }
 
-  ngOnInit(): void {
-    this.findLocations();
+  public override getService(): LocationService {
+    return this.locationService;
+  }
+
+  public override setDataSet(dataSet:Location[]): void {
+    this.locations = dataSet;
+  }
+
+  public override getDataSet(): Location[] {
+    return this.locations;
   }
 
 }
