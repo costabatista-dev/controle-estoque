@@ -16,7 +16,7 @@ export class BrandListPageComponent implements OnInit {
   }
 
   findBrands(): void {
-    this.brandService.getBrands()
+    this.brandService.getAll()
       .then((result:Brand[]) => {
         this.brands = result;
         this.isLoaded = true;

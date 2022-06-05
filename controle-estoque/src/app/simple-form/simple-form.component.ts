@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Entity } from '../entity/Entities';
+import { BrandService } from '../brand.service';
+import { Brand, Entity } from '../entity/Entities';
+import { Service } from '../service';
 
 @Component({
   selector: 'app-simple-form',
@@ -25,24 +27,27 @@ export class SimpleFormComponent implements OnInit {
   @Input()
   listId: string = "";
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private brandService: BrandService) {
     this.data = [];
   }
 
   ngOnInit(): void {
+    let service: Service = this.getService();
     let id = this.route.snapshot.params['id'];
 
-    let dataStorage = localStorage.getItem(this.listId);
-    if (dataStorage) {
-      this.data = JSON.parse(dataStorage);
-      if (id) {
-        id = Number(id);
-        let index = this.data.map(x => { return x.id }).indexOf(id);
-        this.edit(this.data[index].id, this.data[index].name);
-      }
+    service.getAll().then((result: Entity[]) => {
+      this.data = result;
+    }).catch(err =>{
+      console.log(err);
+    });
+
+    if (id) {
+      id = Number(id);
+      service.getById(id).then((result: Brand) => {
+        this.edit(result.id, result.name);
+      });
+
     }
-
-
   }
 
   changeName() {
@@ -54,21 +59,27 @@ export class SimpleFormComponent implements OnInit {
   }
 
   save() {
+    let service:Service = this.getService();
+    let entity:Entity;
     if (this.id == 0) {
-      if (this.data.length == 0)
-        this.data.push(new Entity(1, this.name.trim()));
-      else
-        this.data.push(new Entity(this.data[this.data.length - 1].id + 1,this.name.trim()));
-      localStorage.setItem(this.listId, JSON.stringify(this.data));
+      if (this.data.length == 0) {
+        entity = new Entity(1, this.name.trim());
+        this.data.push(entity);
+      }
+      else {
+        entity = new Entity(this.data[this.data.length - 1].id + 1, this.name.trim())
+        this.data.push(entity);
+      }
+      service.insert(entity);
       alert('Registro salvo com sucesso!')
       this.clearNameField();
       this.id = 0;
     } else {
       let text = "Deseja atualizar o registro?";
       if (confirm(text)) {
+        service.update(new Entity(this.id, this.name.trim()));
         let index = this.data.map(x => { return x.id }).indexOf(this.id);
         this.data[index].name = this.name.trim();
-        localStorage.setItem(this.listId, JSON.stringify(this.data));
         alert('Registro salvo com sucesso!')
         this.clearNameField();
         this.id = 0;
@@ -88,7 +99,7 @@ export class SimpleFormComponent implements OnInit {
         return element.id != id;
       })
 
-      localStorage.setItem(this.listId, JSON.stringify(this.data));
+      this.getService().delete(id);
     }
 
   }
@@ -117,6 +128,15 @@ export class SimpleFormComponent implements OnInit {
 
   clearNameField() {
     this.name = "";
+  }
+
+  getService(): Service {
+    switch (this.listId) {
+      case 'brands':
+        return this.brandService;
+    }
+
+    throw new Error("Service not found");
   }
 
 }
