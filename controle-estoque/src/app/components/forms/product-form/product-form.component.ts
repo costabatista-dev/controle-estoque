@@ -1,5 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Brand, Department, Product } from 'src/app/entity/Entities';
+import { BrandService } from 'src/app/services/brand.service';
+import { DepartmentService } from 'src/app/services/department.service';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-form',
@@ -13,11 +17,11 @@ export class ProductFormComponent implements OnInit {
   brand: number = 0;
   department: number = 0;
   price: string = '';
-  brands = [{ 'id': 0, 'name': '' }];
-  departments = [{ 'id': 0, 'name': '' }];
+  brands: Brand[] = [];
+  departments: Department[] = [];
   brandKeyword = "name";
   departmentKeyword = "name";
-  product = { "id": 0, "name": '', description: '', 'brand': 0, 'department': 0, 'price': 0 };
+  product: Product = new Product(0, '');
   departmentModel: string = "";
   brandModel: string = "";
   isValidName: boolean = true;
@@ -25,92 +29,78 @@ export class ProductFormComponent implements OnInit {
   isValidDepartment: boolean = true;
   isValidPrice: boolean = true;
 
-  constructor(private route: ActivatedRoute) {
-    this.loadBrands();
-    this.loadDepartments();
-    let storage = localStorage.getItem('products');
+  constructor(private route: ActivatedRoute, private brandService: BrandService,
+    private departmentService: DepartmentService, private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.params['id'];
-    let dataStorage = localStorage.getItem("products");
-    if (dataStorage && id) {
-      let data = [{ 'id': 0, 'name': '', 'description': '', 'brand': 0, 'department': 0, 'price': '' }];
-      data = JSON.parse(dataStorage);
-      id = Number(id);
+    this.brandService.getAll()
+      .then((result: Brand[]) => this.brands = result)
+      .catch((err: Error) => this.brands = [])
+      .finally(() => {
+        this.departmentService.getAll()
+          .then((result: Department[]) => this.departments = result)
+          .catch((err: Error) => this.departments = [])
+          .finally(() => {
+            let id = this.route.snapshot.params['id'];
+            if (id && id != 0) {
+              this.productService.getById(Number(id))
+                .then((result: Product) => {
+                  this.id = result.id;
+                  this.name = result.name;
+                  this.description = result.description;
+                  this.brand = result.brand;
+                  this.department = result.department;
+                  this.price = result.price.toString();
+                }).then(() => {
+                  let brandIndex = this.brands.map(x => { return x.id }).indexOf(this.brand);
+                  this.brandModel = this.brands[brandIndex].name;
 
-      let index = data.map(x => { return x.id }).indexOf(id);
-      let object = data[index];
-      console.log(object);
-      this.id = object.id;
-      this.name = object.name;
-      this.description = object.description;
-      this.brand = object.brand;
-      this.department = object.department;
-      this.price = object.price.toString();
+                  let departmentIndex = this.departments.map(x => { return x.id }).indexOf(this.department);
+                  this.departmentModel = this.departments[departmentIndex].name;
+                })
+            }
+          })
+      })
 
-      let brandIndex = this.brands.map(x => { return x.id }).indexOf(this.brand);
-      this.brandModel = this.brands[brandIndex].name;
-
-      let departmentIndex = this.departments.map(x => { return x.id }).indexOf(this.department);
-      console.log(this.departments[departmentIndex])
-      this.departmentModel = this.departments[departmentIndex].name;
-    }
   }
 
 
-  loadBrands(): void {
-    let localBrands = localStorage.getItem('brands');
-
-    if (localBrands) {
-      this.brands = JSON.parse(localBrands);
-    } else {
-      this.brands = [];
-    }
+  selectBrand(brand: Brand): void {
+    this.brand = brand.id;
+    this.brandModel = brand.name;
   }
 
-  loadDepartments(): void {
-    let localDepartments = localStorage.getItem('departments');
-
-    if (localDepartments) {
-      this.departments = JSON.parse(localDepartments);
-    } else {
-      this.brands = [];
-    }
+  selectDepartment(department: Department): void {
+    this.department = department.id;
+    this.departmentModel = department.name;
   }
 
-  selectBrand(item: { 'id': 0, 'name': '' }): void {
-    this.brand = item.id;
-    this.brandModel = item.name;
-  }
-
-  selectDepartment(item: { 'id': 0, 'name': '' }): void {
-    this.department = item.id;
-    this.departmentModel = item.name;
-  }
-
-  createId(): void {
-    if (this.id == 0) {
-      let storage = localStorage.getItem("products");
-
-      if (storage) {
-        let products = JSON.parse(storage);
-        if (products.length > 0) {
-          let lastIndex = products.length - 1;
-          let lastId = products[lastIndex].id + 1;
-          this.id = lastId;
-        } else {
-          this.id = 1;
-        }
-      } else {
-        this.id = 1;
+  createId(): Promise<number> {
+    return new Promise((resolve, reject) => {
+      if (this.id == 0) {
+        this.productService.getAll()
+          .then((result: Product[]) => {
+            let products = result;
+            if (products.length > 0) {
+              let lastIndex = products.length - 1;
+              let lastId = products[lastIndex].id + 1;
+              this.id = lastId;
+            } else {
+              this.id = 1;
+            }
+            resolve(this.id);
+          })
+          .catch((err) => {
+            this.id = 1
+            resolve(1);
+          });
       }
-    }
+    });
   }
 
   createProduct() {
-    this.product.id = this.id;
-    this.product.name = this.name.trim();
+    this.product = new Product(this.id, this.name.trim());
     this.product.description = this.description.trim();
     this.product.brand = this.brand;
     this.product.department = this.department;
@@ -162,44 +152,27 @@ export class ProductFormComponent implements OnInit {
   }
 
   save(): void {
-
     if (!this.validate()) {
       alert("Campos obrigatórios com valores inválidos!")
       return;
     }
-    if (this.id != 0) {
-      let storage = localStorage.getItem('products');
-      if (storage) {
-        let products = [{ 'id': 0, 'name': '', 'description': '', 'brand': 0, 'department': 0, 'price': 0 }];
-        products = JSON.parse(storage);
-        let productIndex = products.map(x => { return x.id }).indexOf(this.id);
+
+    if(confirm('Deseja salvar o produto ?')) {
+      if (this.id != 0) {
         this.createProduct();
-        products[productIndex] = this.product;
-        localStorage.setItem('products', JSON.stringify(products));
-      }
-
-    } else {
-      this.createId();
-      this.createProduct();
-      let storage = localStorage.getItem('products');
-      if (storage) {
-        let products = JSON.parse(storage);
-        products.push(this.product);
-        localStorage.setItem('products', JSON.stringify(products));
+        this.productService.update(this.product);
       } else {
-        let products = [this.product];
-        localStorage.setItem('products', JSON.stringify(products));
+        this.createProduct();
+        this.productService.insert(this.product);
       }
+      this.clearFields();
+      this.id = 0;
     }
-
-
-    this.clearFields();
   }
 
   clearFields(): void {
     this.name = '';
     this.description = '';
-    this.id = 0;
     this.brand = 0;
     this.department = 0;
     this.price = '';
@@ -222,20 +195,7 @@ export class ProductFormComponent implements OnInit {
   delete() {
     let text = "Deseja excluir o produto?";
     if (confirm(text)) {
-      let productStorage = localStorage.getItem('products');
-      if (productStorage) {
-        let products = [{ 'id': 0 }];
-        products = JSON.parse(productStorage);
-        let index = products.map(x => { return x.id }).indexOf(this.id);
-        if (index == 0)
-          products.shift();
-        else if (index == products.length - 1)
-          products.pop();
-        else
-          products.splice(index, index);
-
-        localStorage.setItem('products', JSON.stringify(products));
-      }
+      this.productService.delete(this.id);
     }
   }
 

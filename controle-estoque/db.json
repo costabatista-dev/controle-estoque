@@ -1,0 +1,96 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "marca 01"
+    },
+    {
+      "id": 2,
+      "name": "marca 02"
+    },
+    {
+      "id": 3,
+      "name": "marca 03"
+    }
+  ],
+  "batches": [
+    {
+      "id": 1,
+      "name": "lote-01"
+    },
+    {
+      "id": 2,
+      "name": "lote-02"
+    },
+    {
+      "id": 3,
+      "name": "lote-03"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "local-01"
+    },
+    {
+      "id": 2,
+      "name": "local-02"
+    },
+    {
+      "id": 3,
+      "name": "local-03"
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "departamento 01"
+    },
+    {
+      "id": 2,
+      "name": "departamento 02"
+    },
+    {
+      "id": 3,
+      "name": "departamento 03"
+    },
+    {
+      "id": 4,
+      "name": "departamento 04"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "produto-01",
+      "description": "teste",
+      "brand": 3,
+      "department": 3,
+      "price": 1.75
+    },
+    {
+      "id": 2,
+      "name": "produto-02",
+      "description": "",
+      "brand": 2,
+      "department": 3,
+      "price": 12.23
+    },
+    {
+      "id": 3,
+      "name": "produto-03",
+      "description": "",
+      "brand": 3,
+      "department": 4,
+      "price": 1.22
+    },
+    {
+      "id": 4,
+      "name": "produto-06",
+      "description": "descricao-06",
+      "brand": 2,
+      "department": 2,
+      "price": 12
+    }
+  ]
+}

@@ -20,10 +20,12 @@ export class ProductService implements Service {
   }
 
   insert(product: Product): void {
+    console.log(product);
     this.http.post<Product>(PRODUCTS_SERVICE, product).toPromise();
   }
 
   update(product: Product): void {
+    console.log(product);
     this.http.put<Product>(PRODUCTS_SERVICE + product.id, product).toPromise();
   }
 

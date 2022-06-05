@@ -31,5 +31,4 @@ export class ProductListPageComponent extends DataLoaderService implements OnIni
   public override getDataSet(): Product[] {
     return this.products;
   }
-
 }
