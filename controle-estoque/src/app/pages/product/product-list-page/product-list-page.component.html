@@ -1,4 +1,4 @@
 <app-common-page title="Produtos" header="Listagem e consulta de produtos">
-  <app-list-item tableTitle="Produtos disponíveis" [dataTable]="products" dataStorage="products">
+  <app-list-item *ngIf="isLoaded" tableTitle="Produtos disponíveis" [dataTable]="products" dataStorage="products">
   </app-list-item>
 </app-common-page>
