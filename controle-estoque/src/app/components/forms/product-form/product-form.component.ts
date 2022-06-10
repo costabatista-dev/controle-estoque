@@ -35,24 +35,22 @@ export class ProductFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.brandService.getAll()
-      .then((result: Brand[]) => this.brands = result)
-      .catch((err: Error) => this.brands = [])
-      .finally(() => {
+      .subscribe((result: Brand[]) => {
+        this.brands = result
         this.departmentService.getAll()
-          .then((result: Department[]) => this.departments = result)
-          .catch((err: Error) => this.departments = [])
-          .finally(() => {
+          .subscribe((result: Department[]) => {
+            this.departments = result
             let id = this.route.snapshot.params['id'];
             if (id && id != 0) {
               this.productService.getById(Number(id))
-                .then((result: Product) => {
+                .subscribe((result: Product) => {
                   this.id = result.id;
                   this.name = result.name;
                   this.description = result.description;
                   this.brand = result.brand;
                   this.department = result.department;
                   this.price = result.price.toString();
-                }).then(() => {
+
                   let brandIndex = this.brands.map(x => { return x.id }).indexOf(this.brand);
                   this.brandModel = this.brands[brandIndex].name;
 
@@ -62,7 +60,6 @@ export class ProductFormComponent implements OnInit {
             }
           })
       })
-
   }
 
 
@@ -80,7 +77,7 @@ export class ProductFormComponent implements OnInit {
     return new Promise((resolve, reject) => {
       if (this.id == 0) {
         this.productService.getAll()
-          .then((result: Product[]) => {
+          .subscribe((result: Product[]) => {
             let products = result;
             if (products.length > 0) {
               let lastIndex = products.length - 1;
@@ -90,10 +87,6 @@ export class ProductFormComponent implements OnInit {
               this.id = 1;
             }
             resolve(this.id);
-          })
-          .catch((err) => {
-            this.id = 1
-            resolve(1);
           });
       }
     });
@@ -157,7 +150,7 @@ export class ProductFormComponent implements OnInit {
       return;
     }
 
-    if(confirm('Deseja salvar o produto ?')) {
+    if (confirm('Deseja salvar o produto ?')) {
       if (this.id != 0) {
         this.createProduct();
         this.productService.update(this.product);

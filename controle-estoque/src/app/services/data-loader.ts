@@ -2,7 +2,7 @@ import { Entity } from "../entity/Entities";
 import { Service } from "./service";
 
 export abstract class DataLoaderService implements DataLoader {
-  public isLoaded:boolean=false;
+  public isLoaded: boolean = false;
 
   constructor(private service: Service) {
 
@@ -10,16 +10,17 @@ export abstract class DataLoaderService implements DataLoader {
 
   public loadData(): void {
     this.getService().getAll()
-    .then((result: Entity[]) => this.setDataSet(result))
-    .catch((error:Error) => this.setDataSet([]))
-    .finally(() => this.isLoaded = true);
+      .subscribe((result: Entity[]) => {
+        this.setDataSet(result)
+        this.isLoaded = true
+      })
   }
 
   public getService(): Service {
     throw new Error("Not implemented yet");
   }
 
-  public setDataSet(dataSet:Entity[]): void {
+  public setDataSet(dataSet: Entity[]): void {
     throw new Error("Not implemented yet");
   }
 
@@ -31,7 +32,7 @@ export abstract class DataLoaderService implements DataLoader {
 export interface DataLoader {
   getService(): Service;
 
-  setDataSet(dataSet:Entity[]): void;
+  setDataSet(dataSet: Entity[]): void;
 
   getDataSet(): Entity[];
 }

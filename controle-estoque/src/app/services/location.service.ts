@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Service } from './service';
 import { Location } from '../entity/Entities';
 import { LOCATION_SERVICE } from './ServiceConstants';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,12 @@ export class LocationService implements Service {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Promise<Location[]> {
-    return this.http.get<Location[]>(LOCATION_SERVICE).toPromise() as Promise<Location[]>;
+  getAll(): Observable<Location[]> {
+    return this.http.get<Location[]>(LOCATION_SERVICE);
   }
 
-  getById(id: number): Promise<Location> {
-    return this.http.get<Location>(LOCATION_SERVICE + id).toPromise() as Promise<Location>;
+  getById(id: number): Observable<Location> {
+    return this.http.get<Location>(LOCATION_SERVICE + id);
   }
 
   insert(location: Location): void {

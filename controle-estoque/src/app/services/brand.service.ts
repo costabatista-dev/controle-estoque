@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Brand  } from '../entity/Entities';
 import { Service } from './service';
 import { BRAND_SERVICE } from './ServiceConstants';
+import { catchError, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,12 @@ export class BrandService implements Service {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Promise<Brand[]>  {
-    return this.http.get<Brand[]>(BRAND_SERVICE).toPromise() as Promise<Brand[]>;
+  getAll(): Observable<Brand[]>  {
+    return this.http.get<Brand[]>(BRAND_SERVICE);
   }
 
-  getById(id: number): Promise<Brand> {
-    return this.http.get<Brand>(BRAND_SERVICE + id).toPromise() as Promise<Brand>;
+  getById(id: number): Observable<Brand> {
+    return this.http.get<Brand>(BRAND_SERVICE + id);
   }
 
   insert(brand:Brand): void {

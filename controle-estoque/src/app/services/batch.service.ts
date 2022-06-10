@@ -3,6 +3,7 @@ import { Batch, Entity } from '../entity/Entities';
 import { Service } from './service';
 import { HttpClient } from '@angular/common/http';
 import { BATCH_SERVICE } from './ServiceConstants';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,23 +11,23 @@ import { BATCH_SERVICE } from './ServiceConstants';
 export class BatchService implements Service {
 
   constructor(private http: HttpClient) { }
-  getAll(): Promise<Batch[]> {
-    return this.http.get<Batch[]>(BATCH_SERVICE).toPromise() as Promise<Batch[]>;
+  getAll(): Observable<Batch[]> {
+    return this.http.get<Batch[]>(BATCH_SERVICE);
   }
 
-  getById(id: number): Promise<Entity> {
-    return this.http.get<Batch>(BATCH_SERVICE + id).toPromise() as Promise<Batch>;
+  getById(id: number): Observable<Entity> {
+    return this.http.get<Batch>(BATCH_SERVICE + id);
   }
 
   insert(batch: Batch): void {
-    this.http.post<Batch>(BATCH_SERVICE, batch).toPromise();
+    this.http.post<Batch>(BATCH_SERVICE, batch).subscribe();
   }
 
   update(batch: Batch): void {
-    this.http.put<Batch>(BATCH_SERVICE + batch.id, batch).toPromise();
+    this.http.put<Batch>(BATCH_SERVICE + batch.id, batch).subscribe();
   }
 
   delete(id: number): void {
-    this.http.delete<Batch>(BATCH_SERVICE + id).toPromise();
+    this.http.delete<Batch>(BATCH_SERVICE + id).subscribe();
   }
 }

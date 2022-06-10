@@ -40,15 +40,11 @@ export class SimpleFormComponent implements OnInit {
     let service: Service = this.getService();
     let id = this.route.snapshot.params['id'];
 
-    service.getAll().then((result: Entity[]) => {
-      this.data = result;
-    }).catch(err => {
-      console.log(err);
-    });
+    service.getAll().subscribe(data => this.data = data);
 
     if (id) {
       id = Number(id);
-      service.getById(id).then((result: Brand) => {
+      service.getById(id).subscribe((result: Brand) => {
         this.edit(result.id, result.name);
       });
 
