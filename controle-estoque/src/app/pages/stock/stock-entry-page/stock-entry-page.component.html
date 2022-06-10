@@ -1,3 +1,10 @@
 <app-common-page title="Entrada"
                  header="Operações de entrada de estoque">
+  <app-search-component *ngIf="isLoaded"
+                        title="selecionar produto"
+                        placeholder="selecionar produto"
+                        notFoundMessage="Produto não encontrado"
+                        invalidFeedbackMessage="Produto inválido"
+                        [data]="products">
+  </app-search-component>
 </app-common-page>

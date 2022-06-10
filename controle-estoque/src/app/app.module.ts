@@ -30,6 +30,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { SimpleFormComponent } from './components/forms/simple-form/simple-form.component';
 import { ProductFormComponent } from './components/forms/product-form/product-form.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
+import { SearchComponentComponent } from './search-component/search-component.component';
 
 
 
@@ -59,7 +60,8 @@ import { ListItemComponent } from './components/list-item/list-item.component';
     NotFoundPageComponent,
     SimpleFormComponent,
     ProductFormComponent,
-    ListItemComponent
+    ListItemComponent,
+    SearchComponentComponent
   ],
   imports: [
     BrowserModule,
