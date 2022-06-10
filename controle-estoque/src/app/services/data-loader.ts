@@ -14,6 +14,7 @@ export abstract class DataLoaderService implements DataLoader {
         this.setDataSet(result)
         this.isLoaded = true
       })
+
   }
 
   public getService(): Service {
