@@ -1,10 +1,24 @@
 <app-common-page title="Entrada"
                  header="Operações de entrada de estoque">
-  <app-search-component *ngIf="isLoaded"
+  <app-search-component *ngIf="isProductsLoaded"
                         title="selecionar produto"
                         placeholder="selecionar produto"
                         notFoundMessage="Produto não encontrado"
                         invalidFeedbackMessage="Produto inválido"
                         [data]="products">
+  </app-search-component>
+  <app-search-component *ngIf="isLocationsLoaded"
+                        title="selecionar local"
+                        placeholder="selecionar local"
+                        notFoundMessage="Local não encontrado"
+                        invalidFeedbackMessage="Local inválido"
+                        [data]="locations">
+  </app-search-component>
+  <app-search-component *ngIf="isBatchesLoaded"
+                        title="selecionar lote"
+                        placeholder="selecionar lote"
+                        notFoundMessage="Lote não encontrado"
+                        invalidFeedbackMessage="Lote inválido"
+                        [data]="batches">
   </app-search-component>
 </app-common-page>

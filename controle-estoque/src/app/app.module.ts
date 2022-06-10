@@ -31,6 +31,7 @@ import { SimpleFormComponent } from './components/forms/simple-form/simple-form.
 import { ProductFormComponent } from './components/forms/product-form/product-form.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
 import { SearchComponentComponent } from './search-component/search-component.component';
+import { QuantityInputComponent } from './quantity-input/quantity-input.component';
 
 
 
@@ -61,7 +62,8 @@ import { SearchComponentComponent } from './search-component/search-component.co
     SimpleFormComponent,
     ProductFormComponent,
     ListItemComponent,
-    SearchComponentComponent
+    SearchComponentComponent,
+    QuantityInputComponent
   ],
   imports: [
     BrowserModule,
