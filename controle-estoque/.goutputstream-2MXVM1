@@ -64,9 +64,9 @@
       "id": 1,
       "name": "produto-01",
       "description": "teste",
-      "brand": 2,
-      "department": 2,
-      "price": 3.75
+      "brand": 3,
+      "department": 3,
+      "price": 1.75
     },
     {
       "id": 2,

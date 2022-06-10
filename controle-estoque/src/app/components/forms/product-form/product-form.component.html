@@ -64,10 +64,15 @@
       <div class="row">
         <div class="col-md-4">
           <p class="field-label">Preço</p>
-          <input *ngIf="isValidPrice" class="form-control" type="text" [(ngModel)]="price" name="price" required id="price"/>
-          <input *ngIf="!isValidPrice" class="form-control is-invalid" type="text" [(ngModel)]="price" name="price2" required id="price"/>
-          <div class="invalid-feedback">
-            Preço inválido
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">R$</span>
+            </div>
+            <input *ngIf="isValidPrice" class="form-control" type="text" [(ngModel)]="price" name="price" required id="price"/>
+              <input *ngIf="!isValidPrice" class="form-control is-invalid" type="text" [(ngModel)]="price" name="price2" required id="price"/>
+              <div class="invalid-feedback">
+                Preço inválido
+              </div>
           </div>
         </div>
       </div>

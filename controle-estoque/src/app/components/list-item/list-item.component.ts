@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Entity } from 'src/app/entity/Entities';
 
 @Component({
   selector: 'app-list-item',
@@ -14,13 +15,12 @@ export class ListItemComponent implements OnInit {
   dataStorage:string="";
 
   @Input()
-  dataTable=[{'id':0,'name':''}];
+  dataTable:Entity[]=[];
 
-  searchableTable=[{'id':0,'name':''}];
+  searchableTable:Entity[]=[];
   searchTerm:string="";
 
   constructor() {
-    this.dataTable.pop();
   }
 
   ngOnInit(): void {
@@ -28,18 +28,15 @@ export class ListItemComponent implements OnInit {
   }
 
   onChangeNameFilter() {
-    console.log('auiq')
     if (this.searchTerm.trim().length == 0) {
       this.searchableTable = this.dataTable;
     } else {
-      let data = [{'id':0, 'name': ''}];
-      data = [];
+      let data:Entity[] = [];
       this.dataTable.forEach(element => {
         if (element.name.includes(this.searchTerm.trim()))
           data.push(element);
       });
       this.searchableTable = data;
-      console.log(this.searchableTable);
     }
   }
 
