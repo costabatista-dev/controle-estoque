@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Product, Location, Batch, Entity } from 'src/app/entity/Entities';
+import { Product, Location, Batch, Entity, Movement } from 'src/app/entity/Entities';
 import { BatchService } from 'src/app/services/batch.service';
 import { LocationService } from 'src/app/services/location.service';
 import { ProductService } from 'src/app/services/product.service';
+import { ENTRANCY } from 'src/app/constants/movement-constants';
+import { MovementService } from 'src/app/services/movement.service';
 
 @Component({
   selector: 'app-stock-entry-page',
@@ -20,8 +22,8 @@ export class StockEntryPageComponent implements OnInit {
   locationId:number=0;
   batchId:number=0;
 
-  constructor(private productService:ProductService, private locationService: LocationService,
-    private batchService:BatchService) {
+  constructor(private productService:ProductService, private locationService:LocationService,
+    private batchService:BatchService, private movementService:MovementService) {
     this.loadProducts();
     this.loadLocations();
     this.loadBatches();
@@ -61,7 +63,9 @@ export class StockEntryPageComponent implements OnInit {
   }
 
   saveEntry() {
-
+    let movement:Movement = new Movement(1, this.productId, this.batchId, ENTRANCY, 0);
+    movement.locationTo = this.locationId;
+    this.movementService.insert(movement);
   }
 
   ngOnInit(): void {

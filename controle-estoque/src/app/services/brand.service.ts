@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Brand  } from '../entity/Entities';
 import { Service } from './service';
-import { BRAND_SERVICE, OBSERVABLE_ERROR_HANDLER } from './ServiceConstants';
+import { BRAND_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../constants/ServiceConstants';
 import { catchError, Observable } from 'rxjs';
 
 @Injectable({

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Batch, Entity } from '../entity/Entities';
 import { Service } from './service';
 import { HttpClient } from '@angular/common/http';
-import { BATCH_SERVICE, OBSERVABLE_ERROR_HANDLER } from './ServiceConstants';
+import { BATCH_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../constants/ServiceConstants';
 import { catchError, Observable } from 'rxjs';
 
 @Injectable({

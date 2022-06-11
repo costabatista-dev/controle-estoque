@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable } from 'rxjs';
 import { Product } from '../entity/Entities';
 import { Service } from './service';
-import { OBSERVABLE_ERROR_HANDLER, PRODUCTS_SERVICE } from './ServiceConstants';
+import { OBSERVABLE_ERROR_HANDLER, PRODUCTS_SERVICE } from '../constants/ServiceConstants';
 
 @Injectable({
   providedIn: 'root'

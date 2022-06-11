@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable } from 'rxjs';
 import { Department } from '../entity/Entities';
 import { Service } from './service';
-import { DEPARTMENT_SERVICE, OBSERVABLE_ERROR_HANDLER } from './ServiceConstants';
+import { DEPARTMENT_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../constants/ServiceConstants';
 
 @Injectable({
   providedIn: 'root'
