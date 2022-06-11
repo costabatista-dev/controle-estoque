@@ -25,7 +25,8 @@
                         [data]="batches">
   </app-search-component>
   <app-quantity-input description="Inserir quantidade a ser adicionada"
-                      invalidFeedback="quantidade inválida">
+                      invalidFeedback="quantidade inválida"
+                      (inputValue)="changeQuantity($event)">
   </app-quantity-input>
   <div class="button-group button-container row">
       <button class="btn btn-success col-md-1 button-space"

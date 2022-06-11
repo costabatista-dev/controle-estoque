@@ -1,32 +1,35 @@
 <div class="container-app">
-  <div class="row">
-    <p class="title">Quantidade</p>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <p>{{ description }}</p>
+    <div class="row">
+        <p class="title">Quantidade</p>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <input class="form-control" *ngIf="isValid"/>
-      <input class="form-control is-invalid" *ngIf="!isValid"/>
-      <div class="invalid-feedback">
-        {{ invalidFeedback | titlecase }}
-      </div>
+    <div class="row">
+        <div class="col-md-3">
+            <p>{{ description }}</p>
+        </div>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-md-3">
+            <input class="form-control" *ngIf="isValid" [(ngModel)]="inputValue"
+                (ngModelChange)="changeInputValue($event)" />
+            <input class="form-control is-invalid" *ngIf="!isValid" [(ngModel)]="inputValue"
+                (ngModelChange)="changeInputValue($event)" />
+            <div class="invalid-feedback">
+                {{ invalidFeedback | titlecase }}
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
-  .container-app {
-    padding: 16px;
-    margin-bottom: 64px;
-  }
-  .title {
-    background-color: #03398f;
-    color: #fff;
-    padding: 4px;
-    border-radius: 4px;
-  }
+    .container-app {
+        padding: 16px;
+        margin-bottom: 64px;
+    }
+
+    .title {
+        background-color: #03398f;
+        color: #fff;
+        padding: 4px;
+        border-radius: 4px;
+    }
 </style>

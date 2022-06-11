@@ -21,6 +21,7 @@ export class StockEntryPageComponent implements OnInit {
   productId:number=0;
   locationId:number=0;
   batchId:number=0;
+  quantity:number=0;
 
   constructor(private productService:ProductService, private locationService:LocationService,
     private batchService:BatchService, private movementService:MovementService) {
@@ -62,8 +63,13 @@ export class StockEntryPageComponent implements OnInit {
     this.batchId = event.id;
   }
 
+  changeQuantity(event:Event) {
+      console.log(event);
+      this.quantity = Number(event);
+  }
+
   saveEntry() {
-    let movement:Movement = new Movement(1, this.productId, this.batchId, ENTRANCY, 0);
+    let movement:Movement = new Movement(this.productId, this.batchId, ENTRANCY, this.quantity);
     movement.locationTo = this.locationId;
     this.movementService.insert(movement);
   }

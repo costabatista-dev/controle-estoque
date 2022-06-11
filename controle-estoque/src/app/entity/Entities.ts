@@ -37,7 +37,7 @@ export class Movement extends Entity {
     locationFrom: number = 0;
     locationTo: number = 0;
 
-    constructor(id: number, product: number, batch: number, type: string, quantity: number) {
+    constructor(product: number, batch: number, type: string, quantity: number) {
         super('');
         this.product = product;
         this.batch = batch;

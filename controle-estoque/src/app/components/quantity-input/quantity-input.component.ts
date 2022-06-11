@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-quantity-input',
@@ -13,11 +13,20 @@ export class QuantityInputComponent implements OnInit {
   @Input()
   invalidFeedback:string="";
 
+  inputValue:string='';
+
   isValid:boolean=true;
+
+  @Output()
+  value:EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeInputValue(value:string) {
+      this.value.emit(value);
   }
 
 }
