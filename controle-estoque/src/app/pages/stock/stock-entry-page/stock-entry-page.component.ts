@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product, Location, Batch } from 'src/app/entity/Entities';
+import { Product, Location, Batch, Entity } from 'src/app/entity/Entities';
 import { BatchService } from 'src/app/services/batch.service';
 import { LocationService } from 'src/app/services/location.service';
 import { ProductService } from 'src/app/services/product.service';
@@ -16,6 +16,9 @@ export class StockEntryPageComponent implements OnInit {
   isProductsLoaded:boolean=false;
   isLocationsLoaded:boolean=false;
   isBatchesLoaded:boolean=false;
+  productId:number=0;
+  locationId:number=0;
+  batchId:number=0;
 
   constructor(private productService:ProductService, private locationService: LocationService,
     private batchService:BatchService) {
@@ -43,6 +46,22 @@ export class StockEntryPageComponent implements OnInit {
       this.batches = data;
       this.isBatchesLoaded = true;
     });
+  }
+
+  setProduct(event:Entity) {
+    this.productId = event.id;
+  }
+
+  setLocation(event:Entity) {
+    this.locationId = event.id;
+  }
+
+  setBatch(event:Entity) {
+    this.batchId = event.id;
+  }
+
+  saveEntry() {
+
   }
 
   ngOnInit(): void {

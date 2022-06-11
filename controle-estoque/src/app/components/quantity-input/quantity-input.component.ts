@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-quantity-input',
@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quantity-input.component.css']
 })
 export class QuantityInputComponent implements OnInit {
+
+  @Input()
+  description:string="";
+
+  @Input()
+  invalidFeedback:string="";
+
+  isValid:boolean=true;
 
   constructor() { }
 

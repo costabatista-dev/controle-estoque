@@ -5,6 +5,7 @@
                         placeholder="selecionar produto"
                         notFoundMessage="Produto não encontrado"
                         invalidFeedbackMessage="Produto inválido"
+                        (selected)="setProduct($event)"
                         [data]="products">
   </app-search-component>
   <app-search-component *ngIf="isLocationsLoaded"
@@ -12,6 +13,7 @@
                         placeholder="selecionar local"
                         notFoundMessage="Local não encontrado"
                         invalidFeedbackMessage="Local inválido"
+                        (selected)="setLocation($event)"
                         [data]="locations">
   </app-search-component>
   <app-search-component *ngIf="isBatchesLoaded"
@@ -19,6 +21,33 @@
                         placeholder="selecionar lote"
                         notFoundMessage="Lote não encontrado"
                         invalidFeedbackMessage="Lote inválido"
+                        (selected)="setBatch($event)"
                         [data]="batches">
   </app-search-component>
+  <app-quantity-input description="Inserir quantidade a ser adicionada"
+                      invalidFeedback="quantidade inválida">
+  </app-quantity-input>
+  <div class="button-group button-container row">
+      <button class="btn btn-success col-md-1 button-space"
+              (click)="saveEntry()">
+        Salvar
+      </button>
+      <button class="btn btn-warning col-md-1 button-space">
+        Limpar
+      </button>
+      <button class="btn btn-danger col-md-1 button-space">
+        Cancelar
+      </button>
+  </div>
 </app-common-page>
+
+<style>
+  .button-container {
+    margin-bottom: 64px;
+    padding: 16px;
+  }
+  .button-space {
+    margin-right: 4px;
+  }
+</style>
+

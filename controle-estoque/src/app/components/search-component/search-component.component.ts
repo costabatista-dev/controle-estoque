@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Entity } from '../entity/Entities';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Entity } from '../../entity/Entities';
 
 @Component({
   selector: 'app-search-component',
@@ -23,6 +23,9 @@ export class SearchComponentComponent implements OnInit {
   @Input()
   placeholder:string="";
 
+  @Output()
+  selected:EventEmitter<Entity> = new EventEmitter();
+
   isValid:boolean=true;
   keyword:string="name";
   model:string="";
@@ -32,12 +35,9 @@ export class SearchComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectData(event:Event) {
-
+  selectData(event:Entity) {
+    this.selected.emit(event);
   }
 
-  onChangeAutoComplete(event:string) {
-    this.keyword = event;
-  }
 
 }
