@@ -31,6 +31,11 @@ export class SearchComponentComponent implements OnInit, ControlValueAccessor {
     @Input()
     placeholder: string = "";
 
+    @Input()
+    validate:(value:string) => boolean = function(): boolean {
+        return true;
+    };
+
     @Output()
     selected: EventEmitter<Entity> = new EventEmitter();
 
@@ -49,7 +54,6 @@ export class SearchComponentComponent implements OnInit, ControlValueAccessor {
             this._value = value;
             this.onChange(value);
         }
-
     }
 
     constructor() {
@@ -82,6 +86,4 @@ export class SearchComponentComponent implements OnInit, ControlValueAccessor {
     selectData(event: Entity) {
         this.selected.emit(event);
     }
-
-
 }
