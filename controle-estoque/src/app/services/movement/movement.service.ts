@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
 import { catchError, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Movement } from '../entity/Entities';
-import { Service } from './service';
-import { MOVEMENT_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../constants/ServiceConstants';
+import { Movement, Sequence } from '../../entity/Entities';
+import { Service } from '../service';
+import { MOVEMENT_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../../constants/ServiceConstants';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MovementService implements Service {
+export default class MovementService implements Service {
 
   constructor(private http:HttpClient) { }
+
+    nextSeq(): Observable<Sequence> {
+        throw new Error('Method not implemented.');
+    }
+    increaseSeq(): void {
+        throw new Error('Method not implemented.');
+    }
 
   getAll(): Observable<Movement[]> {
     return this.http.get<Movement[]>(MOVEMENT_SERVICE)

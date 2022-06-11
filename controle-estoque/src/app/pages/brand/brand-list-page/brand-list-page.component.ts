@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BrandService } from 'src/app/services/brand.service';
+import BrandService from 'src/app/services/brand/brand.service';
 import { Brand, Entity } from 'src/app/entity/Entities';
-import { DataLoaderService } from 'src/app/services/data-loader';
+import DataLoaderService from 'src/app/services/data-loader';
 import { Service } from 'src/app/services/service';
 
 @Component({

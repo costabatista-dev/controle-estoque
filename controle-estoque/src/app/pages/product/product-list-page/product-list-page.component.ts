@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/entity/Entities';
-import { DataLoaderService } from 'src/app/services/data-loader';
-import { ProductService } from 'src/app/services/product.service';
+import DataLoaderService from 'src/app/services/data-loader';
+import ProductService from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'app-product-list-page',
   templateUrl: './product-list-page.component.html',
   styleUrls: ['./product-list-page.component.css']
 })
+
 export class ProductListPageComponent extends DataLoaderService implements OnInit {
   products: Product[];
 

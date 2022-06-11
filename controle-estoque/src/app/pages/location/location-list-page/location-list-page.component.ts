@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Location } from 'src/app/entity/Entities';
-import { DataLoaderService } from 'src/app/services/data-loader';
-import { LocationService } from 'src/app/services/location.service';
+import DataLoaderService from 'src/app/services/data-loader';
+import LocationService from 'src/app/services/location/location.service';
 
 @Component({
   selector: 'app-location-list-page',
   templateUrl: './location-list-page.component.html',
   styleUrls: ['./location-list-page.component.css']
 })
+
 export class LocationListPageComponent extends DataLoaderService implements OnInit {
   locations:Location[];
 

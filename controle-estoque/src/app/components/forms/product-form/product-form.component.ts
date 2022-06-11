@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Brand, Department, Product } from 'src/app/entity/Entities';
-import { BrandService } from 'src/app/services/brand.service';
-import { DepartmentService } from 'src/app/services/department.service';
-import { ProductService } from 'src/app/services/product.service';
+import BrandService from 'src/app/services/brand/brand.service';
+import DepartmentService from 'src/app/services/department/department.service';
+import ProductService from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'app-product-form',
@@ -21,7 +21,7 @@ export class ProductFormComponent implements OnInit {
   departments: Department[] = [];
   brandKeyword = "name";
   departmentKeyword = "name";
-  product: Product = new Product(0, '');
+  product: Product = new Product('');
   departmentModel: string = "";
   brandModel: string = "";
   isValidName: boolean = true;
@@ -73,27 +73,8 @@ export class ProductFormComponent implements OnInit {
     this.departmentModel = department.name;
   }
 
-  createId(): Promise<number> {
-    return new Promise((resolve, reject) => {
-      if (this.id == 0) {
-        this.productService.getAll()
-          .subscribe((result: Product[]) => {
-            let products = result;
-            if (products.length > 0) {
-              let lastIndex = products.length - 1;
-              let lastId = products[lastIndex].id + 1;
-              this.id = lastId;
-            } else {
-              this.id = 1;
-            }
-            resolve(this.id);
-          });
-      }
-    });
-  }
-
   createProduct() {
-    this.product = new Product(this.id, this.name.trim());
+    this.product = new Product(this.name.trim());
     this.product.description = this.description.trim();
     this.product.brand = this.brand;
     this.product.department = this.department;

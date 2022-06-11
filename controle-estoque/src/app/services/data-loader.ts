@@ -1,7 +1,7 @@
 import { Entity } from "../entity/Entities";
 import { Service } from "./service";
 
-export abstract class DataLoaderService implements DataLoader {
+export default abstract class DataLoaderService implements DataLoader {
   public isLoaded: boolean = false;
 
   constructor(private service: Service) {

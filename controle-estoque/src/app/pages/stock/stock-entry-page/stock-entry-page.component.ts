@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Product, Location, Batch, Entity, Movement } from 'src/app/entity/Entities';
-import { BatchService } from 'src/app/services/batch.service';
-import { LocationService } from 'src/app/services/location.service';
-import { ProductService } from 'src/app/services/product.service';
 import { ENTRANCY } from 'src/app/constants/movement-constants';
-import { MovementService } from 'src/app/services/movement.service';
+import { Batch, Entity, Location, Movement, Product } from 'src/app/entity/Entities';
+import BatchService  from "src/app/services/batch/batch.service";
+import LocationService from 'src/app/services/location/location.service';
+import MovementService from 'src/app/services/movement/movement.service';
+import ProductService from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'app-stock-entry-page',
