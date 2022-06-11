@@ -5,6 +5,7 @@
                         placeholder="selecionar produto"
                         notFoundMessage="Produto não encontrado"
                         invalidFeedbackMessage="Produto inválido"
+                        [(ngModel)]="productModel"
                         (selected)="setProduct($event)"
                         [data]="products">
   </app-search-component>
@@ -13,6 +14,7 @@
                         placeholder="selecionar local"
                         notFoundMessage="Local não encontrado"
                         invalidFeedbackMessage="Local inválido"
+                        [(ngModel)]="locationModel"
                         (selected)="setLocation($event)"
                         [data]="locations">
   </app-search-component>
@@ -21,11 +23,13 @@
                         placeholder="selecionar lote"
                         notFoundMessage="Lote não encontrado"
                         invalidFeedbackMessage="Lote inválido"
+                        [(ngModel)]="batchModel"
                         (selected)="setBatch($event)"
                         [data]="batches">
   </app-search-component>
   <app-quantity-input description="Inserir quantidade a ser adicionada"
                       invalidFeedback="quantidade inválida"
+                      [(ngModel)]="quantityModel"
                       (value)="changeQuantity($event)">
   </app-quantity-input>
   <div class="button-group button-container row">
@@ -33,7 +37,8 @@
               (click)="saveEntry()">
         Salvar
       </button>
-      <button class="btn btn-warning col-md-1 button-space">
+      <button class="btn btn-warning col-md-1 button-space"
+              (click)="clearFields()">
         Limpar
       </button>
       <button class="btn btn-danger col-md-1 button-space">

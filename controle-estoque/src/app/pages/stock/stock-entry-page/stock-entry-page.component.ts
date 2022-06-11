@@ -22,6 +22,10 @@ export class StockEntryPageComponent implements OnInit {
   locationId:number=0;
   batchId:number=0;
   quantity:number=0;
+  locationModel:string='';
+  batchModel:string='';
+  productModel:string='';
+  quantityModel:string='';
 
   constructor(private productService:ProductService, private locationService:LocationService,
     private batchService:BatchService, private movementService:MovementService) {
@@ -65,6 +69,17 @@ export class StockEntryPageComponent implements OnInit {
 
   changeQuantity(event:Quantity) {
       this.quantity = event.value;
+  }
+
+  clearFields() {
+      this.locationModel = '';
+      this.locationId = 0;
+      this.batchModel = '';
+      this.batchId = 0;
+      this.productModel = '';
+      this.productId = 0;
+      this.quantityModel = '';
+      this.quantity = 0;
   }
 
   saveEntry() {

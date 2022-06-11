@@ -5,11 +5,11 @@
   <div class="row">
     <div class="col-md-6">
       <p class="field-label">Consultar por nome</p>
-      <ng-autocomplete class="is-valid" *ngIf="isValid" [(ngModel)]="model" name="itemField"
+      <ng-autocomplete class="is-valid" *ngIf="isValid" [(ngModel)]="this.value" name="itemField"
         [placeholder]="placeholder" [data]="data" [itemTemplate]="itemTemplate" [searchKeyword]="keyword"
         (selected)='selectData($event)' [notFoundTemplate]="notFoundTemplate" [focusFirst]="true">
       </ng-autocomplete>
-      <ng-autocomplete class="is-invalid" *ngIf="!isValid" [(ngModel)]="model" name="itemField"
+      <ng-autocomplete class="is-invalid" *ngIf="!isValid" [(ngModel)]="this.value" name="itemField"
         [placeholder]="placeholder" [data]="data" [itemTemplate]="itemTemplate" [searchKeyword]="keyword"
         (selected)='selectData($event)' [notFoundTemplate]="notFoundTemplate" [focusFirst]="true">
       </ng-autocomplete>

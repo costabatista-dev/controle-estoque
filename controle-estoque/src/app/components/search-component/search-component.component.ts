@@ -1,43 +1,87 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Entity } from '../../entity/Entities';
 
 @Component({
-  selector: 'app-search-component',
-  templateUrl: './search-component.component.html',
-  styleUrls: ['./search-component.component.css']
+    selector: 'app-search-component',
+    templateUrl: './search-component.component.html',
+    styleUrls: ['./search-component.component.css'],
+    providers: [
+        {
+            provide:NG_VALUE_ACCESSOR,
+            useExisting:forwardRef(() => SearchComponentComponent),
+            multi:true
+        }
+    ]
 })
-export class SearchComponentComponent implements OnInit {
+export class SearchComponentComponent implements OnInit, ControlValueAccessor {
 
-  @Input()
-  title:string="";
+    @Input()
+    title: string = "";
 
-  @Input()
-  data:Entity[]=[];
+    @Input()
+    data: Entity[] = [];
 
-  @Input()
-  notFoundMessage:string="";
+    @Input()
+    notFoundMessage: string = "";
 
-  @Input()
-  invalidFeedbackMessage:string="";
+    @Input()
+    invalidFeedbackMessage: string = "";
 
-  @Input()
-  placeholder:string="";
+    @Input()
+    placeholder: string = "";
 
-  @Output()
-  selected:EventEmitter<Entity> = new EventEmitter();
+    @Output()
+    selected: EventEmitter<Entity> = new EventEmitter();
 
-  isValid:boolean=true;
-  keyword:string="name";
-  model:string="";
+    isValid: boolean = true;
+    keyword: string = "name";
 
-  constructor() { }
+    private _value: string;
 
-  ngOnInit(): void {
-  }
+    public get value(): string {
+        return this._value;
+    }
 
-  selectData(event:Entity) {
-    this.selected.emit(event);
-  }
+    public set value(value: string) {
+        if (value !== this._value) {
+            this._value;
+            this._value = value;
+            this.onChange(value);
+        }
+
+    }
+
+    constructor() {
+        this._value = '';
+    }
+
+    onChange(v:any) {
+
+    }
+
+    onTouch() {
+
+    }
+
+    writeValue(obj: any): void {
+        this._value = obj;
+    }
+
+    registerOnChange(fn: any): void {
+        this.onChange = fn;
+    }
+
+    registerOnTouched(fn: any): void {
+        this.onTouch = fn;
+    }
+
+    ngOnInit(): void {
+    }
+
+    selectData(event: Entity) {
+        this.selected.emit(event);
+    }
 
 
 }

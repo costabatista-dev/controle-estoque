@@ -9,9 +9,9 @@
     </div>
     <div class="row">
         <div class="col-md-3">
-            <input class="form-control" *ngIf="isValid" [(ngModel)]="inputValue"
+            <input class="form-control" *ngIf="isValid" [(ngModel)]="this.inputValue"
                 (ngModelChange)="changeInputValue($event)" />
-            <input class="form-control is-invalid" *ngIf="!isValid" [(ngModel)]="inputValue"
+            <input class="form-control is-invalid" *ngIf="!isValid" [(ngModel)]="this.inputValue"
                 (ngModelChange)="changeInputValue($event)" />
             <div class="invalid-feedback">
                 {{ invalidFeedback | titlecase }}
