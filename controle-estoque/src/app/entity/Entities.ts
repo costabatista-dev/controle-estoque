@@ -46,6 +46,22 @@ export class Movement extends Entity {
     }
 }
 
+export class Quantity {
+    private _value:number;
+
+    constructor(value: number) {
+        this._value = value;
+    }
+
+    public get value():number {
+        return this._value;
+    }
+
+    public set value(value:number) {
+        this._value = value;
+    }
+}
+
 export class Sequence {
     id:string;
     nextVal:number;

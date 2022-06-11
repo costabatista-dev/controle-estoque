@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Quantity } from 'src/app/entity/Entities';
 
 @Component({
   selector: 'app-quantity-input',
@@ -18,7 +19,7 @@ export class QuantityInputComponent implements OnInit {
   isValid:boolean=true;
 
   @Output()
-  value:EventEmitter<string> = new EventEmitter();
+  value:EventEmitter<Quantity> = new EventEmitter();
 
   constructor() { }
 
@@ -26,7 +27,7 @@ export class QuantityInputComponent implements OnInit {
   }
 
   changeInputValue(value:string) {
-      this.value.emit(value);
+      this.value.emit(new Quantity(Number(value)));
   }
 
 }

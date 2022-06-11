@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ENTRANCY } from 'src/app/constants/movement-constants';
-import { Batch, Entity, Location, Movement, Product } from 'src/app/entity/Entities';
+import { Batch, Entity, Location, Movement, Product, Quantity } from 'src/app/entity/Entities';
 import BatchService  from "src/app/services/batch/batch.service";
 import LocationService from 'src/app/services/location/location.service';
 import MovementService from 'src/app/services/movement/movement.service';
@@ -63,9 +63,8 @@ export class StockEntryPageComponent implements OnInit {
     this.batchId = event.id;
   }
 
-  changeQuantity(event:Event) {
-      console.log(event);
-      this.quantity = Number(event);
+  changeQuantity(event:Quantity) {
+      this.quantity = event.value;
   }
 
   saveEntry() {
