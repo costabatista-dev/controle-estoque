@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Movement, Sequence } from '../../entity/Entities';
 import { Service } from '../service';
 import { MOVEMENT_SEQ_SERVICE, MOVEMENT_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../../constants/ServiceConstants';
-import SequenceService from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/sequence.service';
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +12,6 @@ import SequenceService from 'src/app/sequence.service';
 export default class MovementService implements Service {
 
     constructor(private http: HttpClient, private sequenceService: SequenceService) {
-        this.sequenceService.sequenceServiceName = MOVEMENT_SEQ_SERVICE;
     }
 
     getAll(): Observable<Movement[]> {
@@ -26,6 +25,8 @@ export default class MovementService implements Service {
     }
 
     insert(movement: Movement): void {
+        this.sequenceService.sequenceServiceName = MOVEMENT_SEQ_SERVICE;
+
         this.sequenceService.nextSeq().subscribe((sequence: Sequence) => {
             movement.id = sequence.nextVal;
 

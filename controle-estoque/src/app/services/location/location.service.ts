@@ -4,7 +4,7 @@ import { catchError, Observable } from 'rxjs';
 import { Location, Sequence } from '../../entity/Entities';
 import { Service } from '../service';
 import { LOCATION_SEQ_SERVICE, LOCATION_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../../constants/ServiceConstants';
-import SequenceService from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/sequence.service';
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +12,6 @@ import SequenceService from 'src/app/sequence.service';
 export default class LocationService implements Service {
 
     constructor(private http: HttpClient, private sequenceService: SequenceService) {
-        this.sequenceService.sequenceServiceName = LOCATION_SEQ_SERVICE;
     }
 
 
@@ -27,6 +26,8 @@ export default class LocationService implements Service {
     }
 
     insert(location: Location): void {
+        this.sequenceService.sequenceServiceName = LOCATION_SEQ_SERVICE;
+
         this.sequenceService.nextSeq().subscribe((sequence: Sequence) => {
             location.id = sequence.nextVal;
             this.http.post<Location>(LOCATION_SERVICE, location)

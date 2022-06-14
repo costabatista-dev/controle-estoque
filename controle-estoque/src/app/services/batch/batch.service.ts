@@ -4,7 +4,7 @@ import { Service } from '../service';
 import { HttpClient } from '@angular/common/http';
 import { BATCH_SEQ_SERVICE, BATCH_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../../constants/ServiceConstants';
 import { catchError, Observable } from 'rxjs';
-import SequenceService from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/sequence.service';
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +12,6 @@ import SequenceService from 'src/app/sequence.service';
 export default class BatchService implements Service {
 
     constructor(private http: HttpClient, private sequenceService: SequenceService) {
-        this.sequenceService.sequenceServiceName = BATCH_SEQ_SERVICE;
     }
 
     getAll(): Observable<Batch[]> {
@@ -26,6 +25,8 @@ export default class BatchService implements Service {
     }
 
     insert(batch: Batch): void {
+        this.sequenceService.sequenceServiceName = BATCH_SEQ_SERVICE;
+
         this.sequenceService.nextSeq().subscribe((sequence:Sequence) => {
             batch.id = sequence.nextVal;
             this.http.post<Batch>(BATCH_SERVICE, batch)

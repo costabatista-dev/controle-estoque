@@ -4,7 +4,7 @@ import { Brand, Sequence } from '../../entity/Entities';
 import { Service } from '../service';
 import { BRAND_SEQ_SERVICE, BRAND_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../../constants/ServiceConstants';
 import { catchError, Observable } from 'rxjs';
-import SequenceService from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/sequence.service';
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +12,6 @@ import SequenceService from 'src/app/sequence.service';
 export default class BrandService implements Service {
 
     constructor(private http: HttpClient, private sequenceService: SequenceService) {
-        this.sequenceService.sequenceServiceName = BRAND_SEQ_SERVICE;
     }
 
     getAll(): Observable<Brand[]> {
@@ -26,6 +25,8 @@ export default class BrandService implements Service {
     }
 
     insert(brand: Brand): void {
+        this.sequenceService.sequenceServiceName = BRAND_SEQ_SERVICE;
+
         this.sequenceService.nextSeq().subscribe((sequence: Sequence) => {
             brand.id = sequence.nextVal;
 

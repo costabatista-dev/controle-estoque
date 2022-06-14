@@ -8,7 +8,7 @@ import { Sequence } from './entity/Entities';
 @Injectable({
     providedIn: 'root'
 })
-export default class SequenceService {
+export class SequenceService {
     private _sequenceServiceName: string;
 
     public get sequenceServiceName() {

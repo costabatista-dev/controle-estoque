@@ -4,7 +4,7 @@ import { catchError, Observable } from 'rxjs';
 import { Product, Sequence } from '../../entity/Entities';
 import { Service } from '../service';
 import { OBSERVABLE_ERROR_HANDLER, PRODUCTS_SERVICE, PRODUCT_SEQ_SERVICE } from '../../constants/ServiceConstants';
-import SequenceService from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/sequence.service';
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +12,6 @@ import SequenceService from 'src/app/sequence.service';
 export default class ProductService implements Service {
 
     constructor(private http: HttpClient, private sequenceService: SequenceService) {
-        this.sequenceService.sequenceServiceName = PRODUCT_SEQ_SERVICE;
     }
 
     increaseSeq(): void {
@@ -35,6 +34,8 @@ export default class ProductService implements Service {
     }
 
     insert(product: Product): void {
+        this.sequenceService.sequenceServiceName = PRODUCT_SEQ_SERVICE;
+
         this.sequenceService.nextSeq().subscribe((sequence: Sequence) => {
             product.id = sequence.nextVal;
 

@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
-import { Entity, Sequence } from "../entity/Entities";
+import { Entity } from "../entity/Entities";
 
 export interface Service {
     getAll(): Observable<Entity[]>;
