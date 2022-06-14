@@ -1,0 +1,40 @@
+<div class="container-app">
+  <div class="row">
+    <p class="title">{{ title | titlecase }}</p>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <p class="field-label">Consultar por nome</p>
+      <ng-autocomplete class="is-valid" *ngIf="isValid" [(ngModel)]="this.value" name="itemField"
+        [placeholder]="placeholder" [data]="data" [itemTemplate]="itemTemplate" [searchKeyword]="keyword"
+        (selected)='selectData($event)' [notFoundTemplate]="notFoundTemplate" [focusFirst]="true">
+      </ng-autocomplete>
+      <ng-autocomplete class="is-invalid" *ngIf="!isValid" [(ngModel)]="this.value" name="itemField"
+        [placeholder]="placeholder" [data]="data" [itemTemplate]="itemTemplate" [searchKeyword]="keyword"
+        (selected)='selectData($event)' [notFoundTemplate]="notFoundTemplate" [focusFirst]="true">
+      </ng-autocomplete>
+      <div class="invalid-feedback">
+        {{ invalidFeedbackMessage | titlecase }}
+      </div>
+      <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+      </ng-template>
+    </div>
+
+    <ng-template #notFoundTemplate let-notFound>
+      <p>{{ notFoundMessage | titlecase }}</p>
+    </ng-template>
+</div>
+
+<style>
+  .container-app {
+   padding: 16px;
+  }
+  .title {
+    border-radius: 4px;
+    background-color: #03398f;
+    color: #fff;
+    padding: 4px;
+  }
+</style>
+

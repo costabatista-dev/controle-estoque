@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Brand, Department, Product } from 'src/app/entity/Entities';
-import { BrandService } from 'src/app/services/brand.service';
-import { DepartmentService } from 'src/app/services/department.service';
-import { ProductService } from 'src/app/services/product.service';
+import BrandService from 'src/app/services/brand/brand.service';
+import DepartmentService from 'src/app/services/department/department.service';
+import ProductService from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'app-product-form',
@@ -21,7 +21,7 @@ export class ProductFormComponent implements OnInit {
   departments: Department[] = [];
   brandKeyword = "name";
   departmentKeyword = "name";
-  product: Product = new Product(0, '');
+  product: Product = new Product('');
   departmentModel: string = "";
   brandModel: string = "";
   isValidName: boolean = true;
@@ -35,24 +35,22 @@ export class ProductFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.brandService.getAll()
-      .then((result: Brand[]) => this.brands = result)
-      .catch((err: Error) => this.brands = [])
-      .finally(() => {
+      .subscribe((result: Brand[]) => {
+        this.brands = result
         this.departmentService.getAll()
-          .then((result: Department[]) => this.departments = result)
-          .catch((err: Error) => this.departments = [])
-          .finally(() => {
+          .subscribe((result: Department[]) => {
+            this.departments = result
             let id = this.route.snapshot.params['id'];
             if (id && id != 0) {
               this.productService.getById(Number(id))
-                .then((result: Product) => {
+                .subscribe((result: Product) => {
                   this.id = result.id;
                   this.name = result.name;
                   this.description = result.description;
                   this.brand = result.brand;
                   this.department = result.department;
                   this.price = result.price.toString();
-                }).then(() => {
+
                   let brandIndex = this.brands.map(x => { return x.id }).indexOf(this.brand);
                   this.brandModel = this.brands[brandIndex].name;
 
@@ -62,7 +60,6 @@ export class ProductFormComponent implements OnInit {
             }
           })
       })
-
   }
 
 
@@ -76,31 +73,8 @@ export class ProductFormComponent implements OnInit {
     this.departmentModel = department.name;
   }
 
-  createId(): Promise<number> {
-    return new Promise((resolve, reject) => {
-      if (this.id == 0) {
-        this.productService.getAll()
-          .then((result: Product[]) => {
-            let products = result;
-            if (products.length > 0) {
-              let lastIndex = products.length - 1;
-              let lastId = products[lastIndex].id + 1;
-              this.id = lastId;
-            } else {
-              this.id = 1;
-            }
-            resolve(this.id);
-          })
-          .catch((err) => {
-            this.id = 1
-            resolve(1);
-          });
-      }
-    });
-  }
-
   createProduct() {
-    this.product = new Product(this.id, this.name.trim());
+    this.product = new Product(this.name.trim());
     this.product.description = this.description.trim();
     this.product.brand = this.brand;
     this.product.department = this.department;
@@ -157,7 +131,7 @@ export class ProductFormComponent implements OnInit {
       return;
     }
 
-    if(confirm('Deseja salvar o produto ?')) {
+    if (confirm('Deseja salvar o produto ?')) {
       if (this.id != 0) {
         this.createProduct();
         this.productService.update(this.product);

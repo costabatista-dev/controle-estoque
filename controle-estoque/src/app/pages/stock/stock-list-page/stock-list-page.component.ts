@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stock-list-page.component.css']
 })
 export class StockListPageComponent implements OnInit {
+  product:number=0;
 
   constructor() { }
 

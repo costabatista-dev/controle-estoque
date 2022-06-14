@@ -1,9 +1,10 @@
+import { Observable } from "rxjs";
 import { Entity } from "../entity/Entities";
 
 export interface Service {
-  getAll(): Promise<Entity[]>;
-  getById(id:number): Promise<Entity>;
-  insert(entity:Entity):void;
-  update(entity:Entity):void;
-  delete(id:number):void;
+    getAll(): Observable<Entity[]>;
+    getById(id: number): Observable<Entity>;
+    insert(entity: Entity): void;
+    update(entity: Entity): void;
+    delete(id: number): void;
 }

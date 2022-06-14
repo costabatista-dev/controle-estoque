@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Department } from 'src/app/entity/Entities';
-import { DataLoaderService } from 'src/app/services/data-loader';
-import { DepartmentService } from 'src/app/services/department.service';
+import DataLoaderService from 'src/app/services/data-loader';
+import DepartmentService from 'src/app/services/department/department.service';
 
 @Component({
   selector: 'app-department-list-page',

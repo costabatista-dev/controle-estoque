@@ -16,29 +16,33 @@
   "batches": [
     {
       "id": 1,
-      "name": "lote-01"
+      "name": "lote 01"
     },
     {
       "id": 2,
-      "name": "lote-02"
+      "name": "lote 02"
     },
     {
       "id": 3,
-      "name": "lote-03"
+      "name": "lote 03"
     }
   ],
   "locations": [
     {
       "id": 1,
-      "name": "local-01"
+      "name": "local 01"
     },
     {
       "id": 2,
-      "name": "local-02"
+      "name": "local 02"
     },
     {
       "id": 3,
-      "name": "local-03"
+      "name": "local 03"
+    },
+    {
+      "id": 4,
+      "name": "local 04"
     }
   ],
   "departments": [
@@ -57,40 +61,72 @@
     {
       "id": 4,
       "name": "departamento 04"
+    },
+    {
+      "id": 8,
+      "name": "departamento 05"
     }
   ],
   "products": [
     {
       "id": 1,
-      "name": "produto-01",
-      "description": "teste",
-      "brand": 3,
+      "name": "produto 01",
+      "description": "descrição do produto 01",
+      "brand": 2,
       "department": 3,
-      "price": 1.75
+      "price": 12.98
     },
     {
       "id": 2,
-      "name": "produto-02",
-      "description": "",
-      "brand": 2,
+      "name": "produto 02",
+      "description": "descrição do produto 02",
+      "brand": 1,
       "department": 3,
-      "price": 12.23
+      "price": 11.98
+    }
+  ],
+  "movement": [
+    {
+      "id": 1,
+      "name": "",
+      "locationFrom": 0,
+      "locationTo": 2,
+      "product": 1,
+      "batch": 1,
+      "type": "E",
+      "quantity": 30
     },
     {
-      "id": 3,
-      "name": "produto-03",
-      "description": "",
-      "brand": 3,
-      "department": 4,
-      "price": 1.22
+      "id": 2,
+      "name": "",
+      "locationFrom": 0,
+      "locationTo": 1,
+      "product": 2,
+      "batch": 3,
+      "type": "E",
+      "quantity": 20
+    }
+  ],
+  "sequence": [
+    {
+      "id": "brand",
+      "nextVal": 4
     },
     {
-      "id": 4,
-      "name": "produto-06",
-      "description": "descricao-06",
-      "brand": 2,
-      "department": 2,
-      "price": 12
+      "id": "batch",
+      "nextVal": 4
+    },
+    {
+      "id": "location",
+      "nextVal": 5
+    },
+    {
+      "id": "product",
+      "nextVal": 3
+    },
+    {
+      "id": "movement",
+      "nextVal": 3
     }
   ]
 }

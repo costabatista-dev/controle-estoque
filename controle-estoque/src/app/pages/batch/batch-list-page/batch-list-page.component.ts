@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataLoaderService } from 'src/app/services/data-loader';
+import DataLoaderService from 'src/app/services/data-loader';
 import { Batch } from '../../../entity/Entities';
-import { BatchService } from '../../../services/batch.service';
+import BatchService from '../../../services/batch/batch.service';
 
 @Component({
   selector: 'app-batch-list-page',

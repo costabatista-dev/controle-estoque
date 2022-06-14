@@ -1,3 +1,59 @@
 <app-common-page title="Entrada"
                  header="Operações de entrada de estoque">
+  <app-search-component *ngIf="isProductsLoaded"
+                        title="selecionar produto"
+                        placeholder="selecionar produto"
+                        notFoundMessage="Produto não encontrado"
+                        invalidFeedbackMessage="Produto inválido"
+                        [(ngModel)]="productModel"
+                        (selected)="setProduct($event)"
+                        [data]="products">
+  </app-search-component>
+  <app-search-component *ngIf="isLocationsLoaded"
+                        title="selecionar local"
+                        placeholder="selecionar local"
+                        notFoundMessage="Local não encontrado"
+                        invalidFeedbackMessage="Local inválido"
+                        [(ngModel)]="locationModel"
+                        (selected)="setLocation($event)"
+                        [data]="locations">
+  </app-search-component>
+  <app-search-component *ngIf="isBatchesLoaded"
+                        title="selecionar lote"
+                        placeholder="selecionar lote"
+                        notFoundMessage="Lote não encontrado"
+                        invalidFeedbackMessage="Lote inválido"
+                        [(ngModel)]="batchModel"
+                        (selected)="setBatch($event)"
+                        [data]="batches">
+  </app-search-component>
+  <app-quantity-input description="Inserir quantidade a ser adicionada"
+                      invalidFeedback="quantidade inválida"
+                      [(ngModel)]="quantityModel"
+                      (value)="changeQuantity($event)">
+  </app-quantity-input>
+  <div class="button-group button-container row">
+      <button class="btn btn-success col-md-1 button-space"
+              (click)="saveEntry()">
+        Salvar
+      </button>
+      <button class="btn btn-warning col-md-1 button-space"
+              (click)="clearFields()">
+        Limpar
+      </button>
+      <button class="btn btn-danger col-md-1 button-space">
+        Cancelar
+      </button>
+  </div>
 </app-common-page>
+
+<style>
+  .button-container {
+    margin-bottom: 64px;
+    padding: 16px;
+  }
+  .button-space {
+    margin-right: 4px;
+  }
+</style>
+
