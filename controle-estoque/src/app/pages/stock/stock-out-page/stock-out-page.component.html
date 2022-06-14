@@ -1,3 +1,23 @@
 <app-common-page title="Saída"
                  header="Operações de saída de estoque">
+    <app-search-component title="selecionar produto"
+                          placeholder="selecionar produto"
+                          notFoundMessage="produto não encontrado"
+                          invalidFeedbackMessage="produto inválido">
+    </app-search-component>
+    <app-search-component title="selecionar local"
+                          placeholder="selecionar local"
+                          notFoundMessage="local não encontrado"
+                          invalidFeedbackMessage="local inválido">
+    </app-search-component>
+    <app-search-component title="selecionar lote"
+                          placeholder="selecionar lote"
+                          notFoundMessage="lote não encontrado"
+                          invalidFeedbackMessage="lote inválido">
+    </app-search-component>
+    <app-quantity-input description="inserir quantidade a ser removida"
+                        invalidFeedback="quantidade inválida"
+                        >
+    </app-quantity-input>
+
 </app-common-page>
