@@ -4,7 +4,7 @@ import { catchError, Observable } from 'rxjs';
 import { Product, Sequence } from '../../entity/Entities';
 import { Service } from '../service';
 import { OBSERVABLE_ERROR_HANDLER, PRODUCTS_SERVICE, PRODUCT_SEQ_SERVICE } from '../../constants/ServiceConstants';
-import { SequenceService } from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/services/sequence/sequence.service';
 
 @Injectable({
     providedIn: 'root'

@@ -4,7 +4,7 @@ import { Service } from '../service';
 import { HttpClient } from '@angular/common/http';
 import { BATCH_SEQ_SERVICE, BATCH_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../../constants/ServiceConstants';
 import { catchError, Observable } from 'rxjs';
-import { SequenceService } from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/services/sequence/sequence.service';
 
 @Injectable({
     providedIn: 'root'

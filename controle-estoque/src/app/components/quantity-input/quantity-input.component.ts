@@ -55,6 +55,11 @@ export class QuantityInputComponent implements OnInit, ControlValueAccessor {
 
     changeInputValue(value: string) {
         this.value.emit(new Quantity(Number(value)));
+        if (value.match(/^\d*$/g)) {
+            this.isValid = true;
+        } else {
+            this.isValid = false;
+        }
     }
 
     public get inputValue(): string {
