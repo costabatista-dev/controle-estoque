@@ -47,9 +47,50 @@ export class ListItemComponent implements OnInit {
     switch(mov.type) {
         case 'E':
             return 'Entrada';
+        case 'O':
+            return 'Saída';
     }
 
     return '';
+  }
+
+  getEntryLocation(movement: Entity): string {
+    let mov:Movement = movement as Movement;
+    switch(mov.type) {
+        case 'E':
+        case 'T':
+            return mov.locationToName;
+        case 'O':
+            return '----------';
+    }
+    return '';
+  }
+
+  getOutLocation(movement: Entity): string {
+    let mov:Movement = movement as Movement;
+    switch(mov.type) {
+        case 'E':
+            return '----------';
+        case 'O':
+        case 'T':
+            return mov.locationFromName;
+    }
+    return '';
+  }
+
+  getBatch(movement: Entity): string {
+    let mov:Movement = movement as Movement;
+    return mov.batchName;
+  }
+
+  getQuantity(movement: Entity): string {
+    let mov:Movement = movement as Movement;
+    return String(mov.quantity);
+  }
+
+  getMovType(movement: Entity): string {
+    let mov:Movement = movement as Movement;
+    return mov.type;
   }
 
 }

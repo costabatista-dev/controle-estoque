@@ -88,33 +88,28 @@
   "movement": [
     {
       "id": 1,
-      "name": "produto 01",
-      "locationFrom": 0,
-      "locationTo": 1,
-      "product": 1,
-      "batch": 1,
-      "type": "E",
-      "quantity": 100
-    },
-    {
-      "id": 2,
       "name": "produto 02",
+      "locationToName": "local 03",
+      "batchName": "lote 02",
       "locationFrom": 0,
       "locationTo": 3,
       "product": 2,
       "batch": 2,
       "type": "E",
-      "quantity": 200
+      "quantity": 125
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "produto 02",
-      "locationFrom": 0,
-      "locationTo": 2,
+      "locationToName": "",
+      "locationFromName": "local 03",
+      "batchName": "lote 02",
+      "locationFrom": 3,
+      "locationTo": 0,
       "product": 2,
-      "batch": 1,
-      "type": "E",
-      "quantity": 150
+      "batch": 2,
+      "type": "O",
+      "quantity": 100
     }
   ],
   "sequence": [
@@ -136,7 +131,7 @@
     },
     {
       "id": "movement",
-      "nextVal": 4
+      "nextVal": 3
     }
   ]
 }

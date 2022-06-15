@@ -2,7 +2,9 @@
   <div class="row">
     <div class="col-md-6 name-field">
       <p class="field-label">Consultar por nome</p>
-      <input class="form-control" placeholder="Insira um nome para filtrar" type="text" [(ngModel)]="searchTerm"
+      <input class="form-control" [placeholder]="(dataStorage !== 'movements') ?
+      'Insira um nome para filtrar' : 'Insira um nome de produto para filtrar'"
+      type="text" [(ngModel)]="searchTerm"
         (ngModelChange)="onChangeNameFilter()" />
     </div>
   </div>
@@ -15,23 +17,32 @@
     <thead>
       <tr>
         <th>Código</th>
-        <th>Nome</th>
+        <th *ngIf="dataStorage !== 'movements'">Nome</th>
+        <th *ngIf="dataStorage === 'movements'">Produto</th>
         <th *ngIf="dataStorage === 'movements'">Tipo Movimento</th>
-        <th>Ações</th>
+        <th *ngIf="dataStorage !== 'movements'">Ações</th>
+        <th *ngIf="dataStorage === 'movements'">Local Entrada</th>
+        <th *ngIf="dataStorage === 'movements'">Local Saída</th>
+        <th *ngIf="dataStorage === 'movements'">Lote</th>
+        <th *ngIf="dataStorage === 'movements'">Quantidade</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let object of searchableTable">
         <td>{{object.id}}</td>
         <td>{{object.name | uppercase }}</td>
-        <td *ngIf="dataStorage === 'movements'">{{getMovement(object)}}</td>
+        <td *ngIf="dataStorage === 'movements'">{{ getMovement(object) | uppercase }}</td>
+        <td *ngIf="dataStorage === 'movements'">{{ getEntryLocation(object) }}</td>
+        <td *ngIf="dataStorage === 'movements'">{{ getOutLocation(object) }}</td>
+        <td *ngIf="dataStorage === 'movements'">{{ getBatch(object) }}</td>
+        <td *ngIf="dataStorage === 'movements' && getMovType(object) === 'E'"
+            class="entry-quantity">{{ getQuantity(object) }}</td>
+        <td *ngIf="dataStorage === 'movements' && getMovType(object) === 'O'"
+            class="out-quantity">{{ getQuantity(object) }}</td>
         <td>
-          <div class="row">
+          <div *ngIf="dataStorage !== 'movements'" class="row">
             <div class="col-md-2">
-              <button *ngIf="dataStorage !== 'movements'"class="btn btn-warning" [routerLink]="'/' + dataStorage + '/' + object.id">
-                Detalhes
-              </button>
-              <button *ngIf="dataStorage === 'movements'"class="btn btn-warning">
+              <button class="btn btn-warning" [routerLink]="'/' + dataStorage + '/' + object.id">
                 Detalhes
               </button>
             </div>
@@ -40,6 +51,7 @@
       </tr>
     </tbody>
   </table>
+
 </div>
 
 
@@ -58,5 +70,15 @@
 
   .bottom-fix {
     margin-bottom: 50px;
+  }
+
+  .entry-quantity {
+    color: green;
+    font-weight: bold;
+  }
+
+  .out-quantity {
+    color: red;
+    font-weight: bold;
   }
 </style>
