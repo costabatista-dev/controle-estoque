@@ -86,7 +86,7 @@ export class StockEntryPageComponent implements OnInit {
         return true;
     }
 
-    saveEntry() {
+    saveEntry(): void {
         if (confirm('Deseja salvar a movimentação de entrada?')) {
             if (this.isValidMovement() && this.productModel && this.locationModel && this.batchModel) {
                 let movement: Movement = new Movement(this.productId, this.batchId, ENTRANCY, this.quantity);

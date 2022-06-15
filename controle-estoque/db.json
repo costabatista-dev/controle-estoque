@@ -110,6 +110,32 @@
       "batch": 2,
       "type": "O",
       "quantity": 100
+    },
+    {
+      "id": 3,
+      "name": "produto 02",
+      "locationToName": "",
+      "locationFromName": "local 03",
+      "batchName": "lote 02",
+      "locationFrom": 3,
+      "locationTo": 0,
+      "product": 2,
+      "batch": 2,
+      "type": "O",
+      "quantity": 10
+    },
+    {
+      "id": 4,
+      "name": "produto 01",
+      "locationToName": "",
+      "locationFromName": "local 04",
+      "batchName": "lote 01",
+      "locationFrom": 4,
+      "locationTo": 0,
+      "product": 1,
+      "batch": 1,
+      "type": "O",
+      "quantity": 15
     }
   ],
   "sequence": [
@@ -131,7 +157,7 @@
     },
     {
       "id": "movement",
-      "nextVal": 3
+      "nextVal": 5
     }
   ]
 }
