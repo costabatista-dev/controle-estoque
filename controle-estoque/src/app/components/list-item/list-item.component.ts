@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Entity } from 'src/app/entity/Entities';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+import { Entity, Movement } from 'src/app/entity/Entities';
 
 @Component({
   selector: 'app-list-item',
@@ -38,6 +40,16 @@ export class ListItemComponent implements OnInit {
       });
       this.searchableTable = data;
     }
+  }
+
+  getMovement(movement: Entity): string {
+    let mov:Movement = movement as Movement;
+    switch(mov.type) {
+        case 'E':
+            return 'Entrada';
+    }
+
+    return '';
   }
 
 }

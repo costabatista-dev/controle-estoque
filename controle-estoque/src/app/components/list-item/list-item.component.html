@@ -16,6 +16,7 @@
       <tr>
         <th>Código</th>
         <th>Nome</th>
+        <th *ngIf="dataStorage === 'movements'">Tipo Movimento</th>
         <th>Ações</th>
       </tr>
     </thead>
@@ -23,10 +24,14 @@
       <tr *ngFor="let object of searchableTable">
         <td>{{object.id}}</td>
         <td>{{object.name | uppercase }}</td>
+        <td *ngIf="dataStorage === 'movements'">{{getMovement(object)}}</td>
         <td>
           <div class="row">
             <div class="col-md-2">
-              <button class="btn btn-warning" [routerLink]="'/' + dataStorage + '/' + object.id">
+              <button *ngIf="dataStorage !== 'movements'"class="btn btn-warning" [routerLink]="'/' + dataStorage + '/' + object.id">
+                Detalhes
+              </button>
+              <button *ngIf="dataStorage === 'movements'"class="btn btn-warning">
                 Detalhes
               </button>
             </div>
@@ -36,6 +41,7 @@
     </tbody>
   </table>
 </div>
+
 
 <style>
   .container {
