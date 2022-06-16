@@ -1,2 +1,8 @@
 <app-common-page title="Estoque" header="Listagem e consulta de estoque">
+    <app-list-item tableTitle="Valores em estoque"
+                   [dataTable]="stockList"
+                   dataStorage="stock"
+                   *ngIf="isLoaded">
+
+    </app-list-item>
 </app-common-page>

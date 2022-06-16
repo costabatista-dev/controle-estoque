@@ -95,6 +95,14 @@
       "brand": 1,
       "department": 3,
       "price": 11.98
+    },
+    {
+      "id": 3,
+      "name": "produto-03",
+      "description": "",
+      "brand": 3,
+      "department": 2,
+      "price": 11
     }
   ],
   "movement": [
@@ -174,6 +182,32 @@
       "batch": 3,
       "type": "T",
       "quantity": 6
+    },
+    {
+      "id": 7,
+      "name": "produto 01",
+      "locationToName": "local 03",
+      "locationFromName": "",
+      "batchName": "lote 03",
+      "locationFrom": 0,
+      "locationTo": 3,
+      "product": 1,
+      "batch": 3,
+      "type": "E",
+      "quantity": 20
+    },
+    {
+      "id": 8,
+      "name": "produto-03",
+      "locationToName": "",
+      "locationFromName": "local 02",
+      "batchName": "lote 01",
+      "locationFrom": 2,
+      "locationTo": 0,
+      "product": 3,
+      "batch": 1,
+      "type": "O",
+      "quantity": 20
     }
   ],
   "sequence": [
@@ -191,7 +225,7 @@
     },
     {
       "id": "product",
-      "nextVal": 3
+      "nextVal": 4
     },
     {
       "id": "department",
@@ -199,7 +233,7 @@
     },
     {
       "id": "movement",
-      "nextVal": 7
+      "nextVal": 9
     }
   ]
 }
