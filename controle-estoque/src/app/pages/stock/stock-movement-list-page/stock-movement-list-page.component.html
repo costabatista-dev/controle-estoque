@@ -1,3 +1,4 @@
 <app-common-page title="Movimentações" header="Listagem e consulta de movimentações">
-  <h4><a [routerLink]="['/stock-entry', 1]">Clique para teste de rota com parâmetro</a></h4>
+  <app-list-item *ngIf="isLoaded" tableTitle="Movimentações realizadas" [dataTable]="movements" dataStorage="movements">
+  </app-list-item>
 </app-common-page>

@@ -4,7 +4,7 @@ import { Brand, Sequence } from '../../entity/Entities';
 import { Service } from '../service';
 import { BRAND_SEQ_SERVICE, BRAND_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../../constants/ServiceConstants';
 import { catchError, Observable } from 'rxjs';
-import { SequenceService } from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/services/sequence/sequence.service';
 
 @Injectable({
     providedIn: 'root'

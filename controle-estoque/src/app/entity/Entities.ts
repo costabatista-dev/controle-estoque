@@ -31,6 +31,9 @@ export class Product extends Entity {
 
 export class Movement extends Entity {
     product: number;
+    locationToName:string = '';
+    locationFromName:string = '';
+    batchName:string = '';
     batch: number;
     type: string;
     quantity: number;

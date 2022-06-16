@@ -1,3 +1,55 @@
 <app-common-page title="Saída"
                  header="Operações de saída de estoque">
+    <app-search-component title="selecionar produto"
+                          placeholder="selecionar produto"
+                          notFoundMessage="produto não encontrado"
+                          invalidFeedbackMessage="produto inválido"
+                          [(ngModel)]="productModel"
+                          (selected)="setProduct($event)"
+                          [data]="products"
+                          *ngIf="isProductsLoaded">
+    </app-search-component>
+    <app-search-component title="selecionar local"
+                          placeholder="selecionar local"
+                          notFoundMessage="local não encontrado"
+                          invalidFeedbackMessage="local inválido"
+                          [(ngModel)]="locationModel"
+                          (selected)="setLocation($event)"
+                          [data]="locations"
+                          *ngIf="isLocationsLoaded">
+    </app-search-component>
+    <app-search-component title="selecionar lote"
+                          placeholder="selecionar lote"
+                          notFoundMessage="lote não encontrado"
+                          invalidFeedbackMessage="lote inválido"
+                          [(ngModel)]="batchModel"
+                          (selected)="setBatch($event)"
+                          [data]="batches">
+    </app-search-component>
+    <app-quantity-input description="inserir quantidade a ser removida"
+                        invalidFeedback="quantidade inválida"
+                        [(ngModel)]="quantityModel"
+                        (value)="changeQuantity($event)">
+    </app-quantity-input>
+    <div class="button-group button-container row">
+        <button class="btn btn-success col-md-1 button-space" (click)="saveOut()">
+          Salvar
+        </button>
+        <button class="btn btn-warning col-md-1 button-space" (click)="clearFields()">
+          Limpar
+        </button>
+        <button class="btn btn-danger col-md-1 button-space">
+          Cancelar
+        </button>
+    </div>
 </app-common-page>
+
+<style>
+    .button-container {
+      margin-bottom: 64px;
+      padding: 16px;
+    }
+    .button-space {
+      margin-right: 4px;
+    }
+  </style>

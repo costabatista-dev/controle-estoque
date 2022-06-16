@@ -22,9 +22,9 @@ export class StockEntryPageComponent implements OnInit {
     locationId: number = 0;
     batchId: number = 0;
     quantity: number = 0;
-    locationModel: string = '';
-    batchModel: string = '';
-    productModel: string = '';
+    locationModel: Location | undefined;
+    batchModel: Batch | undefined;
+    productModel: Product | undefined;
     quantityModel: string = '';
 
     constructor(private productService: ProductService, private locationService: LocationService,
@@ -72,11 +72,11 @@ export class StockEntryPageComponent implements OnInit {
     }
 
     clearFields() {
-        this.locationModel = '';
+        this.locationModel = undefined;
+        this.productModel = undefined;
         this.locationId = 0;
-        this.batchModel = '';
+        this.batchModel = undefined;
         this.batchId = 0;
-        this.productModel = '';
         this.productId = 0;
         this.quantityModel = '';
         this.quantity = 0;
@@ -86,11 +86,15 @@ export class StockEntryPageComponent implements OnInit {
         return true;
     }
 
-    saveEntry() {
+    saveEntry(): void {
         if (confirm('Deseja salvar a movimentação de entrada?')) {
-            if (this.isValidMovement()) {
+            if (this.isValidMovement() && this.productModel && this.locationModel && this.batchModel) {
                 let movement: Movement = new Movement(this.productId, this.batchId, ENTRANCY, this.quantity);
+                movement.name = this.productModel.name;
                 movement.locationTo = this.locationId;
+                movement.locationToName = this.locationModel.name;
+                movement.batchName = this.batchModel.name;
+
                 this.movementService.insert(movement);
                 this.clearFields();
             } else {

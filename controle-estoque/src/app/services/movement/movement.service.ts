@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Movement, Sequence } from '../../entity/Entities';
 import { Service } from '../service';
 import { MOVEMENT_SEQ_SERVICE, MOVEMENT_SERVICE, OBSERVABLE_ERROR_HANDLER } from '../../constants/ServiceConstants';
-import { SequenceService } from 'src/app/sequence.service';
+import { SequenceService } from 'src/app/services/sequence/sequence.service';
 
 @Injectable({
     providedIn: 'root'

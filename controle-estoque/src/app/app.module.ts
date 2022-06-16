@@ -32,6 +32,7 @@ import { ProductFormComponent } from './components/forms/product-form/product-fo
 import { ListItemComponent } from './components/list-item/list-item.component';
 import { SearchComponentComponent } from './components/search-component/search-component.component';
 import { QuantityInputComponent } from './components/quantity-input/quantity-input.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -70,7 +71,8 @@ import { QuantityInputComponent } from './components/quantity-input/quantity-inp
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AutocompleteLibModule
+    AutocompleteLibModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

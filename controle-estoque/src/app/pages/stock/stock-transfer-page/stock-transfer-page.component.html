@@ -1,3 +1,69 @@
 <app-common-page title="Transferência"
                  header="Operações de transferência de estoque">
+    <app-search-component title="selecionar produto"
+                          placeholder="selecionar produto"
+                          notFoundMessage="Produto não encontrado"
+                          invalidFeedbackMessage="Produto inválido"
+                          [(ngModel)]="productModel"
+                          (selected)="setProduct($event)"
+                          [data]="products"
+                          *ngIf="isProductsLoaded">
+    </app-search-component>
+    <app-search-component title="selecionar lote"
+                          placeholder="selecionar lote"
+                          notFoundMessage="Lote não encontrado"
+                          invalidFeedbackMessage="Lote inválido"
+                          [(ngModel)]="batchModel"
+                          (selected)="setBatch($event)"
+                          [data]="batches"
+                          *ngIf="isBatchesLoaded">
+    </app-search-component>
+    <app-search-component title="selecionar local de origem"
+                          placeholder="selecionar local de origem"
+                          notFoundMessage="Local não encontrado"
+                          invalidFeedbackMessage="Local inválido"
+                          [(ngModel)]="locationFromModel"
+                          (selected)="setFromLocation($event)"
+                          [data]="locations"
+                          *ngIf="isLocationsLoaded">
+    </app-search-component>
+    <app-search-component title="selecionar local de destino"
+                          placeholder="selecionar local de destino"
+                          notFoundMessage="Local não encontrado"
+                          invalidFeedbackMessage="Local inválido"
+                          [(ngModel)]="locationToModel"
+                          (selected)="setToLocation($event)"
+                          [data]="locations"
+                          *ngIf="isLocationsLoaded">
+    </app-search-component>
+    <app-quantity-input description="Inserir quantidade a ser transferida"
+                        invalidFeedback="quantidade inválida"
+                        [(ngModel)]="quantityModel"
+                        (value)="changeQuantity($event)">
+    </app-quantity-input>
+    <div class="button-group button-container row">
+        <button class="btn btn-success col-md-1 button-space"
+                (click)="saveTransfer()">
+            Salvar
+        </button>
+        <button class="btn btn-warning col-md-1 button-space"
+                (click)="clearFields()">
+            Limpar
+        </button>
+        <button class="btn btn-danger col-md-1 button-space">
+            Cancelar
+        </button>
+    </div>
+
 </app-common-page>
+
+
+<style>
+    .button-container {
+      margin-bottom: 64px;
+      padding: 16px;
+    }
+    .button-space {
+      margin-right: 4px;
+    }
+  </style>
