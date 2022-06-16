@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-import { Entity, Movement } from 'src/app/entity/Entities';
+import { Entity, Movement, Stock } from 'src/app/entity/Entities';
 
 @Component({
   selector: 'app-list-item',
@@ -93,6 +93,26 @@ export class ListItemComponent implements OnInit {
   getMovType(movement: Entity): string {
     let mov:Movement = movement as Movement;
     return mov.type;
+  }
+
+  getStockQuantity(stock: Entity): number {
+    let stk: Stock = stock as Stock;
+    return stk.quantity;
+  }
+
+  getDepartment(stock: Entity): string {
+    let stk: Stock = stock as Stock;
+    return stk.department;
+  }
+
+  getStockUnityValue(stock: Entity): string {
+    let stk: Stock = stock as Stock;
+    return String(stk.unityValue);
+  }
+
+  getStockTotalValue(stock: Entity): number {
+    let stk: Stock = stock as Stock;
+    return stk.totalValue;
   }
 
 }

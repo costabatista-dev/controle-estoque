@@ -17,20 +17,31 @@
     <thead>
       <tr>
         <th>Código</th>
-        <th *ngIf="dataStorage !== 'movements'">Nome</th>
-        <th *ngIf="dataStorage === 'movements'">Produto</th>
+        <th *ngIf="dataStorage !== 'movements' && dataStorage !== 'stock'">Nome</th>
+        <th *ngIf="dataStorage === 'movements' || dataStorage === 'stock'">Produto</th>
         <th *ngIf="dataStorage === 'movements'">Tipo Movimento</th>
-        <th *ngIf="dataStorage !== 'movements'">Ações</th>
+        <th *ngIf="dataStorage !== 'movements' && dataStorage !== 'stock'">Ações</th>
         <th *ngIf="dataStorage === 'movements'">Local Entrada</th>
         <th *ngIf="dataStorage === 'movements'">Local Saída</th>
         <th *ngIf="dataStorage === 'movements'">Lote</th>
-        <th *ngIf="dataStorage === 'movements'">Quantidade</th>
+        <th *ngIf="dataStorage === 'movements' || dataStorage==='stock'">Quantidade</th>
+        <th *ngIf="dataStorage === 'stock'">Valor Unitário</th>
+        <th *ngIf="dataStorage === 'stock'">Valor Total</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let object of searchableTable">
         <td>{{object.id}}</td>
         <td>{{object.name | uppercase }}</td>
+        <td *ngIf="dataStorage === 'stock'" [ngClass]="{
+            'entry-quantity': (getStockQuantity(object) > 0),
+            'out-quantity': (getStockQuantity(object) < 0)
+        }">{{ getStockQuantity(object) }}</td>
+        <td *ngIf="dataStorage === 'stock'">{{ getStockUnityValue(object) | currency: 'R$ '}}</td>
+        <td *ngIf="dataStorage === 'stock'" [ngClass]="{
+            'entry-quantity': (getStockTotalValue(object)) > 0,
+            'out-quantity': (getStockTotalValue(object)) < 0
+        }">{{ getStockTotalValue(object) | currency: 'R$ '}}</td>
         <td *ngIf="dataStorage === 'movements'">{{ getMovement(object) | uppercase }}</td>
         <td *ngIf="dataStorage === 'movements'">{{ getEntryLocation(object) }}</td>
         <td *ngIf="dataStorage === 'movements'">{{ getOutLocation(object) }}</td>
@@ -42,7 +53,7 @@
         <td *ngIf="dataStorage === 'movements' && getMovType(object) === 'T'"
             class="transfer-quantity">{{ getQuantity(object) }}</td>
         <td>
-          <div *ngIf="dataStorage !== 'movements'" class="row">
+          <div *ngIf="dataStorage !== 'movements' && dataStorage !== 'stock'" class="row">
             <div class="col-md-2">
               <button class="btn btn-warning" [routerLink]="'/' + dataStorage + '/' + object.id">
                 Detalhes

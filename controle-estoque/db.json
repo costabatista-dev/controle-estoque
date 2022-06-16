@@ -11,6 +11,10 @@
     {
       "id": 3,
       "name": "marca 03"
+    },
+    {
+      "id": 4,
+      "name": "marca 04"
     }
   ],
   "batches": [
@@ -43,6 +47,10 @@
     {
       "id": 4,
       "name": "local 04"
+    },
+    {
+      "id": 5,
+      "name": "local 05"
     }
   ],
   "departments": [
@@ -65,6 +73,10 @@
     {
       "id": 8,
       "name": "departamento 05"
+    },
+    {
+      "id": 9,
+      "name": "departamento 06"
     }
   ],
   "products": [
@@ -83,6 +95,14 @@
       "brand": 1,
       "department": 3,
       "price": 11.98
+    },
+    {
+      "id": 3,
+      "name": "produto-03",
+      "description": "",
+      "brand": 3,
+      "department": 2,
+      "price": 11
     }
   ],
   "movement": [
@@ -149,12 +169,51 @@
       "batch": 2,
       "type": "T",
       "quantity": 120
+    },
+    {
+      "id": 6,
+      "name": "produto 02",
+      "locationToName": "local 03",
+      "locationFromName": "local 03",
+      "batchName": "lote 03",
+      "locationFrom": 3,
+      "locationTo": 3,
+      "product": 2,
+      "batch": 3,
+      "type": "T",
+      "quantity": 6
+    },
+    {
+      "id": 7,
+      "name": "produto 01",
+      "locationToName": "local 03",
+      "locationFromName": "",
+      "batchName": "lote 03",
+      "locationFrom": 0,
+      "locationTo": 3,
+      "product": 1,
+      "batch": 3,
+      "type": "E",
+      "quantity": 20
+    },
+    {
+      "id": 8,
+      "name": "produto-03",
+      "locationToName": "",
+      "locationFromName": "local 02",
+      "batchName": "lote 01",
+      "locationFrom": 2,
+      "locationTo": 0,
+      "product": 3,
+      "batch": 1,
+      "type": "O",
+      "quantity": 20
     }
   ],
   "sequence": [
     {
       "id": "brand",
-      "nextVal": 4
+      "nextVal": 5
     },
     {
       "id": "batch",
@@ -162,15 +221,19 @@
     },
     {
       "id": "location",
-      "nextVal": 5
+      "nextVal": 6
     },
     {
       "id": "product",
-      "nextVal": 3
+      "nextVal": 4
+    },
+    {
+      "id": "department",
+      "nextVal": 10
     },
     {
       "id": "movement",
-      "nextVal": 6
+      "nextVal": 9
     }
   ]
 }
