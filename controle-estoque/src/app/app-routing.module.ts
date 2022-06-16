@@ -43,7 +43,8 @@ const routes: Routes = [
   { path: 'batch-list', component: BatchListPageComponent},
   { path: 'brand-list', component: BrandListPageComponent},
   { path: '', component: MainPageComponent},
-  { path: '**', component: NotFoundPageComponent}
+  { path: '404', component: NotFoundPageComponent},
+  { path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({
