@@ -39,6 +39,8 @@
             class="entry-quantity">{{ getQuantity(object) }}</td>
         <td *ngIf="dataStorage === 'movements' && getMovType(object) === 'O'"
             class="out-quantity">{{ getQuantity(object) }}</td>
+        <td *ngIf="dataStorage === 'movements' && getMovType(object) === 'T'"
+            class="transfer-quantity">{{ getQuantity(object) }}</td>
         <td>
           <div *ngIf="dataStorage !== 'movements'" class="row">
             <div class="col-md-2">
@@ -79,6 +81,11 @@
 
   .out-quantity {
     color: red;
+    font-weight: bold;
+  }
+
+  .transfer-quantity {
+    color: blue;
     font-weight: bold;
   }
 </style>

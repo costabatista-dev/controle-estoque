@@ -49,6 +49,8 @@ export class ListItemComponent implements OnInit {
             return 'Entrada';
         case 'O':
             return 'Saída';
+        case 'T':
+            return 'Transferência';
     }
 
     return '';

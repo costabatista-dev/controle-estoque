@@ -136,6 +136,19 @@
       "batch": 1,
       "type": "O",
       "quantity": 15
+    },
+    {
+      "id": 5,
+      "name": "produto 01",
+      "locationToName": "local 04",
+      "locationFromName": "local 03",
+      "batchName": "lote 02",
+      "locationFrom": 3,
+      "locationTo": 4,
+      "product": 1,
+      "batch": 2,
+      "type": "T",
+      "quantity": 120
     }
   ],
   "sequence": [
@@ -157,7 +170,7 @@
     },
     {
       "id": "movement",
-      "nextVal": 5
+      "nextVal": 6
     }
   ]
 }
