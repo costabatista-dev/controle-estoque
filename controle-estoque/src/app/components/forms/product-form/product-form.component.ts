@@ -41,6 +41,7 @@ export class ProductFormComponent implements OnInit {
           .subscribe((result: Department[]) => {
             this.departments = result
             let id = this.route.snapshot.params['id'];
+
             if (id && id != 0) {
               this.productService.getById(Number(id))
                 .subscribe((result: Product) => {
@@ -75,6 +76,7 @@ export class ProductFormComponent implements OnInit {
 
   createProduct() {
     this.product = new Product(this.name.trim());
+    this.product.id = this.id;
     this.product.description = this.description.trim();
     this.product.brand = this.brand;
     this.product.department = this.department;
