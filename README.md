@@ -1,4 +1,4 @@
-# roubank-app
+# Controle Estoque
 
 Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em operações de controle de estoque para mercearias (mercado, controle de estoque em geral) .
 
